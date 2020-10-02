@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 56d393bbb28e01340aae543173578180
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      74: 1877023007885299983
+    second: NadeThrow
+  - first:
+      74: 8249697191358019470
+    second: PistolFire
+  - first:
+      74: -6651099704231622877
+    second: PistolInstant
+  - first:
+      74: -2145291087636195155
+    second: PistolInstantLookDown
+  - first:
+      74: -2836972563237092781
+    second: PistolInstantLookDown90
+  - first:
+      74: 1896392904235806876
+    second: PistolInstantLookUp
+  - first:
+      74: 1759233263412640681
+    second: PistolInstantLookUp90
+  - first:
+      74: -2099380080179050255
+    second: PistolLeftHandStab
+  - first:
+      74: 8210690312205470168
+    second: PistolReady
+  - first:
+      74: 9065141103075009861
+    second: PistolReload
+  - first:
+      74: -8186384606069542028
+    second: ShotgunFire
+  - first:
+      74: 135554785482283398
+    second: ShotgunReadyFire
+  - first:
+      74: -7917399040393092254
+    second: ShotgunReload
+  - first:
+      74: 1476939321799913354
+    second: WeaponCrouch
+  - first:
+      74: -7070891963030462897
+    second: WeaponFire
+  - first:
+      74: -8080256689204092478
+    second: WeaponInstant
+  - first:
+      74: -4613274477842535658
+    second: WeaponInstantLookDown
+  - first:
+      74: -6113908305551796658
+    second: WeaponInstantLookUp
+  - first:
+      74: 653600018708157663
+    second: WeaponQuickStab
+  - first:
+      74: 8739939461945233834
+    second: WeaponReady
+  - first:
+      74: 8243372835033689507
+    second: WeaponReadyFire
+  - first:
+      74: -4808926826058737327
+    second: WeaponReload
+  - first:
+      74: -9090396522877891548
+    second: WeaponRun
+  - first:
+      74: 6880150021389926135
+    second: WeaponRunBackward
+  - first:
+      74: -8321079439762589843
+    second: WeaponStand
+  - first:
+      74: 5172704148072127292
+    second: WeaponStrafeRunLeft
+  - first:
+      74: 4894784423279340520
+    second: WeaponStrafeRunRight
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
