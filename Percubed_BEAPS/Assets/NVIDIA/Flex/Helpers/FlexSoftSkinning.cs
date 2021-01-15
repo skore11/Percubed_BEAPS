@@ -60,9 +60,9 @@ namespace NVIDIA.Flex
         {
             m_actor = GetComponent<FlexSoftActor>();
             m_renderer = m_skinningTarget ? m_skinningTarget.GetComponent<SkinnedMeshRenderer>() : null;
-
+            //m_renderer = m_skinningTarget ?  m_skinningTarget.GetComponent<MeshRenderer>(): null;
             m_actor.onFlexUpdate += OnFlexUpdate;
-
+            //m_renderer.sharedMesh.UploadMeshData(false);
             BuildSkinningInfo();
             CreateSkinningBones();
         }
@@ -127,14 +127,24 @@ namespace NVIDIA.Flex
             {
                 if (m_renderer.sharedMesh.name.Contains(CLONE_SUFIX))
                 {
+                    //m_renderer.sharedMesh.UploadMeshData(false);
                     m_meshInstance = m_renderer.sharedMesh;
+
                 }
                 else
                 {
+                    //m_renderer.sharedMesh.UploadMeshData(false);
                     m_meshInstance = Mesh.Instantiate(m_renderer.sharedMesh);
                     m_meshInstance.name = m_renderer.sharedMesh.name + CLONE_SUFIX;
-                }
+                    ////
+                    //Debug.Log(m_meshInstance.name);
+                    //print(m_meshInstance.isReadable);
 
+                    ////
+                }
+                //print(m_renderer.sharedMesh.name);
+                //m_meshInstance = Mesh.Instantiate(m_renderer.sharedMesh);
+                
                 Vector2[] uv = m_meshInstance.uv;
                 Vector2[] uv2 = m_meshInstance.uv2;
                 Vector2[] uv3 = m_meshInstance.uv3;

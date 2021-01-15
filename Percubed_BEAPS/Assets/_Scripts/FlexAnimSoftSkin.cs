@@ -60,7 +60,7 @@ namespace Percubed.Flex
         // Needed to update the mass particle positions after assigning bone weights from vertex mapping
         private List<Vector3> particleRestPositions = new List<Vector3>();
         // for each bone of the original mesh, store a list of weights for the particles it should influence:
-        private WeightList[] particleBoneWeights;
+        public WeightList[] particleBoneWeights;
 
         private Vector3[] particleDisplacementVector; // used when updating particle positions
 
