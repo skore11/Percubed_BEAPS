@@ -10,6 +10,11 @@ using System;
 public class SkinnedMorphTargets : MonoBehaviour 
 {
     /// <summary>
+    /// The root of the hierarchy of source meshes that will be morphed "from".
+    /// </summary>
+    public GameObject originalMeshObjects;
+
+    /// <summary>
     /// A simple array of meshes.
     /// This class is created because unity inspector can't handle Mesh[][] or Mesh[,]
     /// </summary>
@@ -91,19 +96,24 @@ public class SkinnedMorphTargets : MonoBehaviour
 		loadedSuccessfully = false;
 		
         //Get the neutral pose meshes
-        SkinnedMeshRenderer[] filters = gameObject.GetComponentsInChildren<SkinnedMeshRenderer>();
+        SkinnedMeshRenderer[] filters = originalMeshObjects.GetComponentsInChildren<SkinnedMeshRenderer>();
         //Debug.Log(filters[0].name);
-        workingMeshes = new Mesh[filters.Length];
         sourceMeshes = new Mesh[filters.Length];
         for (int i = 0; i < filters.Length; i++)
         {
             //Save a reference to the mesh being edited
-            sourceMeshes[i] = filters[i].sharedMesh;
-            //print(sourceMeshes[i].name);
+            // IF it has a baked mesh exposed, use that instead! --strank
+            ExposeBakedMesh bakedMeshExposer = filters[i].gameObject.GetComponent<ExposeBakedMesh>();
+            if (bakedMeshExposer != null) {
+                sourceMeshes[i] = bakedMeshExposer.bakedMesh;
+            } else {
+                sourceMeshes[i] = filters[i].sharedMesh;
+            }
+            print("Morphing from: " + sourceMeshes[i].name);
         }
 
         //Check that attribute meshes have been assigned and extract their meshes
-        for (int i = 1; i < morphTargets.Length; i++)
+        for (int i = 0; i < morphTargets.Length; i++)
         {
             
             if (morphTargets[i] == null)
@@ -124,9 +134,12 @@ public class SkinnedMorphTargets : MonoBehaviour
             int vertexCount = sourceMeshes[submeshNum].vertexCount;
 			string submeshName = sourceMeshes[submeshNum].name;
 			
-            for (int i = 1; i < morphTargets.Length; i++)
+            for (int i = 0; i < morphTargets.Length; i++)
             {
-				if (morphTargets[i][submeshNum].name != submeshName)
+                Debug.Log(string.Format(
+                    "Morph target {0} for Submesh {1} num {2} with {3} vertices.",
+                    morphTargets[i].name, submeshName, submeshNum, vertexCount));
+                if (morphTargets[i][submeshNum].name != submeshName)
 				{
 					Debug.Log(string.Format(
                         "Morph Target {2} : Submesh name mismatch - this might be a problem - {0} is a pose for {1}",
@@ -148,15 +161,25 @@ public class SkinnedMorphTargets : MonoBehaviour
 
         //Create working buffers for the submeshes that will get morphed
         //and make the skinned mesh use these buffers
+        SkinnedMeshRenderer[] wrkFilters = gameObject.GetComponentsInChildren<SkinnedMeshRenderer>();
+        //Debug.Log(filters[0].name);
+        workingMeshes = new Mesh[wrkFilters.Length];
         for (int i = 0; i < sourceMeshes.Length; i++)
         {
             if (morphVertexIndices[i].Length > 0)
             {
                 workingMeshes[i] = CloneMesh(sourceMeshes[i]);
-                filters[i].sharedMesh = workingMeshes[i];
+                wrkFilters[i].sharedMesh = workingMeshes[i];
             }
         }
-        
+
+        //Check that working meshes correspond to source meshes:
+        if (workingMeshes.Length != sourceMeshes.Length)
+        {
+            Debug.Log("Different number of local working meshes than source meshes");
+            Debug.Log(workingMeshes.Length + "," + sourceMeshes.Length);
+        }
+
         //Initialize the blending weights. Start off in neutral pose if not specified.
         if (blendWeights == null || blendWeights.Length != morphTargets.Length)
         {
@@ -199,7 +222,7 @@ public class SkinnedMorphTargets : MonoBehaviour
             //The fetch seems to copy vertices, so prefetch here
             List<Vector3[]> poseVertices = new List<Vector3[]>();
             List<Vector3[]> poseNormals = new List<Vector3[]>();
-            for (int i = 1; i < morphTargets.Length; i++)
+            for (int i = 0; i < morphTargets.Length; i++)
             {
                 poseVertices.Add(morphTargets[i][submeshNum].vertices);
                 poseNormals.Add(morphTargets[i][submeshNum].normals);
@@ -207,8 +230,9 @@ public class SkinnedMorphTargets : MonoBehaviour
 
             for (int j = 0; j < originalVertices.Length; j++)
             {
-                for (int i = 1; i < morphTargets.Length; i++)
-                {   
+                for (int i = 0; i < morphTargets.Length; i++)
+                {
+                    Debug.Log("check vertex " + poseVertices[i][j] + originalVertices[j]);
                     if (poseVertices[i][j] != originalVertices[j] || 
                         poseNormals[i][j] != originalNormals[j])
                     {
@@ -221,6 +245,10 @@ public class SkinnedMorphTargets : MonoBehaviour
             idxArray.indices = new int[morphedVertices.Count];
             morphedVertices.CopyTo(idxArray.indices);
             morphVertexIndices[submeshNum] = idxArray;
+            Debug.Log(string.Format(
+                "For submesh {0}: morphVertexIndices.length {1}.",
+                submeshNum, morphVertexIndices[submeshNum].Length));
+
         }
     }
 
@@ -279,7 +307,7 @@ public class SkinnedMorphTargets : MonoBehaviour
             }
 
             //Next, factor in the pose meshes
-            for (int j = 1; j < morphTargets.Length; j++)
+            for (int j = 0; j < morphTargets.Length; j++)
             {
                 
                 //Early out to avoid unneccesary empty loops
