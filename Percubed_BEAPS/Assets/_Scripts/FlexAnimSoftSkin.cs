@@ -163,7 +163,7 @@ namespace Percubed.Flex
             for (int particleIndex = 0; particleIndex < m_particles.Length; particleIndex++)
             {
                 // casting a Vector4 to a Vector3 automatically discards the w component:
-                _tempVector3 = particlePositions[particleIndex] - (Vector3) m_particles[particleIndex];
+                _tempVector3 = particlePositions[particleIndex] - ((Vector3) m_particles[particleIndex]);
                 particleDisplacementVector[particleIndex].x = _tempVector3.x;
                 particleDisplacementVector[particleIndex].y = _tempVector3.y;
                 particleDisplacementVector[particleIndex].z = _tempVector3.z;
@@ -175,7 +175,8 @@ namespace Percubed.Flex
             {
                 // Note: we replicate roughly what ApplyImpulses in Actor would do, i.e. scale by weight:
                 // impulse divided by particle mass (which is 1/w):
-                m_velocities[i] += particleDisplacementVector[i] * m_particles[i].w;
+                //m_actor.ApplyImpulse(particleDisplacementVector[i], i);
+                m_velocities[i] += particleDisplacementVector[i] * m_particles[i].w ;
             }
             _particleData.SetVelocities(m_actor.indices[0], m_actor.indexCount, m_velocities);
         }
