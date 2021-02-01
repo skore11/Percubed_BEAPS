@@ -8,17 +8,17 @@ namespace Percubed.Flex
 {
     public class FlexController : MonoBehaviour
     {
-        private MeltEffectFlex melt = null;
+        public MeltEffectFlex melt = null;
 
-        private ShockEffectFlex shock = null;
+        public ShockEffectFlex shock = null;
 
-        public int flexParams;
+        //public int flexParams;
 
         private bool iterBool;
 
         public FlexContainer flex_cont;
 
-        public float gravityY;
+        //public float gravityY;
 
         // Start is called before the first frame update
         void Awake() { this.Initialize(); }

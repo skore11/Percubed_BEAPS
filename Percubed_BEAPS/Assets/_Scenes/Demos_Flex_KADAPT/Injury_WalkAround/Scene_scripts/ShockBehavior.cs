@@ -7,22 +7,25 @@ using NVIDIA.Flex;
 
 namespace Percubed.Flex
 {
-    public class InjuryBehavior : MonoBehaviour
+    public class ShockBehavior : MonoBehaviour
     {
         public Transform wander1;
         public Transform wander2;
-        public Transform wander3;
-        public bool meltSelection;
+        //public Transform wander3;
+        //public bool meltSelection;
         public GameObject participant;
         public GameObject participant2;
+        public Transform target;
+        public Val<RootMotion.FinalIK.FullBodyBipedEffector> hand;
+        public Val<RootMotion.FinalIK.InteractionObject> button;
+        public bool shock;
+        //public int iteration1;
+        //public int iteration2;
 
-        public int iteration1;
-        public int iteration2;
-
-        public float gravityVal;
+        //public float gravityVal;
 
         private BehaviorAgent behaviorAgent;
-        private BehaviorAgent behaviorAgent2;
+        //private BehaviorAgent behaviorAgent2;
         // Use this for initialization
 
         public Text debugText;
@@ -39,7 +42,7 @@ namespace Percubed.Flex
         {
             behaviorUpdater = FindObjectOfType<BehaviorUpdater>();
 
-            //behaviorAgent = new BehaviorAgent(this.BuildTreeRoot());
+            behaviorAgent = new BehaviorAgent(this.BuildTreeRoot());
             BehaviorManager.Instance.Register(behaviorAgent);
             behaviorAgent.StartBehavior();
 
@@ -49,26 +52,26 @@ namespace Percubed.Flex
         }
 
         // Update is called once per frame
-        void Update()
-        {
-            String DebugOutput = "";
-            DebugOutput += Node.PrintTree(behaviorAgent.treeRoot);
-            foreach (Node n in behaviorAgent.treeRoot.Trace())
-            {
-                String hCode = "" + n.GetHashCode();
-                DebugOutput = DebugOutput.Replace(hCode, "<b>" + hCode + "</b>");
-            }
-            if (debugText != null)
-            {
-                debugText.text = DebugOutput;
-                Debug.Log(DebugOutput);
-            }
-            //try to turn of behavior updater here and restart when needed!
-            //if (uIController.turnOffAnim)
-            //{
-            //    behaviorUpdater.enabled = false;
-            //}
-        }
+        //void Update()
+        //{
+        //    String DebugOutput = "";
+        //    DebugOutput += Node.PrintTree(behaviorAgent.treeRoot);
+        //    foreach (Node n in behaviorAgent.treeRoot.Trace())
+        //    {
+        //        String hCode = "" + n.GetHashCode();
+        //        DebugOutput = DebugOutput.Replace(hCode, "<b>" + hCode + "</b>");
+        //    }
+        //    if (debugText != null)
+        //    {
+        //        debugText.text = DebugOutput;
+        //        Debug.Log(DebugOutput);
+        //    }
+        //    //try to turn of behavior updater here and restart when needed!
+        //    //if (uIController.turnOffAnim)
+        //    //{
+        //    //    behaviorUpdater.enabled = false;
+        //    //}
+        //}
 
         protected Node ST_ApproachAndWait(Transform target)
         {
@@ -81,7 +84,11 @@ namespace Percubed.Flex
         //    return new Selector(participant2.GetComponent<FlexController>().Node_Melt(x));
         //}
 
-
+        protected Node ST_shocker(Transform target, Val<RootMotion.FinalIK.FullBodyBipedEffector> hand, Val<RootMotion.FinalIK.InteractionObject> button)
+        {
+            Val<Vector3> position = Val.V(() => target.position);
+            return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_OrientTowards(position), new LeafWait(500), participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button));
+        }
         //protected Node ST_Iter(iter iter)
         //{
 
@@ -130,24 +137,26 @@ namespace Percubed.Flex
         //        )
         //}
 
-        //protected Node BuildTreeRoot()
-        //{
-        //    //iter value = new iter();
-        //    Node roaming = new DecoratorLoop(
-        //                    //new Selector(this.pauseAnim,
-        //                    new SequenceShuffle(
-        //                        //this.ST_Melt(meltSelection),
+        protected Node BuildTreeRoot()
+        {
+            //iter value = new iter();
+            Node shocked = new DecoratorLoop(
+                            //new Selector(this.pauseAnim,
+                            new Sequence(
+                            //this.ST_Melt(meltSelection),
+                            this.ST_ApproachAndWait(this.wander1),
+                            this.ST_shocker(this.target, this.hand, this.button),
+                            this.ST_Shock(this.shock),
+                            //this.ST_Iter(/*value = */this.iteration1),
+                            //this.ST_Iter(this.iteration2),
+                            //this.ST_Jiggle(true),
+                            //this.ST_Jiggle(false),
 
-        //                        this.ST_Iter(/*value = */this.iteration1),
-        //                        this.ST_Iter(this.iteration2),
-        //                    //this.ST_Jiggle(true),
-        //                    //this.ST_Jiggle(false),
-        //                    this.ST_ApproachAndWait(this.wander1),
-        //                    this.ST_ApproachAndWait(this.wander2),
-        //                    this.ST_ApproachAndWait(this.wander3)));//);
-        //    return roaming;
+                            this.ST_ApproachAndWait(this.wander2)));
+                            //this.ST_ApproachAndWait(this.wander3)));//);
+            return shocked;
 
-        //}
+        }
 
         //protected Node Trial()
         //{
