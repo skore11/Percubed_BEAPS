@@ -44,6 +44,12 @@ public class SkinnedMorphTargets : MonoBehaviour
     public float[] blendWeights;
 
     /// <summary>
+    /// If true, recalculate morph for every index as often as possible.
+    /// Check this if the target or source mesh is dynamic/animated.
+    /// </summary>
+    public bool dynamicMorph;
+
+    /// <summary>
     /// The normalized weights. Public for debugging
     /// </summary>
     public float[] normalizedBlendWeights;
@@ -200,7 +206,7 @@ public class SkinnedMorphTargets : MonoBehaviour
             return;
         }
 
-        if (CheckWeights())
+        if (CheckWeights() || this.dynamicMorph)
         {
             GenerateBlendedMesh();
         }
@@ -233,7 +239,8 @@ public class SkinnedMorphTargets : MonoBehaviour
                 for (int i = 0; i < morphTargets.Length; i++)
                 {
                     Debug.Log("check vertex " + poseVertices[i][j] + originalVertices[j]);
-                    if (poseVertices[i][j] != originalVertices[j] || 
+                    if (this.dynamicMorph ||
+                        poseVertices[i][j] != originalVertices[j] || 
                         poseNormals[i][j] != originalNormals[j])
                     {
                         morphedVertices.Add(j);
