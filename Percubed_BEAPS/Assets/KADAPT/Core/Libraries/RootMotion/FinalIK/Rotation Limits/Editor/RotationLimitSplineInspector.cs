@@ -162,7 +162,7 @@ namespace RootMotion.FinalIK {
 					switch(scaleMode) {
 					case ScaleMode.Limit:
 						float inputValue = keys[i].value;
-						inputValue = Mathf.Clamp(Handles.ScaleValueHandle(inputValue, position, Quaternion.identity, 0.5f, Handles.SphereCap, 0), 0.01f, 180);
+						inputValue = Mathf.Clamp(Handles.ScaleValueHandle(inputValue, position, Quaternion.identity, 0.5f, Handles.SphereHandleCap, 0), 0.01f, 180);
 						if (keys[i].value != inputValue) {
 							if (!Application.isPlaying) Undo.RecordObject(script, "Handle Value");
 							keys[i].value = inputValue;
@@ -170,7 +170,7 @@ namespace RootMotion.FinalIK {
 						break;
 					case ScaleMode.Angle: 
 						float inputTime = keys[i].time;
-						inputTime = Handles.ScaleValueHandle(inputTime, position, Quaternion.identity, 0.5f, Handles.SphereCap, 0);
+						inputTime = Handles.ScaleValueHandle(inputTime, position, Quaternion.identity, 0.5f, Handles.SphereHandleCap, 0);
 						if (keys[i].time != inputTime) {
 							if (!Application.isPlaying) Undo.RecordObject(script, "Handle Angle");
 							keys[i].time = inputTime;
@@ -182,7 +182,7 @@ namespace RootMotion.FinalIK {
 				// Handle select button
 				if (selectedHandle != i) {
 					Handles.color = Color.blue;
-					if (Handles.Button(position, script.transform.rotation, 0.05f, 0.05f, Handles.SphereCap)) {
+					if (Handles.Button(position, script.transform.rotation, 0.05f, 0.05f, Handles.SphereHandleCap)) {
 						selectedHandle = i;
 					}
 				}
@@ -197,11 +197,11 @@ namespace RootMotion.FinalIK {
 					Handles.color = Color.white;
 					Vector3 toNext = (nextPosition - position).normalized * 0.3f;
 					float outTangent = keys[i].outTangent;
-					outTangent = Handles.ScaleValueHandle(outTangent, position + toNext, Quaternion.identity, 0.2f, Handles.SphereCap, 0);
+					outTangent = Handles.ScaleValueHandle(outTangent, position + toNext, Quaternion.identity, 0.2f, Handles.SphereHandleCap, 0);
 					
 					Vector3 toPrev = (prevPosition - position).normalized * 0.3f;
 					float inTangent = keys[i].inTangent;
-					inTangent = Handles.ScaleValueHandle(inTangent, position + toPrev, Quaternion.identity, 0.2f, Handles.SphereCap, 0);
+					inTangent = Handles.ScaleValueHandle(inTangent, position + toPrev, Quaternion.identity, 0.2f, Handles.SphereHandleCap, 0);
 					
 					if (outTangent != keys[i].outTangent || inTangent != keys[i].inTangent) selectedHandle = i;
 					

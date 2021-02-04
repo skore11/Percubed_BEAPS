@@ -66,7 +66,7 @@ namespace RootMotion.FinalIK {
 			Handles.color = colorDefault;
 			GUI.color = colorDefault;
 			
-			Handles.CircleCap(0, script.transform.position, Quaternion.LookRotation(axis, cross), 0.5f);
+			Handles.CircleHandleCap(0, script.transform.position, Quaternion.LookRotation(axis, cross), 0.5f, Event.current.type);
 			
 			if (!script.useLimits) return;
 			

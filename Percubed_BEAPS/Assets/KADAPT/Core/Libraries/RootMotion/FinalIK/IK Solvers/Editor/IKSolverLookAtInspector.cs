@@ -76,7 +76,7 @@ using System;
 					IKSolverLookAt.LookAtBone bone = solver.spine[i];
 					
 					if (i < solver.spine.Length - 1) Handles.DrawLine(bone.transform.position, solver.spine[i + 1].transform.position);
-					Handles.SphereCap(0, bone.transform.position, Quaternion.identity, jointSize);
+					Handles.SphereHandleCap(0, bone.transform.position, Quaternion.identity, jointSize, Event.current.type);
 				}
 				
 				// Draw a transparent line from last bone to IKPosition
@@ -104,7 +104,7 @@ using System;
 			// Selecting joint and manipulating IKPosition
 			if (Application.isPlaying && solver.IKPositionWeight > 0) {
 				if (modifiable) {
-					Handles.SphereCap(0, solver.IKPosition, Quaternion.identity, selectedSize);
+					Handles.SphereHandleCap(0, solver.IKPosition, Quaternion.identity, selectedSize, Event.current.type);
 						
 					// Manipulating position
 					solver.IKPosition = Handles.PositionHandle(solver.IKPosition, Quaternion.identity);
@@ -125,7 +125,7 @@ using System;
 			Handles.color = color;
 			GUI.color = color;
 					
-			Handles.SphereCap(0, bone.transform.position, Quaternion.identity, jointSize);
+			Handles.SphereHandleCap(0, bone.transform.position, Quaternion.identity, jointSize, Event.current.type);
 			
 			// Draw a transparent line from last bone to IKPosition
 			if (Application.isPlaying && lineWeight > 0) {

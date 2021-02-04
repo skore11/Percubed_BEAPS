@@ -20,7 +20,7 @@ namespace RootMotion.FinalIK.Demos {
 		void OnSceneGUI() {
 			Handles.color = targetColor;
 
-			Handles.SphereCap(0, script.transform.position, Quaternion.identity, size);
+			Handles.SphereHandleCap(0, script.transform.position, Quaternion.identity, size, Event.current.type);
 
 			DrawChildrenRecursive(script.transform);
 
@@ -28,13 +28,13 @@ namespace RootMotion.FinalIK.Demos {
 				Handles.color = pivotColor;
 				GUI.color = pivotColor;
 
-				Handles.SphereCap(0, script.pivot.position, Quaternion.identity, size);
+				Handles.SphereHandleCap(0, script.pivot.position, Quaternion.identity, size, Event.current.type);
 
 				Vector3 twistAxisWorld = script.pivot.rotation * script.twistAxis.normalized * size * 40;
 				Handles.DrawLine(script.pivot.position, script.pivot.position + twistAxisWorld);
-				Handles.SphereCap(0, script.pivot.position + twistAxisWorld, Quaternion.identity, size);
+				Handles.SphereHandleCap(0, script.pivot.position + twistAxisWorld, Quaternion.identity, size, Event.current.type);
 
-				Handles.CircleCap(0, script.pivot.position, Quaternion.LookRotation(twistAxisWorld), size * 20);
+				Handles.CircleHandleCap(0, script.pivot.position, Quaternion.LookRotation(twistAxisWorld), size * 20, Event.current.type);
 				Handles.Label(script.pivot.position + twistAxisWorld, twistAxisLabel);
 			}
 
@@ -46,7 +46,7 @@ namespace RootMotion.FinalIK.Demos {
 			for (int i = 0; i < t.childCount; i++) {
 
 				Handles.DrawLine(t.position, t.GetChild(i).position);
-				Handles.SphereCap(0, t.GetChild(i).position, Quaternion.identity, size);
+				Handles.SphereHandleCap(0, t.GetChild(i).position, Quaternion.identity, size, Event.current.type);
 
 				DrawChildrenRecursive(t.GetChild(i));
 			}

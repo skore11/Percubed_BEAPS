@@ -56,13 +56,13 @@ namespace RootMotion.FinalIK {
 				IKSolver.Bone bone = solver.bones[i];
 
 				if (i < solver.bones.Length - 1) Handles.DrawLine(bone.transform.position, solver.bones[i + 1].transform.position);
-				Handles.SphereCap(0, solver.bones[i].transform.position, Quaternion.identity, jointSize);
+				Handles.SphereHandleCap(0, solver.bones[i].transform.position, Quaternion.identity, jointSize, Event.current.type);
 			}
 			
 			// Selecting joint and manipulating IKPosition
 			if (Application.isPlaying && solver.IKPositionWeight > 0) {
 				if (modifiable) {
-					Handles.CubeCap(0, solver.IKPosition, solver.GetRoot().rotation, selectedSize * sizeMlp);
+					Handles.CubeHandleCap(0, solver.IKPosition, solver.GetRoot().rotation, selectedSize * sizeMlp, Event.current.type);
 						
 					// Manipulating position
 					solver.IKPosition = Handles.PositionHandle(solver.IKPosition, Quaternion.identity);

@@ -58,15 +58,15 @@ using System;
 				IKSolver.Bone bone = solver.bones[i];
 
 				if (i < solver.bones.Length - 1) Handles.DrawLine(bone.transform.position, solver.bones[i + 1].transform.position);
-				Handles.SphereCap(0, solver.bones[i].transform.position, Quaternion.identity, jointSize);
+				Handles.SphereHandleCap(0, solver.bones[i].transform.position, Quaternion.identity, jointSize, Event.current.type);
 			}
 			
-			if (solver.axis != Vector3.zero) Handles.ConeCap(0, solver.transform.position, Quaternion.LookRotation(solver.transform.rotation * solver.axis), jointSize * 2f);
+			if (solver.axis != Vector3.zero) Handles.ConeHandleCap(0, solver.transform.position, Quaternion.LookRotation(solver.transform.rotation * solver.axis), jointSize * 2f, Event.current.type);
 			
 			// Selecting joint and manipulating IKPosition
 			if (Application.isPlaying && solver.IKPositionWeight > 0) {
 				if (modifiable) {
-					Handles.SphereCap(0, solver.IKPosition, Quaternion.identity, selectedSize);
+					Handles.SphereHandleCap(0, solver.IKPosition, Quaternion.identity, selectedSize, Event.current.type);
 						
 					// Manipulating position
 					solver.IKPosition = Handles.PositionHandle(solver.IKPosition, Quaternion.identity);

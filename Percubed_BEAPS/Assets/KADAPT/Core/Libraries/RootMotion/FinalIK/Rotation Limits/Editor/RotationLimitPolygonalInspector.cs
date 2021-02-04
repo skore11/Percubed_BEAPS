@@ -122,7 +122,7 @@ namespace RootMotion.FinalIK {
 				
 				// Selecting points
 				Handles.color = colorHandles;
-				if (Handles.Button(script.transform.position + Direction(script.points[i].point), script.transform.rotation, 0.02f, 0.02f, Handles.DotCap)) {
+				if (Handles.Button(script.transform.position + Direction(script.points[i].point), script.transform.rotation, 0.02f, 0.02f, Handles.DotHandleCap)) {
 					selectedPoint = i;
 				}
 				

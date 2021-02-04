@@ -59,13 +59,13 @@ namespace RootMotion.FinalIK {
 				for (int i = 0; i < solvers.ikSolvers.Length; i++) {
 					Handles.color = GetSolverColor(i);
 					if (solvers.ikSolvers[i].GetIKPositionWeight() > 0 && selected != i && solvers.ikSolvers[i].initiated) {
-						if (Handles.Button(solvers.ikSolvers[i].GetIKPosition(), Quaternion.identity, buttonSize, buttonSize, Handles.DotCap)) selected = i;
+						if (Handles.Button(solvers.ikSolvers[i].GetIKPosition(), Quaternion.identity, buttonSize, buttonSize, Handles.DotHandleCap)) selected = i;
 					}
 				}
 				
 				if ((solvers.pelvis.positionConstraint.weight > 0 || solvers.pelvis.rotationConstraint.weight > 0) && selected != solvers.ikSolvers.Length) {
 					Handles.color = GetSolverColor(7);
-					if (Handles.Button(solvers.pelvis.positionConstraint.position, Quaternion.identity, buttonSize, buttonSize, Handles.DotCap)) selected = solvers.ikSolvers.Length;
+					if (Handles.Button(solvers.pelvis.positionConstraint.position, Quaternion.identity, buttonSize, buttonSize, Handles.DotHandleCap)) selected = solvers.ikSolvers.Length;
 				}
 			}
 			

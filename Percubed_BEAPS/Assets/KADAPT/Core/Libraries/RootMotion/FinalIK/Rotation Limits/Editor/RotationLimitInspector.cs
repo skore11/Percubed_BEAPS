@@ -31,7 +31,7 @@ namespace RootMotion.FinalIK {
 		 * */
 		public static void DrawRotationSphere(Vector3 position) {
 			Handles.color = colorRotationSphere;
-			Handles.SphereCap(0, position, Quaternion.identity, 2.0f);
+			Handles.SphereHandleCap(0, position, Quaternion.identity, 2.0f, Event.current.type);
 			Handles.color = Color.white;
 		}
 		
@@ -41,7 +41,7 @@ namespace RootMotion.FinalIK {
 		public static void DrawArrow(Vector3 position, Vector3 direction, Color color, string label = "", float size = 0.01f) {
 			Handles.color = color;
 			Handles.DrawLine(position, position + direction);
-			Handles.SphereCap(0, position + direction, Quaternion.identity, size);
+			Handles.SphereHandleCap(0, position + direction, Quaternion.identity, size, Event.current.type);
 			Handles.color = Color.white;
 			
 			if (label != "") {
@@ -55,13 +55,13 @@ namespace RootMotion.FinalIK {
 		 * Draws a handle for adjusting rotation limits in the scene
 		 * */
 		public static float DrawLimitHandle(float limit, Vector3 position, Quaternion rotation, float radius, string label, float openingValue) {
-			limit = Handles.ScaleValueHandle(limit,	position, rotation, radius,	Handles.SphereCap, 1);
+			limit = Handles.ScaleValueHandle(limit,	position, rotation, radius,	Handles.SphereHandleCap, 1);
 			string labelInfo = label + ": " + limit.ToString();
 			
 			// If value is 0, draw a button to 'open' the value, because we cant scale 0
 	        if (limit == 0) {
 				labelInfo = "Open " + label;
-				if (Handles.Button(position, rotation, radius * 0.2f, radius * 0.07f, Handles.SphereCap)) {
+				if (Handles.Button(position, rotation, radius * 0.2f, radius * 0.07f, Handles.SphereHandleCap)) {
 					limit = openingValue;
 				}
 			}
