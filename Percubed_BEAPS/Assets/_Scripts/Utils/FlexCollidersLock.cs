@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using NVIDIA.Flex;
 using System;
+using System.Collections;
 
 namespace Percubed.Flex
 {
@@ -11,25 +12,34 @@ namespace Percubed.Flex
      * and then set/reset when the Colliders change or are activated/deactivated (by calling ReLock).
      */
     [RequireComponent(typeof(FlexActor))]
+    [RequireComponent(typeof(BoxCollider))]
     public class FlexCollidersLock : MonoBehaviour
     {
-        [HideInInspector]
-        public bool moveCol;
-        [HideInInspector]
-        public BoxCollider myCol;
-
         FlexSoftActor m_actor;
+
         private Vector4[] m_particles; // local cache
+
+        private BoxCollider myCol;
+        // cache collider values to be able to detect changes:
+        private Vector3 myCol_center;
+        private Vector3 myCol_size;
+        private bool myCol_enabled;
+        private const float CHECK_INTERVAL = 0.5f; // seconds
 
         void Awake()
         {
+            myCol = GetComponent<BoxCollider>();
             m_actor = GetComponent<FlexSoftActor>();
         }
 
         void Start()
         {
+            myCol_center = myCol.center;
+            myCol_size = myCol.size;
+            myCol_enabled = myCol.enabled;
             m_particles = new Vector4[m_actor.indexCount];
             m_actor.onFlexUpdate += OnFlexUpdate;
+            StartCoroutine(CheckForColliderChange());
         }
 
         /**
@@ -66,11 +76,20 @@ namespace Percubed.Flex
             _particleData.SetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
             m_actor.asset.Rebuild();
         }
-        private void Update()
+
+        // check for a change in the local BoxCollider every so often
+        private IEnumerator CheckForColliderChange()
         {
-            if (moveCol)
+            while (Application.isPlaying)
             {
-                ReLock();
+                yield return new WaitForSeconds(CHECK_INTERVAL);
+                if (myCol.center != myCol_center || myCol.size != myCol_size || myCol.enabled != myCol_enabled)
+                {
+                    myCol_center = myCol.center;
+                    myCol_size = myCol.size;
+                    myCol_enabled = myCol.enabled;
+                    ReLock();
+                }
             }
         }
     }
