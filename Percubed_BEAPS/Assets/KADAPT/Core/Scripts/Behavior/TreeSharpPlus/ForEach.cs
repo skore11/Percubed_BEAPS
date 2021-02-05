@@ -43,7 +43,7 @@ namespace TreeSharpPlus
             object sender,
             ForEachEventArgs<T> e);
 
-        public event EventHandler<ForEachEventArgs<T>> ParticipantsChanged;
+        //public event EventHandler<ForEachEventArgs<T>> ParticipantsChanged;
 
         // The mutable participant list
         private Val<IEnumerable<T>> participants;
@@ -53,9 +53,6 @@ namespace TreeSharpPlus
 
         // Subtree factory (takes an participant and produces a subtree for it)
         private Func<T, Node> childFactory;
-
-        // Status of each child subtree
-        private List<RunStatus> childStatus;
 
         private HashSet<Node> childrenToTerminate;
 
@@ -97,13 +94,6 @@ namespace TreeSharpPlus
         /// <param name="participants">Immutable array of participants</param>
         //public ForEach(Func<T, Node> subtreeFactory, params T[] participants)
         //    : this(subtreeFactory, new Val<IEnumerable<T>>(participants)) { }
-
-        protected RunStatus TerminateChildren()
-        {
-            return TreeUtils.DoUntilComplete<Node>(
-                (Node n) => n.Terminate(),
-                this.Children);
-        }
 
         public void AddParticipant(T participant)
         {

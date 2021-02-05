@@ -31,7 +31,7 @@ public class UnitySteeringController : SteeringController
             {
                 this.navAgent.SetDestination(value);
                 this.target = value;
-				this.navAgent.Resume();
+				this.navAgent.isStopped = false;
             }
         }
     }
@@ -178,7 +178,7 @@ public class UnitySteeringController : SteeringController
 
     public override void Stop()
     {
-        this.navAgent.Stop();
+        this.navAgent.isStopped = true;
     }
 
     public override void Warp(Vector3 target)
