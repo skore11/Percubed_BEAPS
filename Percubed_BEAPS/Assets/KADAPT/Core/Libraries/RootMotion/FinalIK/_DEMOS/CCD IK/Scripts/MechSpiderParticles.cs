@@ -19,8 +19,10 @@ namespace RootMotion.FinalIK.Demos {
 		void Update() {
 			// Smoke
 			float inputMag = mechSpiderController.inputVector.magnitude;
-			particles.emissionRate = Mathf.Clamp(inputMag * 50, 30, 50);
-			particles.startColor = new Color (particles.startColor.r, particles.startColor.g, particles.startColor.b, Mathf.Clamp(inputMag, 0.4f, 1f));
+            var em = particles.emission;
+			em.rateOverTime = Mathf.Clamp(inputMag * 50, 30, 50);
+            var main = particles.main;
+			main.startColor = new Color (main.startColor.color.r, main.startColor.color.g, main.startColor.color.b, Mathf.Clamp(inputMag, 0.4f, 1f));
 		}
 	}
 }
