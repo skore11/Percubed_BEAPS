@@ -55,26 +55,44 @@ namespace Percubed.Flex
          */
         void OnFlexUpdate(FlexContainer.ParticleData _particleData)
         {
-            //ReLock();
             m_actor.onFlexUpdate -= OnFlexUpdate; // only run once!
+            // rather then calling rebuild on the asset (which would trigger a recreate of the whole actor instance)
+            // change the fixed particles directly. See also FlexActor.MoveFixedParticles
+            var prev_Fixed = m_actor.asset.fixedParticles;
             m_actor.asset.ClearFixedParticles();
+            //Debug.Log("Pre-loop. cleared particles, but kept copy of length: " + prev_Fixed.Length);
             _particleData.GetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
             // find all particles that are inside one of the colliders, and add it to fixedParticles:
             Collider[] to_be_locked_colls = GetComponents<Collider>();
             float particleRadius = m_actor.asset.particleSpacing; // not sure if this is the radius or the diameter
             for (int i = 0; i < m_particles.Length; i++)
             {
-                Collider[] overlapped_colls = Physics.OverlapSphere(m_particles[i], particleRadius);
+                bool previouslyLocked = Array.IndexOf<int>(prev_Fixed, i) > -1;
+                bool fixIt = false;
+                var particle = m_particles[i];
+                Collider[] overlapped_colls = Physics.OverlapSphere(particle, particleRadius);
                 foreach (Collider ovrlp_c in overlapped_colls)
                 {
                     if (Array.IndexOf<Collider>(to_be_locked_colls, ovrlp_c) > -1) {
-                        m_actor.asset.FixedParticle(i, true);
+                        fixIt = true;
                         break; // no need to check other colliders for this particle now
                     }
                 }
+                if (fixIt && !previouslyLocked)
+                {
+                    //Debug.Log("Changing particle to fixed: " + particle);
+                    m_actor.asset.FixedParticle(i, true);
+                    particle.w = 0f;
+                    m_particles[i] = particle;
+                }
+                if (!fixIt && (previouslyLocked || particle.w == 0f)) // reset weight even if particle was not locked!
+                {
+                    //Debug.Log("Changing particle back to not fixed: " + particle);
+                    particle.w = 1f / m_actor.massScale;
+                    m_particles[i] = particle;
+                }
             }
             _particleData.SetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
-            m_actor.asset.Rebuild();
         }
 
         // check for a change in the local BoxCollider every so often
