@@ -6,12 +6,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
 using System.IO;
 using System;
-using uFlex;
 //using UnityEditor;
 
+namespace Percubed.Flex
+{
 
-
-    public class CreateBehavior : FlexProcessor
+    public class CreateBehavior : MonoBehaviour //FlexProcessor
     {
         //public Texture btnTexture;
 
@@ -29,13 +29,13 @@ using uFlex;
 
         public InputField behaviorName;
 
-        public FlexAnimation flexAnim;
+        public object flexAnim;
 
         public Animator animator;
-        
-    //private bool once;
+
+        //private bool once;
         public GetBehaviors getBehaviors;
-        
+
         //public IntVector3Dictionary behavior = new IntVector3Dictionary();
         //public IntVector3Dictionary behavior = new IntVector3Dictionary();
 
@@ -45,130 +45,133 @@ using uFlex;
 
         public SerializableMap<string, SerializableMap<int, Vector3>> container = new SerializableMap<string, SerializableMap<int, Vector3>>();
 
-    //[Serializable]
-    //public class TestMap : MyMap<int, Vector3> { }
-    //public TestMap testMap;
-    //public MyMap<int, Vector3> mybehavior = new MyMap<int, Vector3>();
+        //[Serializable]
+        //public class TestMap : MyMap<int, Vector3> { }
+        //public TestMap testMap;
+        //public MyMap<int, Vector3> mybehavior = new MyMap<int, Vector3>();
 
-    //public InputField myinputfield;
-        public FlyCamera flyCam;
+        //public InputField myinputfield;
+        public object flyCam;
         private Vector3 reset;
         public bool flyCamEnable = false;
         private FlexPlayerController playerController;
 
-        private UIController m_UIController;
+        private object m_UIController;
 
         private FileStream file;
         void Start()
         {
-             //flyCam = FindObjectOfType<FlyCamera>();
-            m_UIController = FindObjectOfType<UIController>();
+            //flyCam = FindObjectOfType<FlyCamera>();
+//            m_UIController = FindObjectOfType<UIController>();
             playerController = FindObjectOfType<FlexPlayerController>();
             //reset = flyCam.resetTransform;
             //print(flyCam.resetTransform);
         }
 
 
-        public override void PostContainerUpdate(FlexSolver solver, FlexContainer cntr, FlexParameters parameters)
+        public void PostContainerUpdate(object solver, object cntr, object parameters)
         {
 
             //Note: might need to use a Coroutine instead!
 
             //Stop flex animation first then track particle positions for this object;
-            if (m_UIController.turnOffAnim)
+//            if (m_UIController.turnOffAnim)
             {
                 flyCamEnable = true;
-            //List<Vector3> templist = null;
-            //Vector3 temp;
-            //flexAnim.enabled = false;
-            animator.enabled = false;
+                //List<Vector3> templist = null;
+                //Vector3 temp;
+                //flexAnim.enabled = false;
+                animator.enabled = false;
 
-            //this.GetComponent<FlexAnimation>().enabled = false;//might have to move this to start to optimize
+                //this.GetComponent<FlexAnimation>().enabled = false;//might have to move this to start to optimize
 
-            flyCam.enabled = true;
-            if (playerController != null)
-            {
-                playerController.enabled = false;
-            }
-                
+ //               flyCam.enabled = true;
+                if (playerController != null)
+                {
+                    playerController.enabled = false;
+                }
+
                 //StartCoroutine(MoveParticle());
                 //int x = this.GetComponent<FlexMouseDrag>().m_mouseParticle;
 
 
-                if (m_UIController.doneMoving)
-                {
-                m_UIController.turnOffAnim = false;
-                m_UIController.doneMoving = false;
-                    
+ //               if (m_UIController.doneMoving)
+ //               {
+ //                   m_UIController.turnOffAnim = false;
+//                    m_UIController.doneMoving = false;
+
                     //print(reset.position);
-                    playerController.enabled = true;
-                }
-                
+ //                   playerController.enabled = true;
+ //               }
+
             }
 
-            if (m_UIController.turnOnAnim)
+//            if (m_UIController.turnOnAnim)
             {
-                
+
                 //Note: need to save the behavior as an asset possibly or JSON?, need to ask stefan.
                 //string jsonData = JSONSerializer.ToJson<Dictionary<int, Vector3>>(behavior);
                 //File.WriteAllText(Application.persistentDataPath + "/test.json", jsonData);
 
                 // test C# way of serializing:
-                
+
                 XmlSerializer xmlserializer = new XmlSerializer(labeledBehavior.GetType());
-            //FileStream file = File.Open( "C:/Users/siciit/AppData/LocalLow/DefaultCompany/Nvidia_softAnim_trials/labbehaviorTrial2.xml", FileMode.Open, FileAccess.Write);
-            //FileStream file = File.Open(Application.persistentDataPath + "/labbehaviorTrial2.xml", FileMode.Open, FileAccess.Read);
-            if (!System.IO.File.Exists(Application.persistentDataPath + "/labbehaviorTrial3.xml"))
-            {
-               /* FileStream*/ file = File.Open(Application.persistentDataPath + "/labbehaviorTrial3.xml", FileMode.OpenOrCreate, FileAccess.Write);
-            }
-            else
-            {
-                /*FileStream */file = File.Open(Application.persistentDataPath + "/labbehaviorTrial3.xml", FileMode.Open, FileAccess.Write);
-            }
-                
+                //FileStream file = File.Open( "C:/Users/siciit/AppData/LocalLow/DefaultCompany/Nvidia_softAnim_trials/labbehaviorTrial2.xml", FileMode.Open, FileAccess.Write);
+                //FileStream file = File.Open(Application.persistentDataPath + "/labbehaviorTrial2.xml", FileMode.Open, FileAccess.Read);
+                if (!System.IO.File.Exists(Application.persistentDataPath + "/labbehaviorTrial3.xml"))
+                {
+                    /* FileStream*/
+                    file = File.Open(Application.persistentDataPath + "/labbehaviorTrial3.xml", FileMode.OpenOrCreate, FileAccess.Write);
+                }
+                else
+                {
+                    /*FileStream */
+                    file = File.Open(Application.persistentDataPath + "/labbehaviorTrial3.xml", FileMode.Open, FileAccess.Write);
+                }
+
                 xmlserializer.Serialize(file, labeledBehavior);
                 file.Flush();
                 file.Close();
                 flyCamEnable = false;
-            //JSONSerializer.Save<Dictionary<int, Vector3>>("test", behavior);
-            //if (behaviorName != null)
-            //    {
-            //        print(behaviorName.text);
-            //    }
-            //flexAnim.enabled = true;
-            animator.enabled = true;
+                //JSONSerializer.Save<Dictionary<int, Vector3>>("test", behavior);
+                //if (behaviorName != null)
+                //    {
+                //        print(behaviorName.text);
+                //    }
+                //flexAnim.enabled = true;
+                animator.enabled = true;
                 //this.GetComponent<FlexAnimation>().enabled = true;
-            m_UIController.turnOnAnim = false;
-          
+ //               m_UIController.turnOnAnim = false;
+
             }
 
-            if (m_UIController.showAnim)
+//            if (m_UIController.showAnim)
             {
-            m_UIController.showAnim = false;
-            XmlSerializer readSerialize = new XmlSerializer(typeof(SerializableMap<string, SerializableMap<int, Vector3>>));
-            //FileStream file = new FileStream(Application.persistentDataPath + "/labbehaviorTrial2.xml", FileMode.Open);
-            ///*FileStream */file = File.Open("C:/Users/siciit/AppData/LocalLow/DefaultCompany/Nvidia_softAnim_trials/labbehaviorTrial2.xml", FileMode.Open, FileAccess.Read);
-            /*FileStream*/ file = File.Open(Application.persistentDataPath + "/labbehaviorTrial3.xml", FileMode.Open, FileAccess.Read);
-            print(file.Name);
-            container = readSerialize.Deserialize(file) as SerializableMap<string, SerializableMap<int, Vector3>>;
-            foreach (var var in container)
-            {
-                print(var.Key);
-                print(var.Value);
-            }
+ //               m_UIController.showAnim = false;
+                XmlSerializer readSerialize = new XmlSerializer(typeof(SerializableMap<string, SerializableMap<int, Vector3>>));
+                //FileStream file = new FileStream(Application.persistentDataPath + "/labbehaviorTrial2.xml", FileMode.Open);
+                ///*FileStream */file = File.Open("C:/Users/siciit/AppData/LocalLow/DefaultCompany/Nvidia_softAnim_trials/labbehaviorTrial2.xml", FileMode.Open, FileAccess.Read);
+                /*FileStream*/
+                file = File.Open(Application.persistentDataPath + "/labbehaviorTrial3.xml", FileMode.Open, FileAccess.Read);
+                print(file.Name);
+                container = readSerialize.Deserialize(file) as SerializableMap<string, SerializableMap<int, Vector3>>;
+                foreach (var var in container)
+                {
+                    print(var.Key);
+                    print(var.Value);
+                }
 
 
-            //this.GetComponent<GetBehaviors>().localContainer = container;
-            //this.GetComponent<GetBehaviors>().gotXML = true;
+                //this.GetComponent<GetBehaviors>().localContainer = container;
+                //this.GetComponent<GetBehaviors>().gotXML = true;
 
-            getBehaviors.localContainer = container;
-            getBehaviors.gotXML = true;
+                getBehaviors.localContainer = container;
+                getBehaviors.gotXML = true;
 
-            //FindObjectOfType<GetBehaviors> ().localContainer = container;
-            //FindObjectOfType<GetBehaviors>().gotXML = true;
-            file.Flush();
-            file.Close();
+                //FindObjectOfType<GetBehaviors> ().localContainer = container;
+                //FindObjectOfType<GetBehaviors>().gotXML = true;
+                file.Flush();
+                file.Close();
             }
             //store list ofvectors that have changed positions;
         }
@@ -191,7 +194,7 @@ using uFlex;
 
             //XmlFix.SerializeXmlToFile(behavior, "test");
             //TODO: make IntVector3Dictionary a serializable generic class
-            
+
         }
 
         //void PrintContents(IntVector3Dictionary dict)
@@ -243,6 +246,5 @@ using uFlex;
         //    }
     }
 
-    
+}
 
-    

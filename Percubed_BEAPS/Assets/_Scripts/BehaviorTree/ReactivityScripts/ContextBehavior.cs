@@ -7,13 +7,13 @@ using UnityEngine.Events;
 
 //TODO: perform solver sub step and iteration changes on solver parameters only on the current flex game object 
 //and not for all flex game objects in the Flex container.
-namespace uFlex
+namespace Percubed.Flex
 {
-    public class ContextBehavior : FlexProcessor
+    public class ContextBehavior : MonoBehaviour // FlexProcessor
     {
-        public FlexSolver flexSolver;
-        public FlexParameters flexParams;
-        public FlexContainer flexCont;
+        public Object flexSolver;
+        public Object flexParams;
+        public Object flexCont;
 
         [HideInInspector]
         public List<int> pInd;
@@ -48,7 +48,7 @@ namespace uFlex
         //}
 
         // Start is called before the first frame update
-        public override void PostContainerUpdate(FlexSolver solver, FlexContainer cntr, FlexParameters parameters)
+        public void PostContainerUpdate(Object solver, Object cntr, Object parameters)
         {
             //flexSolver.m_solverSubSteps = (int) solverSubSteps;
             //flexParams.m_numIterations = (int) numOfIterations;
@@ -127,16 +127,16 @@ namespace uFlex
             switch (other.tag)
             {
                 case ("Rigid"):
-                    flexSolver.m_solverSubSteps = 3;
+ //                   flexSolver.m_solverSubSteps = 3;
                     break;
                 case ("loose"):
-                    flexSolver.m_solverSubSteps = 1;
+ //                   flexSolver.m_solverSubSteps = 1;
                     break;
                 case ("SoftBody"):
-                    flexParams.m_numIterations = 3;
+  //                  flexParams.m_numIterations = 3;
                     break;
                 case ("RigidBody"):
-                    flexParams.m_numIterations = 20;
+//                    flexParams.m_numIterations = 20;
                     break;
                 case ("test"):
                     print("test object");
@@ -159,25 +159,25 @@ namespace uFlex
         //    numOfIterations = GUI.HorizontalSlider(new Rect(100, 100, 120, 50), numOfIterations, 1.0F, 20.0F);
         //}
 
-        void resetParticle(FlexContainer cntr, List<int> pIndex)
+        void resetParticle(Object cntr, List<int> pIndex)
         {
             if (pIndex.Count != 0)
             {
                 foreach (var index in pInd)
                 {
                     //print(index);
-                    cntr.m_particles[index].invMass = 1.0f;
+ //                   cntr.m_particles[index].invMass = 1.0f;
                 }
 
             }
         }
 
-        void deformParticle(FlexContainer cntr, List<int> pIndex, List<Vector3> pPos)
+        void deformParticle(Object cntr, List<int> pIndex, List<Vector3> pPos)
         {
             for(int i = 0; i  < pIndex.Count; i++)
             {               
-                cntr.m_particles[pIndex[i]].invMass = 0.0f;
-                cntr.m_particles[pIndex[i]].pos = pPos[i];
+ //               cntr.m_particles[pIndex[i]].invMass = 0.0f;
+ //               cntr.m_particles[pIndex[i]].pos = pPos[i];
             }
             
             print("works");

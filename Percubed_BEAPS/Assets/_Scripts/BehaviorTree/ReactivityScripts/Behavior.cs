@@ -4,7 +4,10 @@ using UnityEngine;
 
 //Public interface for every behavior type
 
-public interface IStorable
+namespace Percubed.Flex
 {
-    
+    public interface IStorable
+    {
+
+    }
 }
