@@ -94,6 +94,9 @@ public class SkinnedMorphTargets : MonoBehaviour
     /// </summary>
     private Mesh[] sourceMeshes;
 
+    //Need to check which vertices are highlighted to allow for morph to happen
+    public NeighborVertexHighlight vertexHighlight;
+
 	/// <summary>
 	/// Start the script - attach the targets 
 	/// </summary>
@@ -217,46 +220,70 @@ public class SkinnedMorphTargets : MonoBehaviour
     /// </summary>
     void CalculateMorphedVertices()
     {
-        morphVertexIndices = new IndexArray[sourceMeshes.Length];
-        for (int submeshNum = 0; submeshNum < sourceMeshes.Length; submeshNum++)
+
+        //Copy vertex indices for only the vertices highlighted to be blended 
+        if (vertexHighlight.indexNeighbors.Values.Count != 0)
         {
-            List<int> morphedVertices = new List<int>();
-
-            Vector3[] originalVertices = sourceMeshes[submeshNum].vertices;
-            Vector3[] originalNormals = sourceMeshes[submeshNum].normals;
-
-            //The fetch seems to copy vertices, so prefetch here
-            List<Vector3[]> poseVertices = new List<Vector3[]>();
-            List<Vector3[]> poseNormals = new List<Vector3[]>();
-            for (int i = 0; i < morphTargets.Length; i++)
+            morphVertexIndices = new IndexArray[sourceMeshes.Length];
+            for (int submeshNum = 0; submeshNum < sourceMeshes.Length; submeshNum++)
             {
-                poseVertices.Add(morphTargets[i][submeshNum].vertices);
-                poseNormals.Add(morphTargets[i][submeshNum].normals);
+                List<int> morphedVertices = new List<int>();
+                foreach (var i in vertexHighlight.indexNeighbors)
+                {
+                    //print(i.Value.Index);
+                    morphedVertices.Add(i.Value.Index);
+                }
+                IndexArray idxArray = new IndexArray();
+                idxArray.indices = new int[morphedVertices.Count];
+                morphedVertices.CopyTo(idxArray.indices);
+                morphVertexIndices[submeshNum] = idxArray;
             }
+        }
 
-            for (int j = 0; j < originalVertices.Length; j++)
+        else
+        {
+            morphVertexIndices = new IndexArray[sourceMeshes.Length];
+            for (int submeshNum = 0; submeshNum < sourceMeshes.Length; submeshNum++)
             {
+                List<int> morphedVertices = new List<int>();
+
+                Vector3[] originalVertices = sourceMeshes[submeshNum].vertices;
+                Vector3[] originalNormals = sourceMeshes[submeshNum].normals;
+
+                //The fetch seems to copy vertices, so prefetch here
+                List<Vector3[]> poseVertices = new List<Vector3[]>();
+                List<Vector3[]> poseNormals = new List<Vector3[]>();
                 for (int i = 0; i < morphTargets.Length; i++)
                 {
-                    Debug.Log("check vertex " + poseVertices[i][j] + originalVertices[j]);
-                    if (this.dynamicMorph ||
-                        poseVertices[i][j] != originalVertices[j] || 
-                        poseNormals[i][j] != originalNormals[j])
+                    poseVertices.Add(morphTargets[i][submeshNum].vertices);
+                    poseNormals.Add(morphTargets[i][submeshNum].normals);
+                }
+
+                for (int j = 0; j < originalVertices.Length; j++)
+                {
+                    for (int i = 0; i < morphTargets.Length; i++)
                     {
-                        morphedVertices.Add(j);
-                        break;
+                        Debug.Log("check vertex " + poseVertices[i][j] + originalVertices[j]);
+                        if (this.dynamicMorph ||
+                            poseVertices[i][j] != originalVertices[j] ||
+                            poseNormals[i][j] != originalNormals[j])
+                        {
+                            morphedVertices.Add(j);
+                            break;
+                        }
                     }
                 }
-            }
-            IndexArray idxArray = new IndexArray();
-            idxArray.indices = new int[morphedVertices.Count];
-            morphedVertices.CopyTo(idxArray.indices);
-            morphVertexIndices[submeshNum] = idxArray;
-            Debug.Log(string.Format(
-                "For submesh {0}: morphVertexIndices.length {1}.",
-                submeshNum, morphVertexIndices[submeshNum].Length));
+                IndexArray idxArray = new IndexArray();
+                idxArray.indices = new int[morphedVertices.Count];
+                morphedVertices.CopyTo(idxArray.indices);
+                morphVertexIndices[submeshNum] = idxArray;
+                Debug.Log(string.Format(
+                    "For submesh {0}: morphVertexIndices.length {1}.",
+                    submeshNum, morphVertexIndices[submeshNum].Length));
 
+            }
         }
+        
     }
 
     /// <summary>

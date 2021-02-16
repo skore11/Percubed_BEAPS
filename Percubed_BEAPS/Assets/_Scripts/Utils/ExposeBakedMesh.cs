@@ -17,6 +17,7 @@ public class ExposeBakedMesh : MonoBehaviour
     void Start()
     {
         bakedMesh = new Mesh();
+        
     }
 
     void LateUpdate()
