@@ -59,8 +59,7 @@ namespace Percubed.Flex
             // rather then calling rebuild on the asset (which would trigger a recreate of the whole actor instance)
             // change the fixed particles directly. See also FlexActor.MoveFixedParticles
             var prev_Fixed = m_actor.asset.fixedParticles;
-            m_actor.asset.ClearFixedParticles();
-            //Debug.Log("Pre-loop. cleared particles, but kept copy of length: " + prev_Fixed.Length);
+            m_actor.asset.ClearFixedParticles(); // clear all and re-fix below if needed, so that particle.w is also changed
             _particleData.GetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
             // find all particles that are inside one of the colliders, and add it to fixedParticles:
             Collider[] to_be_locked_colls = GetComponents<Collider>();
@@ -78,7 +77,7 @@ namespace Percubed.Flex
                         break; // no need to check other colliders for this particle now
                     }
                 }
-                if (fixIt && !previouslyLocked)
+                if (fixIt)
                 {
                     //Debug.Log("Changing particle to fixed: " + particle);
                     m_actor.asset.FixedParticle(i, true);
@@ -93,6 +92,8 @@ namespace Percubed.Flex
                 }
             }
             _particleData.SetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
+            //Debug.Log(String.Format("FlexCollidersLock: fixed particles changed from {0} to {1}",
+            //        prev_Fixed.Length, m_actor.asset.fixedParticles.Length));
         }
 
         // check for a change in the local BoxCollider every so often
