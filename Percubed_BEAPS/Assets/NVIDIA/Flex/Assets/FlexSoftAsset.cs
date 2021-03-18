@@ -97,6 +97,7 @@ namespace NVIDIA.Flex
         public int referenceShape
         {
             get { return m_referenceShape; }
+            set { m_referenceShape = value; }
         }
 
         #endregion
