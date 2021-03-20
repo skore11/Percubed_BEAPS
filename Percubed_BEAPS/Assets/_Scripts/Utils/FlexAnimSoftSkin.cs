@@ -174,10 +174,15 @@ namespace Percubed.Flex
             Vector3 _tempVector3Local;
             Vector3 _tempVector3Global; // (split into three different temps for DEBUG)
             Vector3 _tempVector3Diff;
+            Matrix4x4 localRotation = Matrix4x4.Rotate(Quaternion.Inverse(this.transform.localRotation));
             for (int i = 0; i < particlePositions.Length; i++)
             {
-                // Now: First move it back to local space relative to its root bone.
-                _tempVector3Local = referenceAnimSkin.rootBone.InverseTransformPoint(particlePositions[i]);
+                // Now: First move it back to local space relative where its root bone is (i.e. to its parent).
+                _tempVector3Local = referenceAnimSkin.rootBone.parent.InverseTransformPoint(particlePositions[i]);
+                // HACK: undo rotation of the FlexObject's GameObject needed to align flex model created from mesh
+                // with mesh as it is oriented after import (Ideally they should align of course)
+                // There might be a cleaner way to do that.
+                _tempVector3Local = localRotation.MultiplyPoint3x4(_tempVector3Local);
                 // And then move it back to world space relative to this GameObject
                 // and calculate how far it is from its intended (animation-)position:
                 // (casting a Vector4 to a Vector3 automatically discards the w component)
@@ -204,7 +209,7 @@ namespace Percubed.Flex
                 // Note: we replicate roughly what ApplyImpulses in Actor would do, i.e. scale by weight:
                 // impulse divided by particle mass (which is 1/w):
                 //m_actor.ApplyImpulse(particleDisplacementVector[i], i);
-                m_velocities[i] += particleDisplacements[i] * m_particles[i].w * 0.1f ; // DEBUG: temp. small factor for clarity
+                m_velocities[i] += particleDisplacements[i] * m_particles[i].w;// * 0.1f ; // DEBUG: temp. small factor for clarity
                 // TODO: find physically appropriate factor!
             }
             _particleData.SetVelocities(m_actor.indices[0], m_actor.indexCount, m_velocities);
