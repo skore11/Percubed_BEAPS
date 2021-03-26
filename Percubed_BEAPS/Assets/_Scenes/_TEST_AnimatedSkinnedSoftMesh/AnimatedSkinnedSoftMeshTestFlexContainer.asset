@@ -21,7 +21,7 @@ MonoBehaviour:
   m_simpleParticleFriction: 0.1
   m_simpleParticleRestitution: 0
   m_simpleParticleAdhesion: 0
-  m_simpleParticleDamping: 0
+  m_simpleParticleDamping: 0.5
   m_simpleClothWind: {x: 0, y: 0, z: 0}
   m_simpleClothDrag: 0
   m_simpleClothLift: 0
@@ -34,17 +34,17 @@ MonoBehaviour:
   m_simpleFluidMaxScale: 1
   m_maxParticles: 10000
   m_maxDiffuse: 0
-  m_maxNeighbors: 100
+  m_maxNeighbors: 200
   m_maxContacts: 6
   m_recreateSolver: 0
-  m_substepCount: 3
+  m_substepCount: 2
   m_iterationCount: 5
   m_gravity: {x: 0, y: -9.81, z: 0}
-  m_radius: 0.2
+  m_radius: 0.15
   m_solidRest: 0.1
-  m_fluidRest: 0.1
-  m_staticFriction: 0.3
-  m_dynamicFriction: 0.2
+  m_fluidRest: 0.095
+  m_staticFriction: 0.1
+  m_dynamicFriction: 0.1
   m_particleFriction: 0.1
   m_restitution: 0
   m_adhesion: 0
@@ -53,17 +53,17 @@ MonoBehaviour:
   m_maxAcceleration: 3.4028235e+38
   m_shockPropagation: 0
   m_dissipation: 0
-  m_damping: 0
+  m_damping: 0.5
   m_wind: {x: 0, y: 0, z: 0}
   m_drag: 0
   m_lift: 0
   m_fluid: 1
   m_cohesion: 0.025
-  m_surfaceTension: 0
+  m_surfaceTension: 0.01
   m_viscosity: 0
   m_vorticityConfinement: 0
   m_anisotropyScale: 2
-  m_anisotropyMin: 0.1
+  m_anisotropyMin: 0.2
   m_anisotropyMax: 1
   m_smoothing: 0
   m_solidPressure: 0
