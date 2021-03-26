@@ -12,6 +12,9 @@ namespace Percubed.Flex
 
         public ShockEffectFlex shock = null;
 
+        public SkinnedMorphTargets morphComponent = null;
+        //Insert the merging component here for the skinned mesh target
+
         //public int flexParams;
 
         private bool iterBool;
@@ -28,6 +31,13 @@ namespace Percubed.Flex
             this.melt = this.GetComponent<MeltEffectFlex>();
             this.shock = this.GetComponent<ShockEffectFlex>();
             //this.flexParams = this.GetComponent<FlexParameters>();
+        }
+
+        public Node Node_blend(float value)
+        {
+            return new LeafInvoke(
+                () => this.morphComponent.blendWeights[0] = value
+                );
         }
 
         public Node Node_Melt(Val<bool> trigger)

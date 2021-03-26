@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 8b6fec708b9d2b041b02dfcb25e9d5e7
 ModelImporter:
-  serializedVersion: 20101
+  serializedVersion: 20200
   internalIDToNameTable:
   - first:
       1: 100000
@@ -583,7 +583,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: Hips
+    rootMotionBoneName: Reference
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
@@ -592,6 +592,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

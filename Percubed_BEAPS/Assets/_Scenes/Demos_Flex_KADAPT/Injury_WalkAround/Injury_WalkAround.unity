@@ -441,6 +441,8 @@ GameObject:
   - component: {fileID: 623970392}
   - component: {fileID: 623970394}
   - component: {fileID: 623970393}
+  - component: {fileID: 623970396}
+  - component: {fileID: 623970395}
   m_Layer: 0
   m_Name: WarrokFlex
   m_TagString: Untagged
@@ -485,8 +487,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2195937, y: 0.934216, z: 0.21887511}
-  m_Center: {x: 0.013267189, y: 1.308661, z: -0.00043091178}
+  m_Size: {x: 0.2195937, y: 0.43432355, z: 0.21887511}
+  m_Center: {x: 0.013267189, y: 1.0587147, z: -0.00043091178}
 --- !u!114 &623970387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,7 +501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b16a8afaafc82f4fb495adb5cb6cd23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceAnimSkin: {fileID: 623970390}
+  referenceAnimSkin: {fileID: 1788155594}
   particleBoneWeights: []
 --- !u!114 &623970388
 MonoBehaviour:
@@ -65223,6 +65225,37 @@ MonoBehaviour:
   sm_target: {fileID: 859151213}
   morphFrom: {fileID: 623970393}
   morphTo: {fileID: 1788155595}
+--- !u!114 &623970395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623970383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33cdbfa99e42eac419fe7e84c289cd4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mouseParticle: -1
+  m_mousePos: {x: 0, y: 0, z: 0}
+  picked: 0
+  pMouseParticleID: 0
+  pMouseParticlePos: {x: 0, y: 0, z: 0}
+--- !u!114 &623970396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623970383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbecda49462e6254c89493e087d8f657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_mouseParticle: -1
+  m_mousePos: {x: 0, y: 0, z: 0}
 --- !u!4 &632611789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3570864772355295989, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
@@ -66487,6 +66520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melt: {fileID: 949615809}
   shock: {fileID: 949615808}
+  morphComponent: {fileID: 0}
   flex_cont: {fileID: 11400000, guid: 0211764c84df2d64fae2bfdcd18a88a0, type: 2}
 --- !u!4 &771534661 stripped
 Transform:
@@ -66527,11 +66561,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859151212}
-  - component: {fileID: 859151214}
   - component: {fileID: 859151213}
-  - component: {fileID: 859151215}
   - component: {fileID: 859151216}
   - component: {fileID: 859151217}
+  - component: {fileID: 859151214}
+  - component: {fileID: 859151215}
   m_Layer: 0
   m_Name: Warrok_morph_target
   m_TagString: Untagged
@@ -66552,7 +66586,7 @@ Transform:
   m_Children:
   - {fileID: 945427609}
   m_Father: {fileID: 1672805315}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &859151213
 MonoBehaviour:
@@ -66623,13 +66657,78 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 3488260959152339900, guid: 1d215485d9da07542a13ddb1aaa709dc, type: 3}
-  m_Bones: []
+  m_Mesh: {fileID: 3488260959152339900, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
+  m_Bones:
+  - {fileID: 1960512175}
+  - {fileID: 1328221569}
+  - {fileID: 713805584}
+  - {fileID: 914318727}
+  - {fileID: 1964651436}
+  - {fileID: 1182901245}
+  - {fileID: 97867659}
+  - {fileID: 632611789}
+  - {fileID: 1124962866}
+  - {fileID: 602071839}
+  - {fileID: 995411393}
+  - {fileID: 854956695}
+  - {fileID: 1339387436}
+  - {fileID: 1996703765}
+  - {fileID: 1108444394}
+  - {fileID: 53135193}
+  - {fileID: 597218506}
+  - {fileID: 206325546}
+  - {fileID: 130740497}
+  - {fileID: 384180774}
+  - {fileID: 171977208}
+  - {fileID: 1031505139}
+  - {fileID: 777191369}
+  - {fileID: 1635247166}
+  - {fileID: 69815559}
+  - {fileID: 911759878}
+  - {fileID: 1700144165}
+  - {fileID: 935670920}
+  - {fileID: 1564094006}
+  - {fileID: 863245818}
+  - {fileID: 620629834}
+  - {fileID: 1821767793}
+  - {fileID: 2132159376}
+  - {fileID: 955585201}
+  - {fileID: 874073151}
+  - {fileID: 1206966139}
+  - {fileID: 81535414}
+  - {fileID: 1853939335}
+  - {fileID: 464219579}
+  - {fileID: 570825696}
+  - {fileID: 203372333}
+  - {fileID: 1211390379}
+  - {fileID: 950586329}
+  - {fileID: 866858296}
+  - {fileID: 24449067}
+  - {fileID: 1708411559}
+  - {fileID: 1425090246}
+  - {fileID: 23162767}
+  - {fileID: 1230088760}
+  - {fileID: 782783999}
+  - {fileID: 521085929}
+  - {fileID: 545911363}
+  - {fileID: 1527063735}
+  - {fileID: 1892939498}
+  - {fileID: 1016503555}
+  - {fileID: 36843922}
+  - {fileID: 1620595566}
+  - {fileID: 498907210}
+  - {fileID: 900916352}
+  - {fileID: 835633591}
+  - {fileID: 1889760081}
+  - {fileID: 1303858026}
+  - {fileID: 272443249}
+  - {fileID: 1032199264}
+  - {fileID: 1758124693}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
+  m_RootBone: {fileID: 1758124693}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+    m_Center: {x: 0.058550328, y: 0.2621395, z: 0.05519414}
+    m_Extent: {x: 0.9874618, y: 1.1703055, z: 0.5917473}
   m_DirtyAABB: 0
 --- !u!114 &859151215
 MonoBehaviour:
@@ -66651,7 +66750,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859151211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3943d9d8e1d95c04dac94b59b0bac974, type: 3}
   m_Name: 
@@ -66666,7 +66765,7 @@ MeshCollider:
   m_GameObject: {fileID: 859151211}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -121180,13 +121279,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541750378}
-  m_LocalRotation: {x: -0, y: 0.024617251, z: -0, w: 0.99969697}
-  m_LocalPosition: {x: 0.024250925, y: 1.8180001, z: -1.4757806}
+  m_LocalRotation: {x: -0, y: -0.99994713, z: -0, w: 0.010284472}
+  m_LocalPosition: {x: -0.7757512, y: 2.638, z: 9.036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1672805315}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 2.821, z: 0}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: -178.821, z: 0}
 --- !u!4 &1564094006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6599538733376268243, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
@@ -121221,7 +121320,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
       propertyPath: m_LocalPosition.x
@@ -121304,6 +121403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   melt: {fileID: 623970392}
   shock: {fileID: 623970384}
+  morphComponent: {fileID: 859151213}
   flex_cont: {fileID: 11400000, guid: 0211764c84df2d64fae2bfdcd18a88a0, type: 2}
 --- !u!114 &1672805302
 MonoBehaviour:
@@ -122413,6 +122513,11 @@ Transform:
 --- !u!1 &1788155593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8125573954171918538, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
+  m_PrefabInstance: {fileID: 1643873135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1788155594 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3103283877742750325, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
   m_PrefabInstance: {fileID: 1643873135}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1788155595

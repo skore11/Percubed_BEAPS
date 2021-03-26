@@ -89,16 +89,8 @@ namespace Percubed.Flex
             Val<Vector3> position = Val.V(() => target.position);
             return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_OrientTowards(position), new LeafWait(500), participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button));
         }
-        //protected Node ST_Iter(iter iter)
-        //{
 
-        //    foreach (int item in iter.GetValues(typeof(iter)))
-        //    {
-        //        print(item);
-        //        return new Sequence(participant2.GetComponent<FlexController>().Node_Iter(item)); 
-        //    }
-        //    return new Selector();
-        //}
+       
 
         //protected Node ST_Iter(int iter)
         //{
