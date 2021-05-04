@@ -67,7 +67,7 @@ namespace Percubed.Flex
             //base.OnFlexUpdate(_particleData);
             if (tmp_part_id != -1)
             {
-                m_particles[tmp_part_id].w = 0.0f;
+                //m_particles[tmp_part_id].w = 0.0f;
                 m_actor.asset.FixedParticle(m_mouseParticle, true);
                 m_velocities[tmp_part_id] = new Vector3();
             }

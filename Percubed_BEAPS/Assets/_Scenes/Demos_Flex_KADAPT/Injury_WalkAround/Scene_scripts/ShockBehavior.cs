@@ -90,7 +90,10 @@ namespace Percubed.Flex
             return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_OrientTowards(position), new LeafWait(500), participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button));
         }
 
-       
+        //protected Node ST_blend()
+        //{
+        //    return new Parallel();
+        //}
 
         //protected Node ST_Iter(int iter)
         //{

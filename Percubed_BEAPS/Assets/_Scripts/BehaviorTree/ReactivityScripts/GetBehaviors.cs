@@ -5,10 +5,7 @@ using UnityEngine;
 
 namespace Percubed.Flex
 {
-
-    //Define various behaviors as reactions to environment ex: scared, calm, preying 
-    //Have to acccess the Activate Voxels script to allow for each of the behaviors
-    //Activate voxels differently for a given scenario
+   
     public class GetBehaviors : MonoBehaviour
     {
         //storing the bounds behaviors first

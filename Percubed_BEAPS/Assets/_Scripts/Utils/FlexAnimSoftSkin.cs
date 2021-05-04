@@ -167,6 +167,7 @@ namespace Percubed.Flex
                     // moving the vertex of the mesh to where it should be in world space for the reference animation right now.
                     // Adding the VertOffsetVector gives us the location of the particle according to this bone right now
                     particlePositions[pbw.particleIndex] += pbw.weight * (t.TransformPoint(pbw.localPosition) + vertOffsetVectors[pbw.particleIndex]);
+
                 }
             }
             // We now have the particlePositions as they should be based on the animation, in world space,

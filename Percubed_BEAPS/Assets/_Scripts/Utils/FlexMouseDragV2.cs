@@ -24,7 +24,7 @@ namespace Percubed.Flex
 
         private float m_mouseMass = 0;
 
-        private float m_mouseT = 0;
+        private float m_mouseT = 1;
 
         public Vector3 m_mousePos = new Vector3(); // made public to allow use in subclass! --strank
 
@@ -59,10 +59,12 @@ namespace Percubed.Flex
                     Debug.Log("picked: " + m_mouseParticle);
 
                     m_mousePos = ray.origin + ray.direction * m_mouseT;
+                    //m_mousePos = this.transform.InverseTransformPoint(m_mousePos);
+                    print("mouse picked particle pos:" + " x: " + m_mousePos.x + " y: " + m_mousePos.y + " z: " + m_mousePos.z);
                     m_mouseMass = m_particles[m_mouseParticle].w;
                     //print("mouse particle mass:" + m_mouseMass);
                     //m_actor.asset.FixedParticle(m_mouseParticle, true);
-                    m_particles[m_mouseParticle].w = 0.0f;
+                    //m_particles[m_mouseParticle].w = 1.0f;
 
                 }
             }
@@ -83,17 +85,20 @@ namespace Percubed.Flex
                 //    Flex.GetVelocities(m_solverPtr, m_cntr.m_velocitiesHndl.AddrOfPinnedObject(), m_cntr.m_maxParticlesCount, Flex.Memory.eFlexMemoryHost);
 
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                m_mousePos = ray.origin + ray.direction * m_mouseT;
-
+                m_mousePos = ray.origin - ray.direction * m_mouseT;
+                //m_mousePos = this.transform.InverseTransformPoint(m_mousePos);
                 Vector3 pos = new Vector3(m_particles[m_mouseParticle].x, m_particles[m_mouseParticle].y, m_particles[m_mouseParticle].z);
-                Vector3 p = Vector3.Lerp(pos, m_mousePos, 0.8f);
+                Vector3 p = Vector3.Lerp(pos, m_mousePos, 0.1f);
                 Vector3 delta = p - pos;
                 //print(p);
-                m_particles[m_mouseParticle].x = p.x;
-                m_particles[m_mouseParticle].y = p.y;
-                m_particles[m_mouseParticle].z = p.z;
+                m_particles[m_mouseParticle].x = delta.x;
+                m_particles[m_mouseParticle].y = delta.y;
+                m_particles[m_mouseParticle].z = delta.z;
+                //m_particles[m_mouseParticle].x = pos.x;
+                //m_particles[m_mouseParticle].y = pos.y;
+                //m_particles[m_mouseParticle].z = pos.z;
                 //m_actor.asset.FixedParticle(m_mouseParticle, true);
-                m_velocities[m_mouseParticle]= Input.mousePosition * m_particles[m_mouseParticle].w;
+                m_velocities[m_mouseParticle]= (Input.mousePosition) * m_particles[m_mouseParticle].w;
             }
             _particleData.SetVelocities(m_actor.indices[0], m_actor.indexCount, m_velocities);
         }

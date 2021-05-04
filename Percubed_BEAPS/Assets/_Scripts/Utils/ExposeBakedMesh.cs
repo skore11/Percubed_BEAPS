@@ -22,6 +22,7 @@ public class ExposeBakedMesh : MonoBehaviour
 
     void LateUpdate()
     {
+        //Pass baked mesh to vertex selector
         skin.BakeMesh(bakedMesh);
     }
 }
