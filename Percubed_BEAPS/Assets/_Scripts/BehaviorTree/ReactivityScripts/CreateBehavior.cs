@@ -25,7 +25,7 @@ namespace Percubed.Flex
 
         private int mouseParticle;
 
-        private Vector3 mouseLocal = new Vector3();
+        //private Vector3 mouseLocal = new Vector3();
 
         public InputField behaviorName;
 
