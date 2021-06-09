@@ -11,7 +11,7 @@ namespace Percubed.Flex
     /// <summary>
     /// Drag particles using mouse
     /// </summary>
-    [RequireComponent(typeof(FlexActor))]
+    //[RequireComponent(typeof(FlexActor))]
     public class FlexMouseDragV2 : MonoBehaviour
     {
         FlexSoftActor m_actor;
@@ -30,6 +30,8 @@ namespace Percubed.Flex
 
         float particleRadius;
 
+        public bool mouse_particle;
+
         void Awake()
         {
             m_actor = GetComponent<FlexSoftActor>();
@@ -46,8 +48,13 @@ namespace Percubed.Flex
         public void OnFlexUpdate(FlexContainer.ParticleData _particleData)
         {
             var mouse= Mouse.current;
-            _particleData.GetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
-            _particleData.GetVelocities(m_actor.indices[0], m_actor.indexCount, m_velocities);
+            if (mouse_particle)
+            {
+                _particleData.GetParticles(m_actor.indices[0], m_actor.indexCount, m_particles);
+                _particleData.GetVelocities(m_actor.indices[0], m_actor.indexCount, m_velocities);
+                mouse_particle = false;
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 //Vector3 worldPos = Camera.ScreenToWorldPoint(mouse.position);
@@ -99,8 +106,11 @@ namespace Percubed.Flex
                 //m_particles[m_mouseParticle].z = pos.z;
                 //m_actor.asset.FixedParticle(m_mouseParticle, true);
                 m_velocities[m_mouseParticle]= (Input.mousePosition) * m_particles[m_mouseParticle].w;
+                //_particleData.SetVelocity(m_mouseParticle, new Vector3 (m_particles[m_mouseParticle].x, m_particles[m_mouseParticle].y, m_particles[m_mouseParticle].z) );
+                
             }
             _particleData.SetVelocities(m_actor.indices[0], m_actor.indexCount, m_velocities);
+
         }
 
 

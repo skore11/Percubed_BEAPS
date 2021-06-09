@@ -50,14 +50,16 @@ namespace NVIDIA.Flex
             Destroy();
         }
 
-        void OnTriggerEnter(Collider collider)
+        public void OnTriggerEnter(Collider collider)
         {
             if (collider.isTrigger) return;
             m_colliders.Add(collider, new ShapeData(collider));
+
         }
 
-        void OnTriggerExit(Collider collider)
+        public void OnTriggerExit(Collider collider)
         {
+            
             if (collider.isTrigger) return;
             if (m_colliders.ContainsKey(collider))
             {
@@ -223,6 +225,7 @@ namespace NVIDIA.Flex
             }
             else if (collider is CapsuleCollider)
             {
+                //Debug.Log(collider.name);
                 CapsuleCollider capsuleCollider = collider as CapsuleCollider;
                 Vector3 scale = collider.transform.lossyScale;
                 if (capsuleCollider.direction == 1) scale = new Vector3(scale.y, scale.z, scale.x);
@@ -251,6 +254,7 @@ namespace NVIDIA.Flex
             }
             else if (collider is MeshCollider)
             {
+                //Debug.Log(collider.name);
                 MeshCollider meshCollider = collider as MeshCollider;
                 Mesh mesh = meshCollider.sharedMesh;
                 if (mesh)

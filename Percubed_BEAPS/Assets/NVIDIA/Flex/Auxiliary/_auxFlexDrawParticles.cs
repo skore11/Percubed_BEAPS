@@ -71,7 +71,11 @@ namespace NVIDIA.Flex
                     {
                         m_indexBuffers[0].Release();
                         m_indexBuffers[0] = null;
+                        //m_indexBuffers[0] = new ComputeBuffer(indexCount, sizeof(int));
+                        
                     }
+                   
+                    
                     if (m_indexBuffers[0] == null && indexCount > 0)
                     {
                         m_indexBuffers[0] = new ComputeBuffer(indexCount, sizeof(int));
