@@ -6,10 +6,12 @@ public class MeshBonesDebug : MonoBehaviour
 {
     private Transform[] mesh_bones;
 
+    public SkinnedMeshRenderer myskinmesh;
+
     // Start is called before the first frame update
     void Start()
     {
-        mesh_bones = GetComponent<SkinnedMeshRenderer>().bones;
+        mesh_bones = myskinmesh.bones;
         print(this.gameObject.name);
     }
 

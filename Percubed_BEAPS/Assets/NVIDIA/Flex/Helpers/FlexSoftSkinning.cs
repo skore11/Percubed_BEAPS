@@ -35,6 +35,7 @@ namespace NVIDIA.Flex
     [AddComponentMenu("NVIDIA/Flex/Flex Soft Skinning")]
     public class FlexSoftSkinning : MonoBehaviour
     {
+        public int numBones;
         #region Messages
 
         void OnEnable()
