@@ -51,32 +51,32 @@ namespace Percubed.Flex
             //behaviorAgent2.StartBehavior();
         }
 
-        // Update is called once per frame
-        //void Update()
-        //{
-        //    String DebugOutput = "";
-        //    DebugOutput += Node.PrintTree(behaviorAgent.treeRoot);
-        //    foreach (Node n in behaviorAgent.treeRoot.Trace())
-        //    {
-        //        String hCode = "" + n.GetHashCode();
-        //        DebugOutput = DebugOutput.Replace(hCode, "<b>" + hCode + "</b>");
-        //    }
-        //    if (debugText != null)
-        //    {
-        //        debugText.text = DebugOutput;
-        //        Debug.Log(DebugOutput);
-        //    }
-        //    //try to turn of behavior updater here and restart when needed!
-        //    //if (uIController.turnOffAnim)
-        //    //{
-        //    //    behaviorUpdater.enabled = false;
-        //    //}
-        //}
+        //Update is called once per frame
+        void Update()
+        {
+            String DebugOutput = "";
+            DebugOutput += Node.PrintTree(behaviorAgent.treeRoot);
+            foreach (Node n in behaviorAgent.treeRoot.Trace())
+            {
+                String hCode = "" + n.GetHashCode();
+                DebugOutput = DebugOutput.Replace(hCode, "<b>" + hCode + "</b>");
+            }
+            if (debugText != null)
+            {
+                debugText.text = DebugOutput;
+                Debug.Log(DebugOutput);
+            }
+            //try to turn of behavior updater here and restart when needed!
+            //if (uIController.turnOffAnim)
+            //{
+            //    behaviorUpdater.enabled = false;
+            //}
+        }
 
         protected Node ST_ApproachAndWait(Transform target)
         {
             Val<Vector3> position = Val.V(() => target.position);
-            return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_GoTo(position), new LeafWait(1000));
+            return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_GoTo(position)/*, new LeafWait(1000)*/);
         }
 
         //protected Node ST_Melt(bool x)
@@ -134,6 +134,10 @@ namespace Percubed.Flex
         //        )
         //}
 
+        //Over here run a parallel node that allows the user to interact with the character by choosing which are of the body needs to be shocked
+        //Add additions/modifications to list of allowable additions when the menu for user interaction is revealed when the parallel node is triggered
+        //Apply modifications, the blending will take place as long as the parallel node runs
+        //Once shocking is done, and parallel node has completed successfully, blend back to original animation, basically as dictated by the user and hence parallel node.
         protected Node BuildTreeRoot()
         {
             //iter value = new iter();
@@ -142,6 +146,7 @@ namespace Percubed.Flex
                             new Sequence(
                             //this.ST_Melt(meltSelection),
                             this.ST_ApproachAndWait(this.wander1),
+                            this.ST_ApproachAndWait(this.wander2),
                             this.ST_shocker(this.target, this.hand, this.button),
                             this.ST_Shock(this.shock),
                             //this.ST_Iter(/*value = */this.iteration1),
@@ -154,6 +159,8 @@ namespace Percubed.Flex
             return shocked;
 
         }
+
+        //Write another behavior tree to pick up an aobject.
 
         //protected Node Trial()
         //{

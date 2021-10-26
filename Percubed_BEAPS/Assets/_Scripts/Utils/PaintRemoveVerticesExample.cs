@@ -21,7 +21,11 @@ public class PaintRemoveVerticesExample : MonoBehaviour
             if (hitObjCollider != null && vertHighlighter != null)
             {
                 if (Input.GetMouseButton(0))//left mouse pressed - add vertices to highlight
-                    vertHighlighter.AddIndex(hitObjCollider.sharedMesh.triangles[rayHit.triangleIndex * 3]);
+                    for (int i = 0; i < 5/*this has to be replaced by a list of selected vertices around a shapecenter/bone transform*/; i++)
+                    {
+                        vertHighlighter.AddIndex(hitObjCollider.sharedMesh.triangles[(rayHit.triangleIndex + i) * 3]);
+                    }
+                    
                 if (Input.GetMouseButton(1))//right mouse pressed - remove highlighted vertices
                     vertHighlighter.RemoveIndex(hitObjCollider.sharedMesh.triangles[rayHit.triangleIndex * 3]);
             }

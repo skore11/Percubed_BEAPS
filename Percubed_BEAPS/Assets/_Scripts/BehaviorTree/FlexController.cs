@@ -29,7 +29,7 @@ namespace Percubed.Flex
         protected void Initialize()
         {
             this.melt = this.GetComponent<MeltEffectFlex>();
-            this.shock = this.GetComponent<ShockEffectFlex>();
+            //this.shock = this.GetComponent<ShockEffectFlex>();
             //this.flexParams = this.GetComponent<FlexParameters>();
         }
 
