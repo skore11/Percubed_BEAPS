@@ -13,7 +13,7 @@ By allowing particle level access of the underlying character's volume, we can c
 
 This opens the door for new and innovative game mechanics as well
 
-![Alt Text](https://drive.google.com/file/d/1PibYo48njlYgH9hM9La_olKyjYoVha1N/view?usp=sharing.gif)
+![](https://drive.google.com/file/d/1PibYo48njlYgH9hM9La_olKyjYoVha1N/view?usp=sharing.gif)
 ![Alt Text](https://user-images.githubusercontent.com/22035965/140826566-a57706bf-0b96-4a0c-8f3f-36867e83c87e.gif)
 
 We have tested the BEAPS system in creating natural secondary motion, expressive torso and limb extensions, real tim collision detection and conditional logic based on the same
