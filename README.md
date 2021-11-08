@@ -11,10 +11,12 @@ Using Unity's anonymous functions we can imbue the graphical mesh of the agent w
 
 By allowing particle level access of the underlying character's volume, we can create robust virtual agents not limited to actions dictated by IK but also volumetric dynamics
 
-This opens the door for new and innovative game mechanics as well.
+This opens the door for new and innovative game mechanics as well
 
-![Alt Text](https://user-images.githubusercontent.com/22035965/140826528-787985a6-eafb-49fc-8681-b6a61d3e4e4e.gif)
+![Alt Text](https://drive.google.com/drive/folders/1GGJBQK94l4HDW7uLVdaEg7cJpJjTKcxH.gif)
 ![Alt Text](https://user-images.githubusercontent.com/22035965/140826566-a57706bf-0b96-4a0c-8f3f-36867e83c87e.gif)
 
+We have tested the BEAPS system in creating natural secondary motion, expressive torso and limb extensions, real tim collision detection and conditional logic based on the same
 
+KADAPT allows for a hierarchical modular bheavior tree model to control our agents.
 
