@@ -15,7 +15,8 @@ This opens the door for new and innovative game mechanics as well.
 
 ![image](https://user-images.githubusercontent.com/22035965/140826528-787985a6-eafb-49fc-8681-b6a61d3e4e4e.png)
 ![image](https://user-images.githubusercontent.com/22035965/140826566-a57706bf-0b96-4a0c-8f3f-36867e83c87e.png)
-![image](https://user-images.githubusercontent.com/22035965/140826569-48a325c2-faac-4978-b47d-452097cc4bd3.png)
 
+
+![image](https://user-images.githubusercontent.com/22035965/140826624-0f32c445-1864-4995-8155-204852ccbd1a.png)
 
 
