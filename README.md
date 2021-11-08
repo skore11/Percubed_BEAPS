@@ -13,11 +13,15 @@ By allowing particle level access of the underlying character's volume, we can c
 
 This opens the door for new and innovative game mechanics as well
 
-![](https://drive.google.com/file/d/1PibYo48njlYgH9hM9La_olKyjYoVha1N/view?usp=sharing.gif)
+![](https://github.com/skore11/Percubed_BEAPS/blob/main/GIF%209-22-2021%206-26-07%20PM.gif)
 
-![Alt Text](https://user-images.githubusercontent.com/22035965/140826566-a57706bf-0b96-4a0c-8f3f-36867e83c87e.gif)
+![](https://github.com/skore11/Percubed_BEAPS/blob/main/GIF%209-21-2021%203-06-36%20PM.gif)
 
-We have tested the BEAPS system in creating natural secondary motion, expressive torso and limb extensions, real tim collision detection and conditional logic based on the same
+![Alt Text](https://github.com/skore11/Percubed_BEAPS/blob/main/GIF%209-21-2021%203-49-58%20PM.gif)
+
+![](https://github.com/skore11/Percubed_BEAPS/blob/main/GIF%209-21-2021%203-54-36%20PM.gif)
+
+We have tested the BEAPS system in creating natural secondary motion, expressive torso and limb extensions, real tim collision detection, user deformed free form deformations and conditional logic based on the same
 
 KADAPT allows for a hierarchical modular bheavior tree model to control our agents.
 
