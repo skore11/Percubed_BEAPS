@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to Percubed BEAPS
 
-You can use the [editor on GitHub](https://github.com/skore11/Percubed_BEAPS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The repository is part of my PhD thesis and a larger project regarding expressive virtual agents
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Simulating voxel based agents is a non-trivial task and assigning goals and control schemes for the same is tedious, procedural animation algorithms like physically based animation and volumetric dynamics can provide an extra layer of virtual agent control
 
 ### Markdown
 
