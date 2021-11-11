@@ -14,8 +14,9 @@ public class MeshBonesSelect : MonoBehaviour
     public FlexSoftActor m_softActor;
     private Vector4[] m_particles; // local cache of positions
     Vector3[] shapeBones;
+    public List<int> selectedBonesIndices;
     float particleRadius;
-
+    public bool doneSelect;
     void Awake()
     {
         if (m_softActor == null) {
@@ -47,12 +48,18 @@ public class MeshBonesSelect : MonoBehaviour
                 Vector3 localParticle = this.transform.InverseTransformPoint((Vector3) foundParticle);
                 print("foundParticle's world position: " + foundParticle + " local: " + localParticle);
                 int shapeCenterIndex = PickShapeCenter(localParticle);
+                selectedBonesIndices.Add(shapeCenterIndex);
+                doneSelect = true;
                 print("shapeCenter's index " + shapeCenterIndex + " position: " + selectedBone);
                 GameObject sBone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sBone.transform.parent = this.gameObject.transform;
                 sBone.transform.localPosition = selectedBone;
                 sBone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            doneSelect = false;
         }
     }
     Vector3? FindParticle(Ray ray)

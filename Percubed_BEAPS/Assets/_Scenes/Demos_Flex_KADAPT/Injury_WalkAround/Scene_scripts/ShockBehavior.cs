@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using TreeSharpPlus;
+using RootMotion.FinalIK;
 using UnityEngine.UI;
 using NVIDIA.Flex;
 
@@ -16,8 +17,8 @@ namespace Percubed.Flex
         public GameObject participant;
         public GameObject participant2;
         public Transform target;
-        public Val<RootMotion.FinalIK.FullBodyBipedEffector> hand;
-        public Val<RootMotion.FinalIK.InteractionObject> button;
+        public FullBodyBipedEffector hand;
+        public InteractionObject button;
         public bool shock;
         //public int iteration1;
         //public int iteration2;
@@ -71,6 +72,7 @@ namespace Percubed.Flex
             //{
             //    behaviorUpdater.enabled = false;
             //}
+            
         }
 
         protected Node ST_ApproachAndWait(Transform target)
@@ -84,13 +86,15 @@ namespace Percubed.Flex
         //    return new Selector(participant2.GetComponent<FlexController>().Node_Melt(x));
         //}
 
-        protected Node ST_shocker(Transform target, Val<RootMotion.FinalIK.FullBodyBipedEffector> hand, Val<RootMotion.FinalIK.InteractionObject> button)
+        protected Node ST_shocker(Transform target, FullBodyBipedEffector hand, InteractionObject button)
         {
             Val<Vector3> position = Val.V(() => target.position);
-            return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_OrientTowards(position), new LeafWait(500), participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button));
+            print("hand" + hand);
+            print("button" + button);
+            return new Sequence(participant.GetComponent<BehaviorMecanim>().Node_OrientTowards(position), participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button), participant.GetComponent<BehaviorMecanim>().Node_ResumeInteraction(hand));
         }
 
-  
+
 
         //protected Node ST_blend()
         //{
@@ -143,19 +147,23 @@ namespace Percubed.Flex
             //iter value = new iter();
             Node shocked = new DecoratorLoop(
                             //new Selector(this.pauseAnim,
-                            new Sequence(
+                            new Selector(
                             //this.ST_Melt(meltSelection),
-                            this.ST_ApproachAndWait(this.wander1),
-                            this.ST_ApproachAndWait(this.wander2),
-                            this.ST_shocker(this.target, this.hand, this.button),
-                            this.ST_Shock(this.shock),
+                            //new SequenceParallel(this.ST_ApproachAndWait(this.wander1), this.ST_Shock(this.shock)),
+                            //this.ST_ApproachAndWait(this.wander1),
+                            //new Selector(participant.GetComponent<BehaviorMecanim>().Node_Orient(wander1.rotation)),
+                            //this.ST_ApproachAndWait(this.wander2),
+                            this.ST_shocker(target, hand, button)
+                            //participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button)
+                            
+                            //this.ST_Shock(this.shock),
                             //this.ST_Iter(/*value = */this.iteration1),
                             //this.ST_Iter(this.iteration2),
                             //this.ST_Jiggle(true),
                             //this.ST_Jiggle(false),
 
-                            this.ST_ApproachAndWait(this.wander2)));
-                            //this.ST_ApproachAndWait(this.wander3)));//);
+                            /*this.ST_ApproachAndWait(this.wander2)*/));
+            //this.ST_ApproachAndWait(this.wander3)));//);
             return shocked;
 
         }

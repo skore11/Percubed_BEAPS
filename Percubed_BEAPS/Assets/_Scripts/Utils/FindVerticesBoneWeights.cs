@@ -8,73 +8,89 @@ using Unity.Jobs;
 public class FindVerticesBoneWeights : MonoBehaviour
 {
     public GameObject m_object;
-    SkinnedMeshRenderer flexCLoneMesh;
+    SkinnedMeshRenderer flexCloneMesh;
+    public MeshBonesSelect m_selectedBones;
     public int testBoneIndex = -1;
     BoneWeight[] m_boneWeights = new BoneWeight[0];
     Dictionary<Transform, List<int>> boneToVerticesDict;
     // Start is called before the first frame update
     void Start()
     {
-        flexCLoneMesh = m_object.GetComponent<SkinnedMeshRenderer>();
-        m_boneWeights = new BoneWeight[flexCLoneMesh.sharedMesh.boneWeights.Length];
+        flexCloneMesh = m_object.GetComponent<SkinnedMeshRenderer>();
+        m_boneWeights = new BoneWeight[flexCloneMesh.sharedMesh.boneWeights.Length];
         for (int i = 0; i < m_boneWeights.Length; i++)
         {
-            m_boneWeights[i] = flexCLoneMesh.sharedMesh.boneWeights[i];
+            m_boneWeights[i] = flexCloneMesh.sharedMesh.boneWeights[i];
         }
 
-        if (testBoneIndex != -1)
+       
+
+        // Update is called once per frame
+        void Update()
         {
-
-            for (int i = 0; i < flexCLoneMesh.bones.Length; i++)
+            if (m_selectedBones.doneSelect)
             {
-                for (int j = 0; j < m_boneWeights.Length; i++)
+                foreach (int boneIndex in m_selectedBones.selectedBonesIndices)
                 {
-                    if (i == m_boneWeights[j].boneIndex0) 
+                    for (int i = 0; i < flexCloneMesh.sharedMesh.vertices.Length; i++)
                     {
-                        if (m_boneWeights[j].weight0 > 0)
+                        if (boneIndex != -1)
                         {
-                            if (boneToVerticesDict.ContainsKey(flexCLoneMesh.bones[i]))
+                            for (int j = 0; j < m_boneWeights.Length; j++)
                             {
-                                boneToVerticesDict[flexCLoneMesh.bones[i]].Add(j);
+                                if (boneIndex == m_boneWeights[j].boneIndex0 && m_boneWeights[j].weight0 > 0)
+                                {
+                                    if (boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                    else if (!boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict.Add(flexCloneMesh.bones[boneIndex], new List<int>());
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                }
+                                else if (boneIndex == m_boneWeights[j].boneIndex1 && m_boneWeights[j].weight1 > 0)
+                                {
+                                    if (boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                    else if (!boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict.Add(flexCloneMesh.bones[boneIndex], new List<int>());
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                }
+                                else if (boneIndex == m_boneWeights[j].boneIndex2 && m_boneWeights[j].weight2 > 0)
+                                {
+                                    if (boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                    else if (!boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict.Add(flexCloneMesh.bones[boneIndex], new List<int>());
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                }
+                                else if (boneIndex == m_boneWeights[j].boneIndex3 && m_boneWeights[j].weight3 > 0)
+                                {
+                                    if (boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                    else if (!boneToVerticesDict.ContainsKey(flexCloneMesh.bones[boneIndex]))
+                                    {
+                                        boneToVerticesDict.Add(flexCloneMesh.bones[boneIndex], new List<int>());
+                                        boneToVerticesDict[flexCloneMesh.bones[boneIndex]].Add(i);
+                                    }
+                                }
                             }
-                            else if (!boneToVerticesDict.ContainsKey(flexCLoneMesh.bones[i]))
-                            {
-                                boneToVerticesDict.Add(flexCLoneMesh.bones[i], new List<int>());
-                                boneToVerticesDict[flexCLoneMesh.bones[i]].Add(j);
-                            }
-                        }
-                    }
-                    else if (i == m_boneWeights[j].boneIndex1)
-                    {
-                        if (m_boneWeights[j].weight0 > 1)
-                        {
-
-                        }
-                    }
-                    else if (i == m_boneWeights[j].boneIndex2)
-                    {
-                        if (m_boneWeights[j].weight0 > 2)
-                        {
-
-                        }
-                    }
-                    else if (i == m_boneWeights[j].boneIndex3)
-                    {
-                        if (m_boneWeights[j].weight0 > 3)
-                        {
-
                         }
                     }
                 }
             }
-
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        print(flexCLoneMesh.name);
     }
 }
