@@ -16,16 +16,23 @@ public class MeshBonesSelect : MonoBehaviour
     Vector3[] shapeBones;
     public List<int> selectedBonesIndices;
     float particleRadius;
-    public bool doneSelect;
+    BoneWeight[] m_boneWeights = new BoneWeight[0];
+    public Dictionary<Transform, List<int>> boneToVerticesDict;
     void Awake()
     {
         if (m_softActor == null) {
             m_softActor = GetComponent<FlexSoftActor>();
         }
+        boneToVerticesDict = new Dictionary<Transform, List<int>>();
     }
 
     void Start()
     {
+        m_boneWeights = new BoneWeight[m_softActor.GetComponent<SkinnedMeshRenderer>().sharedMesh.boneWeights.Length];
+        for (int i = 0; i < m_boneWeights.Length; i++)
+        {
+            m_boneWeights[i] = m_softActor.GetComponent<SkinnedMeshRenderer>().sharedMesh.boneWeights[i];
+        }
         m_particles = new Vector4[m_softActor.indexCount];
         shapeBones = m_softActor.asset.shapeCenters;
         string shapeDebug = "";
@@ -48,18 +55,26 @@ public class MeshBonesSelect : MonoBehaviour
                 Vector3 localParticle = this.transform.InverseTransformPoint((Vector3) foundParticle);
                 print("foundParticle's world position: " + foundParticle + " local: " + localParticle);
                 int shapeCenterIndex = PickShapeCenter(localParticle);
-                selectedBonesIndices.Add(shapeCenterIndex);
-                doneSelect = true;
+                findVerticesBoneWeight(shapeCenterIndex);
                 print("shapeCenter's index " + shapeCenterIndex + " position: " + selectedBone);
                 GameObject sBone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sBone.transform.parent = this.gameObject.transform;
                 sBone.transform.localPosition = selectedBone;
                 sBone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                if (boneToVerticesDict != null)
+                {
+                    print("dictionary is not empty");
+                    foreach (var x in boneToVerticesDict)
+                    {
+                        print("Bone: " + x.Key + " List of associated vertices: ");
+                        foreach (int i in x.Value)
+                        {
+                            print("vert index: " + i);
+                        }
+                    }
+                }
+
             }
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            doneSelect = false;
         }
     }
     Vector3? FindParticle(Ray ray)
@@ -108,6 +123,47 @@ public class MeshBonesSelect : MonoBehaviour
         }
         selectedBone = shapeBones[minIndex];
         return minIndex;
+    }
+
+    void findVerticesBoneWeight(int selectedBone)
+    {
+        if (selectedBone != -1)
+        {
+            for (int j = 0; j < m_boneWeights.Length; j++)
+            {
+                if (selectedBone == m_boneWeights[j].boneIndex0 && m_boneWeights[j].weight0 > 0)
+                {
+                    addBoneVert(selectedBone, j);
+                }
+                else if (selectedBone == m_boneWeights[j].boneIndex1 && m_boneWeights[j].weight1 > 0)
+                {
+                    addBoneVert(selectedBone, j);
+                }
+                else if (selectedBone == m_boneWeights[j].boneIndex2 && m_boneWeights[j].weight2 > 0)
+                {
+                    addBoneVert(selectedBone, j);
+                }
+                else if (selectedBone == m_boneWeights[j].boneIndex3 && m_boneWeights[j].weight3 > 0)
+                {
+                    addBoneVert(selectedBone, j);
+                }
+            }
+        }
+
+    }
+
+    void addBoneVert(int boneIndex, int vertIndex)
+    {
+        if (boneToVerticesDict.ContainsKey(m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]))
+        {
+            boneToVerticesDict[m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]].Add(vertIndex);
+        }
+        else if (!boneToVerticesDict.ContainsKey(m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]))
+        {
+            boneToVerticesDict.Add(m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex], new List<int>());
+            boneToVerticesDict[m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]].Add(vertIndex);
+        }
+        //return boneToVerticesDict;
     }
 }
 
