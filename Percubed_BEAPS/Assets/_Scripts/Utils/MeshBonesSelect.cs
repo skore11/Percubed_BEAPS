@@ -18,6 +18,7 @@ public class MeshBonesSelect : MonoBehaviour
     float particleRadius;
     BoneWeight[] m_boneWeights = new BoneWeight[0];
     public Dictionary<Transform, List<int>> boneToVerticesDict;
+    public bool doneSelecting = false;
     void Awake()
     {
         if (m_softActor == null) {
@@ -56,6 +57,8 @@ public class MeshBonesSelect : MonoBehaviour
                 print("foundParticle's world position: " + foundParticle + " local: " + localParticle);
                 int shapeCenterIndex = PickShapeCenter(localParticle);
                 findVerticesBoneWeight(shapeCenterIndex);
+                //Important: Will need to store this dictionary in XML using serializable formats, for future use
+                doneSelecting = true;
                 print("shapeCenter's index " + shapeCenterIndex + " position: " + selectedBone);
                 GameObject sBone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sBone.transform.parent = this.gameObject.transform;
@@ -73,7 +76,6 @@ public class MeshBonesSelect : MonoBehaviour
                         }
                     }
                 }
-
             }
         }
     }

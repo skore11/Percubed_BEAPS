@@ -114,6 +114,31 @@ namespace Percubed.Flex
             return new Selector(participant2.GetComponent<FlexController>().Node_Shock(x));
         }
 
+        protected Node stylize()
+        {
+            //Call create behavior script here; add modifications as necessary
+            //Alternatively the user may select from a dropdown a list of available modifications from the past
+            //Here we will pause the running node by disabling the behaviorUpdater
+            //Trigger the UI drop down for available behaviors
+            //The behaviors in the drop down should also host the list of vertices for blending them
+            //Apply the blend with said vertices as necessary
+            //Hit done! on UI box when all modifications are done, if there are new modifications store them as XML...
+            //Resume the behavior updater
+            behaviorUpdater.enabled = false;
+            participant2.GetComponent<Animator>().enabled = false;
+            StartCoroutine(wait());
+            
+            return new Selector();
+            
+        }
+
+        public IEnumerator wait()
+        {
+            print("waiting");
+            yield return new WaitForSeconds(10);
+            participant2.GetComponent<Animator>().enabled = true;
+            behaviorUpdater.enabled = true;
+        }
         //protected Node ST_Gravity(float y_gravity)
         //{
         //    FlexController flexController = participant2.GetComponent<FlexController>();
@@ -149,18 +174,11 @@ namespace Percubed.Flex
                             //new Selector(this.pauseAnim,
                             new Selector(
                             //this.ST_Melt(meltSelection),
-                            //new SequenceParallel(this.ST_ApproachAndWait(this.wander1), this.ST_Shock(this.shock)),
-                            //this.ST_ApproachAndWait(this.wander1),
-                            //new Selector(participant.GetComponent<BehaviorMecanim>().Node_Orient(wander1.rotation)),
-                            //this.ST_ApproachAndWait(this.wander2),
+                            new SequenceParallel(this.ST_ApproachAndWait(this.wander1), this.ST_Shock(this.shock)),
+                            new SelectorParallel(this.stylize(),this.ST_ApproachAndWait(this.wander2)/*, this.stylize()*/),
+
                             this.ST_shocker(target, hand, button)
-                            //participant.GetComponent<BehaviorMecanim>().Node_StartInteraction(hand, button)
-                            
-                            //this.ST_Shock(this.shock),
-                            //this.ST_Iter(/*value = */this.iteration1),
-                            //this.ST_Iter(this.iteration2),
-                            //this.ST_Jiggle(true),
-                            //this.ST_Jiggle(false),
+
 
                             /*this.ST_ApproachAndWait(this.wander2)*/));
             //this.ST_ApproachAndWait(this.wander3)));//);
