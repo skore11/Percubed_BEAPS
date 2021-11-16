@@ -19,6 +19,8 @@ public class MeshBonesSelect : MonoBehaviour
     BoneWeight[] m_boneWeights = new BoneWeight[0];
     public Dictionary<Transform, List<int>> boneToVerticesDict;
     public bool doneSelecting = false;
+    public bool selectBones = false;
+    
     void Awake()
     {
         if (m_softActor == null) {
@@ -47,23 +49,25 @@ public class MeshBonesSelect : MonoBehaviour
 
     void OnFlexUpdate(FlexContainer.ParticleData _particleData)
     {
+
         if (Input.GetMouseButtonDown(0))
-        {
+            {
             print("Mousedown: Find a shape center close to click");
             _particleData.GetParticles(m_softActor.indices[0], m_softActor.indexCount, m_particles);
             Vector3? foundParticle = FindParticle(Camera.main.ScreenPointToRay(Input.mousePosition));
-            if (foundParticle != null) {
-                Vector3 localParticle = this.transform.InverseTransformPoint((Vector3) foundParticle);
+            if (foundParticle != null)
+            {
+                Vector3 localParticle = this.transform.InverseTransformPoint((Vector3)foundParticle);
                 print("foundParticle's world position: " + foundParticle + " local: " + localParticle);
                 int shapeCenterIndex = PickShapeCenter(localParticle);
-                findVerticesBoneWeight(shapeCenterIndex);
+                findVerticesfromBoneWeight(shapeCenterIndex);
                 //Important: Will need to store this dictionary in XML using serializable formats, for future use
                 doneSelecting = true;
                 print("shapeCenter's index " + shapeCenterIndex + " position: " + selectedBone);
                 GameObject sBone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 sBone.transform.parent = this.gameObject.transform;
                 sBone.transform.localPosition = selectedBone;
-                sBone.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                sBone.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 if (boneToVerticesDict != null)
                 {
                     print("dictionary is not empty");
@@ -78,6 +82,8 @@ public class MeshBonesSelect : MonoBehaviour
                 }
             }
         }
+        
+        
     }
     Vector3? FindParticle(Ray ray)
     {
@@ -116,18 +122,22 @@ public class MeshBonesSelect : MonoBehaviour
         int minIndex = -1;
         for (int i = 0; i < shapeBones.Length; ++i)
         {
-            float dist = Vector3.Distance(particle, shapeBones[i]); 
-            if (dist < minDist)
+            if (!boneToVerticesDict.ContainsKey(this.GetComponent<SkinnedMeshRenderer>().bones[i]))
             {
-                minDist = dist;
-                minIndex = i;
+                float dist = Vector3.Distance(particle, shapeBones[i]);
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    minIndex = i;
+                }
             }
+
         }
         selectedBone = shapeBones[minIndex];
         return minIndex;
     }
 
-    void findVerticesBoneWeight(int selectedBone)
+    void findVerticesfromBoneWeight(int selectedBone)
     {
         if (selectedBone != -1)
         {
@@ -137,15 +147,15 @@ public class MeshBonesSelect : MonoBehaviour
                 {
                     addBoneVert(selectedBone, j);
                 }
-                else if (selectedBone == m_boneWeights[j].boneIndex1 && m_boneWeights[j].weight1 > 0)
+                if (selectedBone == m_boneWeights[j].boneIndex1 && m_boneWeights[j].weight1 > 0)
                 {
                     addBoneVert(selectedBone, j);
                 }
-                else if (selectedBone == m_boneWeights[j].boneIndex2 && m_boneWeights[j].weight2 > 0)
+                if (selectedBone == m_boneWeights[j].boneIndex2 && m_boneWeights[j].weight2 > 0)
                 {
                     addBoneVert(selectedBone, j);
                 }
-                else if (selectedBone == m_boneWeights[j].boneIndex3 && m_boneWeights[j].weight3 > 0)
+                if (selectedBone == m_boneWeights[j].boneIndex3 && m_boneWeights[j].weight3 > 0)
                 {
                     addBoneVert(selectedBone, j);
                 }
@@ -158,12 +168,12 @@ public class MeshBonesSelect : MonoBehaviour
     {
         if (boneToVerticesDict.ContainsKey(m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]))
         {
-            boneToVerticesDict[m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]].Add(vertIndex);
+            boneToVerticesDict[this.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]].Add(vertIndex);
         }
-        else if (!boneToVerticesDict.ContainsKey(m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]))
+        else if (!boneToVerticesDict.ContainsKey(this.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]))
         {
-            boneToVerticesDict.Add(m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex], new List<int>());
-            boneToVerticesDict[m_softActor.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]].Add(vertIndex);
+            boneToVerticesDict.Add(this.GetComponent<SkinnedMeshRenderer>().bones[boneIndex], new List<int>());
+            boneToVerticesDict[this.GetComponent<SkinnedMeshRenderer>().bones[boneIndex]].Add(vertIndex);
         }
         //return boneToVerticesDict;
     }

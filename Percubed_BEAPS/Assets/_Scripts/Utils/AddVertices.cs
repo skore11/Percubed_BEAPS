@@ -25,6 +25,7 @@ public class AddVertices : MonoBehaviour
                     neighborVertHighlighter.AddIndex(i);
                 }
             }
+            m_bonesSelect.doneSelecting = false;
         }
     }
 }
