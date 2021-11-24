@@ -24,7 +24,7 @@ public class MeshBonesDebug : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
+    private void XXOnDrawGizmos()
     {
         for (int i = 0; i < mesh_bones.Length; i++)
         {

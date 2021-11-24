@@ -109,7 +109,7 @@ namespace Percubed.Flex
                     yield return null;
                 }
                 debugCollect = false;
-                Debug.Log("DebugDump for FlexAnimSoftSkin of " + m_actor.name + debugStr);
+                //Debug.Log("DebugDump for FlexAnimSoftSkin of " + m_actor.name + debugStr);
                 yield return new WaitForSeconds(0.5f);
             }
         }

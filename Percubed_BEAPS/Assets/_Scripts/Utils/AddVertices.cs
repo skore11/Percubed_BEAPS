@@ -16,9 +16,9 @@ public class AddVertices : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_bonesSelect.boneToVerticesDict != null && m_bonesSelect.doneSelecting)
+        if (m_bonesSelect.shapeIndexToVerticesDict != null && m_bonesSelect.doneSelecting)
         {
-            foreach (var entry in m_bonesSelect.boneToVerticesDict)
+            foreach (var entry in m_bonesSelect.shapeIndexToVerticesDict)
             {
                 foreach (int i in entry.Value)
                 {
