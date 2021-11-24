@@ -1,0 +1,5909 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientEquatorColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 1
+    m_BakeResolution: 50
+    m_AtlasSize: 1024
+    m_AO: 1
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 0
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 512
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 0
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 3da4017c529b33d4e98c9f51a762f589,
+    type: 2}
+--- !u!196 &5
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666666
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!4 &259981693 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400022, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &287562136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400030, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &418905276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400036, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &483683181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 483683182}
+  - component: {fileID: 483683186}
+  - component: {fileID: 483683185}
+  - component: {fileID: 483683183}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &483683182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483683181}
+  m_LocalRotation: {x: 0.03746244, y: -0.9043602, z: 0.07815902, w: 0.41787624}
+  m_LocalPosition: {x: 1.1179128, y: 1.298175, z: 1.770877}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 829974502}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &483683183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483683181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ef3e8d5c77f405d8ab70a643d6a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 830925125}
+  lockCursor: 1
+  distance: 4
+  minDistance: 2.5
+  maxDistance: 5
+  zoomSpeed: 5
+  zoomSensitivity: 0.1
+  rotationSensitivity: 2.5
+  yMinLimit: -89
+  yMaxLimit: 89
+  offset: {x: 0.5, y: 0, z: 0.5}
+  rotateAlways: 1
+  rotateOnLeftButton: 0
+  rotateOnRightButton: 0
+  rotateOnMiddleButton: 0
+--- !u!124 &483683185
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483683181}
+  m_Enabled: 1
+--- !u!20 &483683186
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483683181}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0.019607844}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &506897460 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400028, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &513640595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400018, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &554870297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554870298}
+  - component: {fileID: 554870299}
+  - component: {fileID: 554870300}
+  - component: {fileID: 554870301}
+  m_Layer: 0
+  m_Name: Morph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554870298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554870297}
+  m_LocalRotation: {x: -0.663737, y: -0, z: -0, w: 0.74796605}
+  m_LocalPosition: {x: 0.017938962, y: 0.4774617, z: 0.015174851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 825888443}
+  m_Father: {fileID: 688481107}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: -83.171, y: 0, z: 0}
+--- !u!114 &554870299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554870297}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20df14af55f87714ca8e2e8bcc94de8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalMeshObjects: {fileID: 1610395720}
+  morphTargets: []
+  blendWeights: []
+  dynamicMorph: 1
+  normalizedBlendWeights: []
+  neutralWeight: 0
+  loadedSuccessfully: 0
+  vertexHighlight: {fileID: 825888442}
+--- !u!137 &554870300
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554870297}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  - {fileID: 2100000, guid: 1947e96b578963840a710f5781bc03aa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
+  m_Mesh: {fileID: 4300000, guid: a0984aae81a6f9d4294955fc25382391, type: 3}
+  m_Bones: []
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 0}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_DirtyAABB: 0
+--- !u!114 &554870301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554870297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba7e1a11c019e74a9fe7cf7fe12bf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bakedMesh: {fileID: 0}
+--- !u!4 &616703930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400024, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &636389494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &674371920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 674371924}
+  - component: {fileID: 674371923}
+  - component: {fileID: 674371922}
+  - component: {fileID: 674371921}
+  m_Layer: 6
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!135 &674371921
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674371920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &674371922
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674371920}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &674371923
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674371920}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &674371924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674371920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.017938962, y: 0.47746164, z: -5.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &688481106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &688481107 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &688481110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688481106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a01f59b6ac94f1b95f51f60eff7eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  ik: {fileID: 688481111}
+  bodies:
+  - transform: {fileID: 259981693}
+    effectorLinks:
+    - effector: 1
+      weight: 1
+    - effector: 2
+      weight: 1
+    - effector: 5
+      weight: 0.3
+    - effector: 6
+      weight: 0.3
+    - effector: 0
+      weight: 0.4
+    speed: 25
+    acceleration: 2.5
+    matchVelocity: 0.3
+    gravity: 0
+  - transform: {fileID: 2119745906}
+    effectorLinks:
+    - effector: 5
+      weight: 0.4
+    - effector: 1
+      weight: 0.1
+    speed: 20
+    acceleration: 3
+    matchVelocity: 0.5
+    gravity: 0
+  - transform: {fileID: 636389494}
+    effectorLinks:
+    - effector: 6
+      weight: 0.4
+    - effector: 2
+      weight: 0.1
+    speed: 20
+    acceleration: 2
+    matchVelocity: 0
+    gravity: 0
+  limits:
+  - effector: 6
+    spring: 0.4
+    x: 1
+    y: 0
+    z: 0
+    minX: 0
+    maxX: 1
+    minY: 0
+    maxY: 0
+    minZ: 0
+    maxZ: 0
+  - effector: 5
+    spring: 0.2
+    x: 1
+    y: 0
+    z: 0
+    minX: -1
+    maxX: 0
+    minY: 0
+    maxY: 0
+    minZ: 0
+    maxZ: 0
+--- !u!114 &688481111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688481106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70e525c82ce9413fa4d940ad7fcf1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeStep: 0
+  fixTransforms: 1
+  references:
+    root: {fileID: 688481107}
+    pelvis: {fileID: 1408352298}
+    leftThigh: {fileID: 418905276}
+    leftCalf: {fileID: 1177438957}
+    leftFoot: {fileID: 1498718052}
+    rightThigh: {fileID: 287562136}
+    rightCalf: {fileID: 506897460}
+    rightFoot: {fileID: 1148937585}
+    leftUpperArm: {fileID: 1441068470}
+    leftForearm: {fileID: 1501331140}
+    leftHand: {fileID: 2119745906}
+    rightUpperArm: {fileID: 1666804368}
+    rightForearm: {fileID: 1233873120}
+    rightHand: {fileID: 636389494}
+    head: {fileID: 1826517603}
+    spine:
+    - {fileID: 616703930}
+    - {fileID: 259981693}
+    eyes: []
+  solver:
+    IKPosition: {x: 0, y: 0, z: 0}
+    IKPositionWeight: 1
+    iterations: 4
+    chain:
+    - pin: 0
+      pull: 1
+      reach: 0.05
+      reachSmoothing: 0
+      nodes:
+      - transform: {fileID: 616703930}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      children: 01000000020000000300000004000000
+      childConstraints:
+      - bone1: {fileID: 1441068470}
+        bone2: {fileID: 287562136}
+        pushElasticity: 0
+        pullElasticity: 1
+      - bone1: {fileID: 1666804368}
+        bone2: {fileID: 418905276}
+        pushElasticity: 0
+        pullElasticity: 1
+      - bone1: {fileID: 1441068470}
+        bone2: {fileID: 1666804368}
+        pushElasticity: 0
+        pullElasticity: 0
+      - bone1: {fileID: 418905276}
+        bone2: {fileID: 287562136}
+        pushElasticity: 0
+        pullElasticity: 0
+    - pin: 0
+      pull: 1
+      reach: 0.05
+      reachSmoothing: 0
+      nodes:
+      - transform: {fileID: 1441068470}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 1501331140}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 2119745906}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      children: 
+      childConstraints: []
+    - pin: 0
+      pull: 1
+      reach: 0.05
+      reachSmoothing: 0
+      nodes:
+      - transform: {fileID: 1666804368}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 1233873120}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 636389494}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      children: 
+      childConstraints: []
+    - pin: 0
+      pull: 1
+      reach: 0.05
+      reachSmoothing: 0
+      nodes:
+      - transform: {fileID: 418905276}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 1177438957}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 1498718052}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      children: 
+      childConstraints: []
+    - pin: 0
+      pull: 1
+      reach: 0.05
+      reachSmoothing: 0
+      nodes:
+      - transform: {fileID: 287562136}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 506897460}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      - transform: {fileID: 1148937585}
+        weight: 1
+        solverPosition: {x: 0, y: 0, z: 0}
+        defaultLocalPosition: {x: 0, y: 0, z: 0}
+        defaultLocalRotation: {x: 0, y: 0, z: 0, w: 0}
+        length: 0
+        solverRotation: {x: 0, y: 0, z: 0, w: 1}
+        effectorPositionWeight: 0
+        effectorRotationWeight: 0
+        offset: {x: 0, y: 0, z: 0}
+      children: 
+      childConstraints: []
+    effectors:
+    - bone: {fileID: 616703930}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones:
+      - {fileID: 418905276}
+      - {fileID: 287562136}
+      planeBone1: {fileID: 0}
+      planeBone2: {fileID: 0}
+      planeBone3: {fileID: 0}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 1441068470}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 0}
+      planeBone2: {fileID: 0}
+      planeBone3: {fileID: 0}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 1666804368}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 0}
+      planeBone2: {fileID: 0}
+      planeBone3: {fileID: 0}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 418905276}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 0}
+      planeBone2: {fileID: 0}
+      planeBone3: {fileID: 0}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 287562136}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 0}
+      planeBone2: {fileID: 0}
+      planeBone3: {fileID: 0}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 2119745906}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 1441068470}
+      planeBone2: {fileID: 1666804368}
+      planeBone3: {fileID: 616703930}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 636389494}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 1666804368}
+      planeBone2: {fileID: 1441068470}
+      planeBone3: {fileID: 616703930}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 1498718052}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 418905276}
+      planeBone2: {fileID: 287562136}
+      planeBone3: {fileID: 616703930}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    - bone: {fileID: 1148937585}
+      positionWeight: 0
+      rotationWeight: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      positionOffset: {x: 0, y: 0, z: 0}
+      effectChildNodes: 1
+      maintainRelativePositionWeight: 0
+      childBones: []
+      planeBone1: {fileID: 287562136}
+      planeBone2: {fileID: 418905276}
+      planeBone3: {fileID: 616703930}
+      planeRotationOffset: {x: 0, y: 0, z: 0, w: 0}
+    bendConstraints:
+    - bone1: {fileID: 1441068470}
+      bone2: {fileID: 1501331140}
+      bone3: {fileID: 2119745906}
+      direction: {x: 1, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0, w: 0}
+      weight: 0
+    - bone1: {fileID: 1666804368}
+      bone2: {fileID: 1233873120}
+      bone3: {fileID: 636389494}
+      direction: {x: 1, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0, w: 0}
+      weight: 0
+    - bone1: {fileID: 418905276}
+      bone2: {fileID: 1177438957}
+      bone3: {fileID: 1498718052}
+      direction: {x: 1, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0, w: 0}
+      weight: 0
+    - bone1: {fileID: 287562136}
+      bone2: {fileID: 506897460}
+      bone3: {fileID: 1148937585}
+      direction: {x: 1, y: 0, z: 0}
+      rotationOffset: {x: 0, y: 0, z: 0, w: 0}
+      weight: 0
+    spineMapping:
+      spineBones:
+      - {fileID: 1408352298}
+      - {fileID: 616703930}
+      - {fileID: 259981693}
+      leftUpperArmBone: {fileID: 1441068470}
+      rightUpperArmBone: {fileID: 1666804368}
+      leftThighBone: {fileID: 418905276}
+      rightThighBone: {fileID: 287562136}
+      iterations: 3
+      twistWeight: 1
+    boneMappings:
+    - bone: {fileID: 1826517603}
+      maintainRotationWeight: 0.5
+    limbMappings:
+    - parentBone: {fileID: 1181482725}
+      bone1: {fileID: 1441068470}
+      bone2: {fileID: 1501331140}
+      bone3: {fileID: 2119745906}
+      maintainRotationWeight: 0
+      weight: 1
+    - parentBone: {fileID: 1959317774}
+      bone1: {fileID: 1666804368}
+      bone2: {fileID: 1233873120}
+      bone3: {fileID: 636389494}
+      maintainRotationWeight: 0
+      weight: 1
+    - parentBone: {fileID: 0}
+      bone1: {fileID: 418905276}
+      bone2: {fileID: 1177438957}
+      bone3: {fileID: 1498718052}
+      maintainRotationWeight: 1
+      weight: 1
+    - parentBone: {fileID: 0}
+      bone1: {fileID: 287562136}
+      bone2: {fileID: 506897460}
+      bone3: {fileID: 1148937585}
+      maintainRotationWeight: 1
+      weight: 1
+    rootNode: {fileID: 616703930}
+    spineStiffness: 0
+    pullBodyVertical: 0.5
+    pullBodyHorizontal: 0
+--- !u!114 &688481112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688481106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b2262890e37454bb12cc9e718effe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 483683183}
+  states:
+  - clipName: Idle
+    animationSpeed: 1
+    moveSpeed: 0
+  - clipName: Walk
+    animationSpeed: 1.5
+    moveSpeed: 1.5
+  - clipName: Run
+    animationSpeed: 2
+    moveSpeed: 3
+  idleStateIndex: 0
+  walkStateIndex: 1
+  runStateIndex: 2
+  acceleration: 7
+  speedAcceleration: 3
+  angularSpeed: 10
+  rotationMode: 1
+  animationSpeedRelativeToVelocity:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &825888441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825888443}
+  - component: {fileID: 825888442}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &825888442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825888441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9c612a40c09e64cbf393e8a58b7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &825888443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825888441}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 554870298}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &829974501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 829974502}
+  m_Layer: 0
+  m_Name: Viking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &829974502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829974501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 483683182}
+  - {fileID: 688481107}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &830925124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830925125}
+  m_Layer: 0
+  m_Name: CameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &830925125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830925124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 688481107}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &987842907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 987842909}
+  - component: {fileID: 987842908}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &987842908
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987842907}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.8
+    m_Bias: 0.03
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 1
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &987842909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987842907}
+  m_LocalRotation: {x: -0.0040427675, y: -0.90626615, z: 0.4225993, w: -0.00866975}
+  m_LocalPosition: {x: 0.2878244, y: 3.633855, z: 0.7286153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1148937585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400026, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1177438957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400034, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1181482725 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400048, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1233873120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400006, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1330125223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0b25675351c3a43f799c307f044249d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2089736425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1330125224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330125223}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 62.822044, y: 64.79, z: 2}
+  m_Center: {x: 26.94008, y: 24.57, z: -1}
+--- !u!4 &1408352298 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400038, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1434867899 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400050, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1441068470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400016, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1498718052 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400032, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1501331140 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400014, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1571339958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571339960}
+  - component: {fileID: 1571339959}
+  m_Layer: 0
+  m_Name: Cannon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1571339959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571339958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c3672512a0b594792929c38b333065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToInstantiate: {fileID: 674371920}
+  speed: 7
+--- !u!4 &1571339960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571339958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.017938962, y: 0.47746164, z: 0.015174866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1610395719
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 829974502}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: a0984aae81a6f9d4294955fc25382391, type: 3}
+    - target: {fileID: 11100000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+--- !u!1 &1610395720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100042, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1610395721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610395720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba7e1a11c019e74a9fe7cf7fe12bf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bakedMesh: {fileID: 0}
+--- !u!4 &1666804368 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400008, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1667534611 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13700000, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1825855706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825855709}
+  - component: {fileID: 1825855708}
+  - component: {fileID: 1825855707}
+  m_Layer: 0
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &1825855707
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825855706}
+  m_Text: Hit Play, run around (shift), find the Inertia script on the Viking, try
+    changing it's weight
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &1825855708
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825855706}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!4 &1825855709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825855706}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: 5.5606985, y: 2.63563, z: 0.34724498}
+  m_LocalScale: {x: 0.3973009, y: 0.3973009, z: 0.3973009}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1826517603 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400020, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1875086630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875086631}
+  - component: {fileID: 1875086636}
+  - component: {fileID: 1875086635}
+  - component: {fileID: 1875086634}
+  - component: {fileID: 1875086633}
+  - component: {fileID: 1875086632}
+  - component: {fileID: 1875086637}
+  - component: {fileID: 1875086638}
+  - component: {fileID: 1875086639}
+  m_Layer: 7
+  m_Name: VikingFlex
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875086631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_LocalRotation: {x: -0.6675511, y: -0, z: -0, w: 0.74456406}
+  m_LocalPosition: {x: 0.02, y: 0.14, z: -0.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 688481107}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -83.757, y: 0, z: 0}
+--- !u!114 &1875086632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6ea39aab0086147a331947bdac7398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1875086633
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13300137, y: 0.121480614, z: 0.19655004}
+  m_Center: {x: 0.003826879, y: 0.00102309, z: 0.43940675}
+--- !u!114 &1875086634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b16a8afaafc82f4fb495adb5cb6cd23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceAnimSkin: {fileID: 1667534611}
+  particleBoneWeights: []
+--- !u!114 &1875086635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17add574727e0b84ca0c004035e2bdd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_skinningFalloff: 1
+  m_skinningMaxDistance: 0.5
+  m_skinningTarget: {fileID: 1875086630}
+  m_bindposes:
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.8019279
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.1148504
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.9615897
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.70529324
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.116310716
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.9657612
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.35485592
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.088540494
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.94023556
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.24650444
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.00597243
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.06411422
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.10015865
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.020492077
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.8494733
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.20329562
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.019604951
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.3060635
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.050314926
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.0010556579
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.62453514
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.020733602
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.025788188
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -1.282865
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.05731339
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.016608953
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.74529994
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.072456285
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.02028668
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.8063468
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.002477916
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.005915761
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -1.0955758
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.011834777
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.00097227097
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.8778242
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.010708928
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.030000448
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -1.2059098
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: 0.0030386075
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.04412657
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.93083996
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.015289888
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.0048656464
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.64306
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.063100964
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.0046263337
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.77564186
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.08666152
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.036767125
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.85609734
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.21036619
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.021445751
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.27647936
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.021963093
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0.02473712
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -1.2679793
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.24368037
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.007866859
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.08850111
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.15298909
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.04418397
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.8837666
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.4786109
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.10497171
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.9574996
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  - e00: 1
+    e01: 0
+    e02: 0
+    e03: -0.79441047
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: -0.11662179
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: -0.96106327
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_boneWeights:
+  - m_Weight0: 0.81702703
+    m_Weight1: 0.13088626
+    m_Weight2: 0.052086692
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.86320746
+    m_Weight1: 0.13679256
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8670761
+    m_Weight1: 0.1329239
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.92536724
+    m_Weight1: 0.074632846
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.86320746
+    m_Weight1: 0.13679256
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.90728563
+    m_Weight1: 0.09271433
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9798097
+    m_Weight1: 0.02019035
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.93934673
+    m_Weight1: 0.060653232
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.92119485
+    m_Weight1: 0.078805126
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9032163
+    m_Weight1: 0.09678367
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.92471224
+    m_Weight1: 0.07528783
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8787762
+    m_Weight1: 0.07131665
+    m_Weight2: 0.02648594
+    m_Weight3: 0.023421241
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: 17
+  - m_Weight0: 0.86320746
+    m_Weight1: 0.13679256
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.97389674
+    m_Weight1: 0.016599253
+    m_Weight2: 0.0049508438
+    m_Weight3: 0.0045532878
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: 17
+  - m_Weight0: 0.81702703
+    m_Weight1: 0.13088626
+    m_Weight2: 0.052086692
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.80182296
+    m_Weight1: 0.13430963
+    m_Weight2: 0.0638674
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8669471
+    m_Weight1: 0.090361066
+    m_Weight2: 0.042691868
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9303505
+    m_Weight1: 0.048989262
+    m_Weight2: 0.020660322
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8973852
+    m_Weight1: 0.07581948
+    m_Weight2: 0.026795385
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8912896
+    m_Weight1: 0.069444075
+    m_Weight2: 0.020295965
+    m_Weight3: 0.018970348
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8719606
+    m_Weight1: 0.09038413
+    m_Weight2: 0.037655365
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.92119485
+    m_Weight1: 0.078805126
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9032163
+    m_Weight1: 0.09678367
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8912896
+    m_Weight1: 0.069444075
+    m_Weight2: 0.020295965
+    m_Weight3: 0.018970348
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: 17
+  - m_Weight0: 0.92471224
+    m_Weight1: 0.07528783
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.76934457
+    m_Weight1: 0.17300116
+    m_Weight2: 0.057654265
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.81550497
+    m_Weight1: 0.18449505
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.816376
+    m_Weight1: 0.18362415
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.88152176
+    m_Weight1: 0.11847829
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.816376
+    m_Weight1: 0.18362415
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.85465926
+    m_Weight1: 0.14534077
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.95635444
+    m_Weight1: 0.04364557
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8874377
+    m_Weight1: 0.11256237
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.87910074
+    m_Weight1: 0.12089933
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.85215
+    m_Weight1: 0.14784987
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8975789
+    m_Weight1: 0.102421135
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.83036065
+    m_Weight1: 0.108849786
+    m_Weight2: 0.03278432
+    m_Weight3: 0.028005296
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: 5
+  - m_Weight0: 0.816376
+    m_Weight1: 0.18362415
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.94852984
+    m_Weight1: 0.041797142
+    m_Weight2: 0.009673
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.76934457
+    m_Weight1: 0.17300116
+    m_Weight2: 0.057654265
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7472573
+    m_Weight1: 0.17976925
+    m_Weight2: 0.07297349
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8076993
+    m_Weight1: 0.13778311
+    m_Weight2: 0.05451756
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.86927503
+    m_Weight1: 0.097087055
+    m_Weight2: 0.033637967
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8513085
+    m_Weight1: 0.11589064
+    m_Weight2: 0.032800842
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.87875736
+    m_Weight1: 0.09881933
+    m_Weight2: 0.02242332
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.81563306
+    m_Weight1: 0.13732895
+    m_Weight2: 0.04703792
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.87910074
+    m_Weight1: 0.12089933
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.85215
+    m_Weight1: 0.14784987
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.87875736
+    m_Weight1: 0.09881933
+    m_Weight2: 0.02242332
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8975789
+    m_Weight1: 0.102421135
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9303505
+    m_Weight1: 0.048989262
+    m_Weight2: 0.020660322
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9032163
+    m_Weight1: 0.09678367
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8719606
+    m_Weight1: 0.09038413
+    m_Weight2: 0.037655365
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.93934673
+    m_Weight1: 0.060653232
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8669471
+    m_Weight1: 0.090361066
+    m_Weight2: 0.042691868
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.90728563
+    m_Weight1: 0.09271433
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.80182296
+    m_Weight1: 0.13430963
+    m_Weight2: 0.0638674
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8670761
+    m_Weight1: 0.1329239
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.39403433
+    m_Weight1: 0.25013167
+    m_Weight2: 0.21312314
+    m_Weight3: 0.1427108
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.3494998
+    m_Weight1: 0.29923192
+    m_Weight2: 0.19398189
+    m_Weight3: 0.15728639
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.91866463
+    m_Weight1: 0.052096788
+    m_Weight2: 0.016369548
+    m_Weight3: 0.0128689455
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 14
+  - m_Weight0: 0.91786563
+    m_Weight1: 0.050311394
+    m_Weight2: 0.016709214
+    m_Weight3: 0.015113711
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.38393086
+    m_Weight1: 0.26030403
+    m_Weight2: 0.2129815
+    m_Weight3: 0.14278352
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.88267946
+    m_Weight1: 0.07709586
+    m_Weight2: 0.020499269
+    m_Weight3: 0.019725472
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8847482
+    m_Weight1: 0.07900174
+    m_Weight2: 0.01997807
+    m_Weight3: 0.016272064
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8320113
+    m_Weight1: 0.122259356
+    m_Weight2: 0.02455304
+    m_Weight3: 0.02117634
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.9548339
+    m_Weight1: 0.026801491
+    m_Weight2: 0.009720874
+    m_Weight3: 0.008643654
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.34282628
+    m_Weight1: 0.30777866
+    m_Weight2: 0.19351588
+    m_Weight3: 0.1558792
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.9539364
+    m_Weight1: 0.0286036
+    m_Weight2: 0.009798246
+    m_Weight3: 0.0076616746
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 14
+  - m_Weight0: 0.3494998
+    m_Weight1: 0.29923192
+    m_Weight2: 0.19398189
+    m_Weight3: 0.15728639
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.91866463
+    m_Weight1: 0.052096788
+    m_Weight2: 0.016369548
+    m_Weight3: 0.0128689455
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 14
+  - m_Weight0: 0.8847482
+    m_Weight1: 0.07900174
+    m_Weight2: 0.01997807
+    m_Weight3: 0.016272064
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8320113
+    m_Weight1: 0.122259356
+    m_Weight2: 0.02455304
+    m_Weight3: 0.02117634
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8287115
+    m_Weight1: 0.12026685
+    m_Weight2: 0.025754815
+    m_Weight3: 0.025266742
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 17
+    m_BoneIndex3: 6
+  - m_Weight0: 0.9798097
+    m_Weight1: 0.02019035
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.97389674
+    m_Weight1: 0.016599253
+    m_Weight2: 0.0049508438
+    m_Weight3: 0.0045532878
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8664043
+    m_Weight1: 0.090888456
+    m_Weight2: 0.021408841
+    m_Weight3: 0.021298388
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 17
+    m_BoneIndex3: 6
+  - m_Weight0: 0.8912896
+    m_Weight1: 0.069444075
+    m_Weight2: 0.020295965
+    m_Weight3: 0.018970348
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: 19
+    m_BoneIndex3: 17
+  - m_Weight0: 0.8687707
+    m_Weight1: 0.09281745
+    m_Weight2: 0.020757796
+    m_Weight3: 0.017653998
+    m_BoneIndex0: 5
+    m_BoneIndex1: 3
+    m_BoneIndex2: 6
+    m_BoneIndex3: 17
+  - m_Weight0: 0.9798097
+    m_Weight1: 0.02019035
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.92471224
+    m_Weight1: 0.07528783
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 3
+    m_BoneIndex1: 5
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.40305987
+    m_Weight1: 0.2542926
+    m_Weight2: 0.17725992
+    m_Weight3: 0.16538763
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 13
+    m_BoneIndex3: 9
+  - m_Weight0: 0.747107
+    m_Weight1: 0.11512811
+    m_Weight2: 0.0803286
+    m_Weight3: 0.0574363
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.7195607
+    m_Weight1: 0.121256575
+    m_Weight2: 0.08266366
+    m_Weight3: 0.07651912
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 13
+  - m_Weight0: 0.6123491
+    m_Weight1: 0.1706303
+    m_Weight2: 0.11194725
+    m_Weight3: 0.10507334
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 13
+  - m_Weight0: 0.33602667
+    m_Weight1: 0.2753826
+    m_Weight2: 0.19887829
+    m_Weight3: 0.18971246
+    m_BoneIndex0: 4
+    m_BoneIndex1: 2
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.34223786
+    m_Weight1: 0.23017733
+    m_Weight2: 0.22977072
+    m_Weight3: 0.1978141
+    m_BoneIndex0: 13
+    m_BoneIndex1: 4
+    m_BoneIndex2: 10
+    m_BoneIndex3: 11
+  - m_Weight0: 0.26252928
+    m_Weight1: 0.25327656
+    m_Weight2: 0.24479829
+    m_Weight3: 0.23939584
+    m_BoneIndex0: 13
+    m_BoneIndex1: 4
+    m_BoneIndex2: 10
+    m_BoneIndex3: 11
+  - m_Weight0: 0.6213456
+    m_Weight1: 0.17493275
+    m_Weight2: 0.11688207
+    m_Weight3: 0.08683962
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.29126877
+    m_Weight1: 0.28739828
+    m_Weight2: 0.24021651
+    m_Weight3: 0.18111645
+    m_BoneIndex0: 4
+    m_BoneIndex1: 11
+    m_BoneIndex2: 13
+    m_BoneIndex3: 9
+  - m_Weight0: 0.3488047
+    m_Weight1: 0.27948654
+    m_Weight2: 0.24789363
+    m_Weight3: 0.12381516
+    m_BoneIndex0: 10
+    m_BoneIndex1: 13
+    m_BoneIndex2: 11
+    m_BoneIndex3: 16
+  - m_Weight0: 0.35440838
+    m_Weight1: 0.24621354
+    m_Weight2: 0.21124133
+    m_Weight3: 0.18813668
+    m_BoneIndex0: 4
+    m_BoneIndex1: 9
+    m_BoneIndex2: 2
+    m_BoneIndex3: 8
+  - m_Weight0: 0.28150767
+    m_Weight1: 0.27468765
+    m_Weight2: 0.25424558
+    m_Weight3: 0.18955901
+    m_BoneIndex0: 4
+    m_BoneIndex1: 8
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.38427535
+    m_Weight1: 0.2555496
+    m_Weight2: 0.1827985
+    m_Weight3: 0.17737655
+    m_BoneIndex0: 11
+    m_BoneIndex1: 13
+    m_BoneIndex2: 4
+    m_BoneIndex3: 16
+  - m_Weight0: 0.33384869
+    m_Weight1: 0.27020353
+    m_Weight2: 0.21494702
+    m_Weight3: 0.18100071
+    m_BoneIndex0: 4
+    m_BoneIndex1: 9
+    m_BoneIndex2: 2
+    m_BoneIndex3: 8
+  - m_Weight0: 0.747107
+    m_Weight1: 0.11512811
+    m_Weight2: 0.0803286
+    m_Weight3: 0.0574363
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.38083106
+    m_Weight1: 0.2607178
+    m_Weight2: 0.20414203
+    m_Weight3: 0.15430905
+    m_BoneIndex0: 6
+    m_BoneIndex1: 8
+    m_BoneIndex2: 14
+    m_BoneIndex3: 9
+  - m_Weight0: 0.4195249
+    m_Weight1: 0.23443164
+    m_Weight2: 0.18405358
+    m_Weight3: 0.16198988
+    m_BoneIndex0: 6
+    m_BoneIndex1: 8
+    m_BoneIndex2: 14
+    m_BoneIndex3: 9
+  - m_Weight0: 0.3494998
+    m_Weight1: 0.29923192
+    m_Weight2: 0.19398189
+    m_Weight3: 0.15728639
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.4949499
+    m_Weight1: 0.2502672
+    m_Weight2: 0.15925357
+    m_Weight3: 0.095529415
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 8
+    m_BoneIndex3: 5
+  - m_Weight0: 0.39403433
+    m_Weight1: 0.25013167
+    m_Weight2: 0.21312314
+    m_Weight3: 0.1427108
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.38365924
+    m_Weight1: 0.24857415
+    m_Weight2: 0.24499613
+    m_Weight3: 0.12277053
+    m_BoneIndex0: 6
+    m_BoneIndex1: 8
+    m_BoneIndex2: 14
+    m_BoneIndex3: 9
+  - m_Weight0: 0.39423147
+    m_Weight1: 0.36230722
+    m_Weight2: 0.13638727
+    m_Weight3: 0.10707406
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 8
+    m_BoneIndex3: 15
+  - m_Weight0: 0.3819868
+    m_Weight1: 0.33592767
+    m_Weight2: 0.15191701
+    m_Weight3: 0.13016848
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 5
+    m_BoneIndex3: 8
+  - m_Weight0: 0.34769008
+    m_Weight1: 0.2505247
+    m_Weight2: 0.24558905
+    m_Weight3: 0.15619609
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.3114185
+    m_Weight1: 0.24501565
+    m_Weight2: 0.23571177
+    m_Weight3: 0.20785412
+    m_BoneIndex0: 11
+    m_BoneIndex1: 15
+    m_BoneIndex2: 8
+    m_BoneIndex3: 9
+  - m_Weight0: 0.35465193
+    m_Weight1: 0.29315323
+    m_Weight2: 0.2050468
+    m_Weight3: 0.14714803
+    m_BoneIndex0: 14
+    m_BoneIndex1: 6
+    m_BoneIndex2: 8
+    m_BoneIndex3: 15
+  - m_Weight0: 0.43007886
+    m_Weight1: 0.26892522
+    m_Weight2: 0.16243975
+    m_Weight3: 0.1385562
+    m_BoneIndex0: 14
+    m_BoneIndex1: 6
+    m_BoneIndex2: 15
+    m_BoneIndex3: 8
+  - m_Weight0: 0.3131814
+    m_Weight1: 0.2964294
+    m_Weight2: 0.21616478
+    m_Weight3: 0.17422435
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.39281744
+    m_Weight1: 0.22047216
+    m_Weight2: 0.22046383
+    m_Weight3: 0.16624664
+    m_BoneIndex0: 14
+    m_BoneIndex1: 6
+    m_BoneIndex2: 15
+    m_BoneIndex3: 8
+  - m_Weight0: 0.36291745
+    m_Weight1: 0.27363712
+    m_Weight2: 0.20313396
+    m_Weight3: 0.16031137
+    m_BoneIndex0: 14
+    m_BoneIndex1: 15
+    m_BoneIndex2: 6
+    m_BoneIndex3: 8
+  - m_Weight0: 0.36674774
+    m_Weight1: 0.27850553
+    m_Weight2: 0.19099514
+    m_Weight3: 0.16375163
+    m_BoneIndex0: 14
+    m_BoneIndex1: 15
+    m_BoneIndex2: 6
+    m_BoneIndex3: 16
+  - m_Weight0: 0.46046498
+    m_Weight1: 0.26040673
+    m_Weight2: 0.18500282
+    m_Weight3: 0.094125524
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 15
+    m_BoneIndex3: 11
+  - m_Weight0: 0.3087199
+    m_Weight1: 0.2628283
+    m_Weight2: 0.24920145
+    m_Weight3: 0.1792504
+    m_BoneIndex0: 15
+    m_BoneIndex1: 20
+    m_BoneIndex2: 16
+    m_BoneIndex3: 11
+  - m_Weight0: 0.43775165
+    m_Weight1: 0.24859536
+    m_Weight2: 0.1959106
+    m_Weight3: 0.11774235
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 15
+    m_BoneIndex3: 11
+  - m_Weight0: 0.5087927
+    m_Weight1: 0.23213924
+    m_Weight2: 0.13672815
+    m_Weight3: 0.12233984
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 13
+    m_BoneIndex3: 15
+  - m_Weight0: 0.27976426
+    m_Weight1: 0.26242182
+    m_Weight2: 0.23024063
+    m_Weight3: 0.2275733
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 11
+    m_BoneIndex3: 13
+  - m_Weight0: 0.29124078
+    m_Weight1: 0.24288177
+    m_Weight2: 0.23480353
+    m_Weight3: 0.23107393
+    m_BoneIndex0: 20
+    m_BoneIndex1: 10
+    m_BoneIndex2: 13
+    m_BoneIndex3: 16
+  - m_Weight0: 0.2990854
+    m_Weight1: 0.27572942
+    m_Weight2: 0.22375502
+    m_Weight3: 0.20143011
+    m_BoneIndex0: 20
+    m_BoneIndex1: 13
+    m_BoneIndex2: 16
+    m_BoneIndex3: 10
+  - m_Weight0: 0.5119
+    m_Weight1: 0.23056488
+    m_Weight2: 0.14784826
+    m_Weight3: 0.109686844
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 13
+    m_BoneIndex3: 11
+  - m_Weight0: 0.48690554
+    m_Weight1: 0.2079137
+    m_Weight2: 0.1786503
+    m_Weight3: 0.12653048
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 21
+    m_BoneIndex3: 15
+  - m_Weight0: 0.45919734
+    m_Weight1: 0.21698247
+    m_Weight2: 0.20224866
+    m_Weight3: 0.121571444
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 15
+  - m_Weight0: 0.46656927
+    m_Weight1: 0.2117589
+    m_Weight2: 0.18957591
+    m_Weight3: 0.13209589
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 21
+    m_BoneIndex3: 13
+  - m_Weight0: 0.5119
+    m_Weight1: 0.23056488
+    m_Weight2: 0.14784826
+    m_Weight3: 0.109686844
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 13
+    m_BoneIndex3: 11
+  - m_Weight0: 0.44183487
+    m_Weight1: 0.22558114
+    m_Weight2: 0.20522901
+    m_Weight3: 0.12735504
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 13
+  - m_Weight0: 0.45919734
+    m_Weight1: 0.21698247
+    m_Weight2: 0.20224866
+    m_Weight3: 0.121571444
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 15
+  - m_Weight0: 0.7195607
+    m_Weight1: 0.121256575
+    m_Weight2: 0.08266366
+    m_Weight3: 0.07651912
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 13
+  - m_Weight0: 0.747107
+    m_Weight1: 0.11512811
+    m_Weight2: 0.0803286
+    m_Weight3: 0.0574363
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.6553386
+    m_Weight1: 0.20240198
+    m_Weight2: 0.14225948
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.6185743
+    m_Weight1: 0.20966445
+    m_Weight2: 0.17176126
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.6123491
+    m_Weight1: 0.1706303
+    m_Weight2: 0.11194725
+    m_Weight3: 0.10507334
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 13
+  - m_Weight0: 0.66851175
+    m_Weight1: 0.203633
+    m_Weight2: 0.12785526
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.70153946
+    m_Weight1: 0.19304328
+    m_Weight2: 0.105417326
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.61678654
+    m_Weight1: 0.20187283
+    m_Weight2: 0.18134066
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.6213456
+    m_Weight1: 0.17493275
+    m_Weight2: 0.11688207
+    m_Weight3: 0.08683962
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.6563579
+    m_Weight1: 0.19421856
+    m_Weight2: 0.14942366
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.747107
+    m_Weight1: 0.11512811
+    m_Weight2: 0.0803286
+    m_Weight3: 0.0574363
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.6553386
+    m_Weight1: 0.20240198
+    m_Weight2: 0.14225948
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.70153946
+    m_Weight1: 0.19304328
+    m_Weight2: 0.105417326
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.73598254
+    m_Weight1: 0.18238229
+    m_Weight2: 0.08163514
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7055887
+    m_Weight1: 0.19509147
+    m_Weight2: 0.09931984
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.73598254
+    m_Weight1: 0.18238229
+    m_Weight2: 0.08163514
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7444933
+    m_Weight1: 0.17243744
+    m_Weight2: 0.083069235
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9818548
+    m_Weight1: 0.01736238
+    m_Weight2: 0.00078278803
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.82535315
+    m_Weight1: 0.16633995
+    m_Weight2: 0.00830685
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.77060276
+    m_Weight1: 0.21922927
+    m_Weight2: 0.010167996
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.71173906
+    m_Weight1: 0.18622231
+    m_Weight2: 0.10203866
+    m_Weight3: 0
+    m_BoneIndex0: 1
+    m_BoneIndex1: 0
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8333884
+    m_Weight1: 0.1592545
+    m_Weight2: 0.0073570265
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9818548
+    m_Weight1: 0.01736238
+    m_Weight2: 0.00078278803
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8333884
+    m_Weight1: 0.1592545
+    m_Weight2: 0.0073570265
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9818548
+    m_Weight1: 0.01736238
+    m_Weight2: 0.00078278803
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.865515
+    m_Weight1: 0.12610461
+    m_Weight2: 0.008380386
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7953764
+    m_Weight1: 0.19138664
+    m_Weight2: 0.013236874
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7366889
+    m_Weight1: 0.26331097
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.753492
+    m_Weight1: 0.22331601
+    m_Weight2: 0.023192
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.73860675
+    m_Weight1: 0.2613933
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7552867
+    m_Weight1: 0.24471335
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8333884
+    m_Weight1: 0.1592545
+    m_Weight2: 0.0073570265
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.77060276
+    m_Weight1: 0.21922927
+    m_Weight2: 0.010167996
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.788437
+    m_Weight1: 0.19653922
+    m_Weight2: 0.015023878
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7506548
+    m_Weight1: 0.24934517
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.82535315
+    m_Weight1: 0.16633995
+    m_Weight2: 0.00830685
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.77060276
+    m_Weight1: 0.21922927
+    m_Weight2: 0.010167996
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.73049605
+    m_Weight1: 0.24472961
+    m_Weight2: 0.024774384
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7506548
+    m_Weight1: 0.24934517
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7326356
+    m_Weight1: 0.26736435
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7279976
+    m_Weight1: 0.2720024
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7326356
+    m_Weight1: 0.26736435
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7506548
+    m_Weight1: 0.24934517
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7366889
+    m_Weight1: 0.26331097
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.73860675
+    m_Weight1: 0.2613933
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7279976
+    m_Weight1: 0.2720024
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.753492
+    m_Weight1: 0.22331601
+    m_Weight2: 0.023192
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.73049605
+    m_Weight1: 0.24472961
+    m_Weight2: 0.024774384
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9818548
+    m_Weight1: 0.01736238
+    m_Weight2: 0.00078278803
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.82535315
+    m_Weight1: 0.16633995
+    m_Weight2: 0.00830685
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.865515
+    m_Weight1: 0.12610461
+    m_Weight2: 0.008380386
+    m_Weight3: 0
+    m_BoneIndex0: 0
+    m_BoneIndex1: 1
+    m_BoneIndex2: 2
+    m_BoneIndex3: -1
+  - m_Weight0: 0.32678524
+    m_Weight1: 0.2934854
+    m_Weight2: 0.27412692
+    m_Weight3: 0.10560243
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.46676013
+    m_Weight1: 0.24084575
+    m_Weight2: 0.15507774
+    m_Weight3: 0.13731639
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.44748813
+    m_Weight1: 0.2410047
+    m_Weight2: 0.15997165
+    m_Weight3: 0.1515355
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 18
+  - m_Weight0: 0.34223786
+    m_Weight1: 0.23017733
+    m_Weight2: 0.22977072
+    m_Weight3: 0.1978141
+    m_BoneIndex0: 13
+    m_BoneIndex1: 4
+    m_BoneIndex2: 10
+    m_BoneIndex3: 11
+  - m_Weight0: 0.41541374
+    m_Weight1: 0.24292088
+    m_Weight2: 0.18057261
+    m_Weight3: 0.16109283
+    m_BoneIndex0: 13
+    m_BoneIndex1: 10
+    m_BoneIndex2: 11
+    m_BoneIndex3: 16
+  - m_Weight0: 0.26252928
+    m_Weight1: 0.25327656
+    m_Weight2: 0.24479829
+    m_Weight3: 0.23939584
+    m_BoneIndex0: 13
+    m_BoneIndex1: 4
+    m_BoneIndex2: 10
+    m_BoneIndex3: 11
+  - m_Weight0: 0.52836084
+    m_Weight1: 0.2001392
+    m_Weight2: 0.15340815
+    m_Weight3: 0.11809171
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 13
+    m_BoneIndex3: 7
+  - m_Weight0: 0.43675917
+    m_Weight1: 0.26429304
+    m_Weight2: 0.15841524
+    m_Weight3: 0.14053254
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 18
+  - m_Weight0: 0.36451212
+    m_Weight1: 0.22333719
+    m_Weight2: 0.20657074
+    m_Weight3: 0.20557997
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 13
+    m_BoneIndex3: 11
+  - m_Weight0: 0.37379667
+    m_Weight1: 0.2978014
+    m_Weight2: 0.21290578
+    m_Weight3: 0.11549612
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3876605
+    m_Weight1: 0.25308478
+    m_Weight2: 0.24305709
+    m_Weight3: 0.11619753
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32678524
+    m_Weight1: 0.2934854
+    m_Weight2: 0.27412692
+    m_Weight3: 0.10560243
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3285876
+    m_Weight1: 0.28251722
+    m_Weight2: 0.22167648
+    m_Weight3: 0.1672187
+    m_BoneIndex0: 12
+    m_BoneIndex1: 7
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.30805734
+    m_Weight1: 0.29662466
+    m_Weight2: 0.20918436
+    m_Weight3: 0.18613358
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 7
+    m_BoneIndex3: 18
+  - m_Weight0: 0.37735623
+    m_Weight1: 0.2471875
+    m_Weight2: 0.22236556
+    m_Weight3: 0.15309075
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34753042
+    m_Weight1: 0.26915386
+    m_Weight2: 0.20204529
+    m_Weight3: 0.18127051
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.3385899
+    m_Weight1: 0.26876342
+    m_Weight2: 0.20615394
+    m_Weight3: 0.1864927
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.34753042
+    m_Weight1: 0.26915386
+    m_Weight2: 0.20204529
+    m_Weight3: 0.18127051
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.37116224
+    m_Weight1: 0.22271279
+    m_Weight2: 0.20733152
+    m_Weight3: 0.19879349
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 11
+    m_BoneIndex3: 13
+  - m_Weight0: 0.6507005
+    m_Weight1: 0.12852715
+    m_Weight2: 0.12553574
+    m_Weight3: 0.095236525
+    m_BoneIndex0: 10
+    m_BoneIndex1: 13
+    m_BoneIndex2: 12
+    m_BoneIndex3: 11
+  - m_Weight0: 0.52836084
+    m_Weight1: 0.2001392
+    m_Weight2: 0.15340815
+    m_Weight3: 0.11809171
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 13
+    m_BoneIndex3: 7
+  - m_Weight0: 0.26252928
+    m_Weight1: 0.25327656
+    m_Weight2: 0.24479829
+    m_Weight3: 0.23939584
+    m_BoneIndex0: 13
+    m_BoneIndex1: 4
+    m_BoneIndex2: 10
+    m_BoneIndex3: 11
+  - m_Weight0: 0.3488047
+    m_Weight1: 0.27948654
+    m_Weight2: 0.24789363
+    m_Weight3: 0.12381516
+    m_BoneIndex0: 10
+    m_BoneIndex1: 13
+    m_BoneIndex2: 11
+    m_BoneIndex3: 16
+  - m_Weight0: 0.32678524
+    m_Weight1: 0.2934854
+    m_Weight2: 0.27412692
+    m_Weight3: 0.10560243
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.44166377
+    m_Weight1: 0.25869828
+    m_Weight2: 0.17022814
+    m_Weight3: 0.12940975
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 13
+  - m_Weight0: 0.32678524
+    m_Weight1: 0.2934854
+    m_Weight2: 0.27412692
+    m_Weight3: 0.10560243
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.39829725
+    m_Weight1: 0.29263872
+    m_Weight2: 0.2033826
+    m_Weight3: 0.105681464
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3770239
+    m_Weight1: 0.37672067
+    m_Weight2: 0.15245976
+    m_Weight3: 0.09379572
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.42244774
+    m_Weight1: 0.3018485
+    m_Weight2: 0.16487102
+    m_Weight3: 0.11083279
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.37731096
+    m_Weight1: 0.2862256
+    m_Weight2: 0.18340811
+    m_Weight3: 0.15305538
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34198418
+    m_Weight1: 0.28363946
+    m_Weight2: 0.21740206
+    m_Weight3: 0.15697433
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.37735623
+    m_Weight1: 0.2471875
+    m_Weight2: 0.22236556
+    m_Weight3: 0.15309075
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34753042
+    m_Weight1: 0.26915386
+    m_Weight2: 0.20204529
+    m_Weight3: 0.18127051
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.5283599
+    m_Weight1: 0.21427669
+    m_Weight2: 0.13451508
+    m_Weight3: 0.12284824
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 13
+    m_BoneIndex3: 18
+  - m_Weight0: 0.29124078
+    m_Weight1: 0.24288177
+    m_Weight2: 0.23480353
+    m_Weight3: 0.23107393
+    m_BoneIndex0: 20
+    m_BoneIndex1: 10
+    m_BoneIndex2: 13
+    m_BoneIndex3: 16
+  - m_Weight0: 0.2990854
+    m_Weight1: 0.27572942
+    m_Weight2: 0.22375502
+    m_Weight3: 0.20143011
+    m_BoneIndex0: 20
+    m_BoneIndex1: 13
+    m_BoneIndex2: 16
+    m_BoneIndex3: 10
+  - m_Weight0: 0.46676013
+    m_Weight1: 0.24084575
+    m_Weight2: 0.15507774
+    m_Weight3: 0.13731639
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.41541374
+    m_Weight1: 0.24292088
+    m_Weight2: 0.18057261
+    m_Weight3: 0.16109283
+    m_BoneIndex0: 13
+    m_BoneIndex1: 10
+    m_BoneIndex2: 11
+    m_BoneIndex3: 16
+  - m_Weight0: 0.36744034
+    m_Weight1: 0.24041587
+    m_Weight2: 0.19669409
+    m_Weight3: 0.1954498
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 20
+    m_BoneIndex3: 13
+  - m_Weight0: 0.3385899
+    m_Weight1: 0.26876342
+    m_Weight2: 0.20615394
+    m_Weight3: 0.1864927
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.34753042
+    m_Weight1: 0.26915386
+    m_Weight2: 0.20204529
+    m_Weight3: 0.18127051
+    m_BoneIndex0: 12
+    m_BoneIndex1: 10
+    m_BoneIndex2: 18
+    m_BoneIndex3: 7
+  - m_Weight0: 0.37116224
+    m_Weight1: 0.22271279
+    m_Weight2: 0.20733152
+    m_Weight3: 0.19879349
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 11
+    m_BoneIndex3: 13
+  - m_Weight0: 0.6507005
+    m_Weight1: 0.12852715
+    m_Weight2: 0.12553574
+    m_Weight3: 0.095236525
+    m_BoneIndex0: 10
+    m_BoneIndex1: 13
+    m_BoneIndex2: 12
+    m_BoneIndex3: 11
+  - m_Weight0: 0.5283599
+    m_Weight1: 0.21427669
+    m_Weight2: 0.13451508
+    m_Weight3: 0.12284824
+    m_BoneIndex0: 10
+    m_BoneIndex1: 12
+    m_BoneIndex2: 13
+    m_BoneIndex3: 18
+  - m_Weight0: 0.29124078
+    m_Weight1: 0.24288177
+    m_Weight2: 0.23480353
+    m_Weight3: 0.23107393
+    m_BoneIndex0: 20
+    m_BoneIndex1: 10
+    m_BoneIndex2: 13
+    m_BoneIndex3: 16
+  - m_Weight0: 0.3488047
+    m_Weight1: 0.27948654
+    m_Weight2: 0.24789363
+    m_Weight3: 0.12381516
+    m_BoneIndex0: 10
+    m_BoneIndex1: 13
+    m_BoneIndex2: 11
+    m_BoneIndex3: 16
+  - m_Weight0: 0.3285876
+    m_Weight1: 0.28251722
+    m_Weight2: 0.22167648
+    m_Weight3: 0.1672187
+    m_BoneIndex0: 12
+    m_BoneIndex1: 7
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37735623
+    m_Weight1: 0.2471875
+    m_Weight2: 0.22236556
+    m_Weight3: 0.15309075
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35624823
+    m_Weight1: 0.2519657
+    m_Weight2: 0.23083149
+    m_Weight3: 0.16095462
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.31359985
+    m_Weight1: 0.28845802
+    m_Weight2: 0.22492054
+    m_Weight3: 0.17302164
+    m_BoneIndex0: 12
+    m_BoneIndex1: 7
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37379667
+    m_Weight1: 0.2978014
+    m_Weight2: 0.21290578
+    m_Weight3: 0.11549612
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3740327
+    m_Weight1: 0.28285292
+    m_Weight2: 0.21494383
+    m_Weight3: 0.12817049
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3876605
+    m_Weight1: 0.25308478
+    m_Weight2: 0.24305709
+    m_Weight3: 0.11619753
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34236586
+    m_Weight1: 0.28567246
+    m_Weight2: 0.24090675
+    m_Weight3: 0.13105495
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35624823
+    m_Weight1: 0.2519657
+    m_Weight2: 0.23083149
+    m_Weight3: 0.16095462
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32331723
+    m_Weight1: 0.2854431
+    m_Weight2: 0.27051738
+    m_Weight3: 0.120722316
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32389444
+    m_Weight1: 0.29123592
+    m_Weight2: 0.27503964
+    m_Weight3: 0.10983003
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35098284
+    m_Weight1: 0.2854806
+    m_Weight2: 0.2428037
+    m_Weight3: 0.1207329
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.472941
+    m_Weight1: 0.22226779
+    m_Weight2: 0.21798965
+    m_Weight3: 0.08680147
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.51207805
+    m_Weight1: 0.21238115
+    m_Weight2: 0.20419489
+    m_Weight3: 0.07134597
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37993258
+    m_Weight1: 0.24852993
+    m_Weight2: 0.24336205
+    m_Weight3: 0.12817554
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32678524
+    m_Weight1: 0.2934854
+    m_Weight2: 0.27412692
+    m_Weight3: 0.10560243
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3197348
+    m_Weight1: 0.29531065
+    m_Weight2: 0.26649234
+    m_Weight3: 0.11846223
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.44146204
+    m_Weight1: 0.2481803
+    m_Weight2: 0.21279375
+    m_Weight3: 0.09756397
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4658974
+    m_Weight1: 0.24755923
+    m_Weight2: 0.20127763
+    m_Weight3: 0.085265785
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34669504
+    m_Weight1: 0.34124902
+    m_Weight2: 0.22329703
+    m_Weight3: 0.0887589
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3197348
+    m_Weight1: 0.29531065
+    m_Weight2: 0.26649234
+    m_Weight3: 0.11846223
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35747042
+    m_Weight1: 0.353934
+    m_Weight2: 0.21182853
+    m_Weight3: 0.07676709
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.396802
+    m_Weight1: 0.27116504
+    m_Weight2: 0.20981821
+    m_Weight3: 0.122214794
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35631323
+    m_Weight1: 0.2851513
+    m_Weight2: 0.21924902
+    m_Weight3: 0.13928649
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.38877407
+    m_Weight1: 0.26893723
+    m_Weight2: 0.21285968
+    m_Weight3: 0.12942903
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4751105
+    m_Weight1: 0.25051638
+    m_Weight2: 0.18754657
+    m_Weight3: 0.08682651
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.49909788
+    m_Weight1: 0.26431912
+    m_Weight2: 0.16495985
+    m_Weight3: 0.07162322
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4101248
+    m_Weight1: 0.278514
+    m_Weight2: 0.20080365
+    m_Weight3: 0.11055766
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35631323
+    m_Weight1: 0.2851513
+    m_Weight2: 0.21924902
+    m_Weight3: 0.13928649
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.50302225
+    m_Weight1: 0.3087778
+    m_Weight2: 0.13933858
+    m_Weight3: 0.048861284
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4891624
+    m_Weight1: 0.25767472
+    m_Weight2: 0.18376295
+    m_Weight3: 0.06939997
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.47432446
+    m_Weight1: 0.24118437
+    m_Weight2: 0.19223791
+    m_Weight3: 0.0922533
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.55756223
+    m_Weight1: 0.20806722
+    m_Weight2: 0.17422974
+    m_Weight3: 0.060140815
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.40076885
+    m_Weight1: 0.2759732
+    m_Weight2: 0.20499201
+    m_Weight3: 0.11826593
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4101248
+    m_Weight1: 0.278514
+    m_Weight2: 0.20080365
+    m_Weight3: 0.11055766
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.50534153
+    m_Weight1: 0.25468236
+    m_Weight2: 0.16624127
+    m_Weight3: 0.07373479
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.55517894
+    m_Weight1: 0.2417105
+    m_Weight2: 0.14553708
+    m_Weight3: 0.057573497
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.49909788
+    m_Weight1: 0.26431912
+    m_Weight2: 0.16495985
+    m_Weight3: 0.07162322
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.50302225
+    m_Weight1: 0.3087778
+    m_Weight2: 0.13933858
+    m_Weight3: 0.048861284
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45513076
+    m_Weight1: 0.3439894
+    m_Weight2: 0.1483175
+    m_Weight3: 0.0525623
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.50302225
+    m_Weight1: 0.3087778
+    m_Weight2: 0.13933858
+    m_Weight3: 0.048861284
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4891624
+    m_Weight1: 0.25767472
+    m_Weight2: 0.18376295
+    m_Weight3: 0.06939997
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.5249955
+    m_Weight1: 0.25561443
+    m_Weight2: 0.15522903
+    m_Weight3: 0.06416105
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45513076
+    m_Weight1: 0.3439894
+    m_Weight2: 0.1483175
+    m_Weight3: 0.0525623
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.42826724
+    m_Weight1: 0.3564542
+    m_Weight2: 0.15683791
+    m_Weight3: 0.058440644
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.55517894
+    m_Weight1: 0.2417105
+    m_Weight2: 0.14553708
+    m_Weight3: 0.057573497
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4658974
+    m_Weight1: 0.24755923
+    m_Weight2: 0.20127763
+    m_Weight3: 0.085265785
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35747042
+    m_Weight1: 0.353934
+    m_Weight2: 0.21182853
+    m_Weight3: 0.07676709
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.51207805
+    m_Weight1: 0.21238115
+    m_Weight2: 0.20419489
+    m_Weight3: 0.07134597
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.55756223
+    m_Weight1: 0.20806722
+    m_Weight2: 0.17422974
+    m_Weight3: 0.060140815
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45818806
+    m_Weight1: 0.26595575
+    m_Weight2: 0.19873585
+    m_Weight3: 0.07712031
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45513076
+    m_Weight1: 0.3439894
+    m_Weight2: 0.1483175
+    m_Weight3: 0.0525623
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35098284
+    m_Weight1: 0.2854806
+    m_Weight2: 0.2428037
+    m_Weight3: 0.1207329
+    m_BoneIndex0: 7
+    m_BoneIndex1: 12
+    m_BoneIndex2: 18
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37575287
+    m_Weight1: 0.3377664
+    m_Weight2: 0.21319713
+    m_Weight3: 0.07328365
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32389444
+    m_Weight1: 0.29123592
+    m_Weight2: 0.27503964
+    m_Weight3: 0.10983003
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34769008
+    m_Weight1: 0.2505247
+    m_Weight2: 0.24558905
+    m_Weight3: 0.15619609
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.3819868
+    m_Weight1: 0.33592767
+    m_Weight2: 0.15191701
+    m_Weight3: 0.13016848
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 5
+    m_BoneIndex3: 8
+  - m_Weight0: 0.33922368
+    m_Weight1: 0.25826076
+    m_Weight2: 0.24505952
+    m_Weight3: 0.157456
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.37890318
+    m_Weight1: 0.33142647
+    m_Weight2: 0.15758553
+    m_Weight3: 0.13208486
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 5
+    m_BoneIndex3: 17
+  - m_Weight0: 0.40249315
+    m_Weight1: 0.3642816
+    m_Weight2: 0.12747832
+    m_Weight3: 0.105746806
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 8
+    m_BoneIndex3: 15
+  - m_Weight0: 0.38393086
+    m_Weight1: 0.26030403
+    m_Weight2: 0.2129815
+    m_Weight3: 0.14278352
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.39403433
+    m_Weight1: 0.25013167
+    m_Weight2: 0.21312314
+    m_Weight3: 0.1427108
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.3705052
+    m_Weight1: 0.259447
+    m_Weight2: 0.19961551
+    m_Weight3: 0.1704323
+    m_BoneIndex0: 14
+    m_BoneIndex1: 6
+    m_BoneIndex2: 15
+    m_BoneIndex3: 17
+  - m_Weight0: 0.307052
+    m_Weight1: 0.30305132
+    m_Weight2: 0.21564077
+    m_Weight3: 0.17425597
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.417127
+    m_Weight1: 0.23878644
+    m_Weight2: 0.17980827
+    m_Weight3: 0.16427821
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 8
+    m_BoneIndex3: 5
+  - m_Weight0: 0.34282628
+    m_Weight1: 0.30777866
+    m_Weight2: 0.19351588
+    m_Weight3: 0.1558792
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.36674774
+    m_Weight1: 0.27850553
+    m_Weight2: 0.19099514
+    m_Weight3: 0.16375163
+    m_BoneIndex0: 14
+    m_BoneIndex1: 15
+    m_BoneIndex2: 6
+    m_BoneIndex3: 16
+  - m_Weight0: 0.3131814
+    m_Weight1: 0.2964294
+    m_Weight2: 0.21616478
+    m_Weight3: 0.17422435
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.38190877
+    m_Weight1: 0.25975478
+    m_Weight2: 0.20116402
+    m_Weight3: 0.15717241
+    m_BoneIndex0: 14
+    m_BoneIndex1: 15
+    m_BoneIndex2: 6
+    m_BoneIndex3: 16
+  - m_Weight0: 0.46046498
+    m_Weight1: 0.26040673
+    m_Weight2: 0.18500282
+    m_Weight3: 0.094125524
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 15
+    m_BoneIndex3: 11
+  - m_Weight0: 0.4673028
+    m_Weight1: 0.21807697
+    m_Weight2: 0.1900604
+    m_Weight3: 0.1245598
+    m_BoneIndex0: 14
+    m_BoneIndex1: 6
+    m_BoneIndex2: 15
+    m_BoneIndex3: 8
+  - m_Weight0: 0.4195249
+    m_Weight1: 0.23443164
+    m_Weight2: 0.18405358
+    m_Weight3: 0.16198988
+    m_BoneIndex0: 6
+    m_BoneIndex1: 8
+    m_BoneIndex2: 14
+    m_BoneIndex3: 9
+  - m_Weight0: 0.3494998
+    m_Weight1: 0.29923192
+    m_Weight2: 0.19398189
+    m_Weight3: 0.15728639
+    m_BoneIndex0: 6
+    m_BoneIndex1: 5
+    m_BoneIndex2: 14
+    m_BoneIndex3: 8
+  - m_Weight0: 0.43564844
+    m_Weight1: 0.21488196
+    m_Weight2: 0.19289024
+    m_Weight3: 0.15657935
+    m_BoneIndex0: 6
+    m_BoneIndex1: 8
+    m_BoneIndex2: 14
+    m_BoneIndex3: 9
+  - m_Weight0: 0.33384869
+    m_Weight1: 0.27020353
+    m_Weight2: 0.21494702
+    m_Weight3: 0.18100071
+    m_BoneIndex0: 4
+    m_BoneIndex1: 9
+    m_BoneIndex2: 2
+    m_BoneIndex3: 8
+  - m_Weight0: 0.53788185
+    m_Weight1: 0.20580755
+    m_Weight2: 0.15568179
+    m_Weight3: 0.100628756
+    m_BoneIndex0: 6
+    m_BoneIndex1: 14
+    m_BoneIndex2: 8
+    m_BoneIndex3: 9
+  - m_Weight0: 0.46171948
+    m_Weight1: 0.35975033
+    m_Weight2: 0.10076451
+    m_Weight3: 0.07776559
+    m_BoneIndex0: 14
+    m_BoneIndex1: 6
+    m_BoneIndex2: 8
+    m_BoneIndex3: 15
+  - m_Weight0: 0.33318794
+    m_Weight1: 0.26660475
+    m_Weight2: 0.25392744
+    m_Weight3: 0.1462798
+    m_BoneIndex0: 16
+    m_BoneIndex1: 20
+    m_BoneIndex2: 15
+    m_BoneIndex3: 11
+  - m_Weight0: 0.41578925
+    m_Weight1: 0.2896211
+    m_Weight2: 0.18019654
+    m_Weight3: 0.114393055
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 15
+    m_BoneIndex3: 13
+  - m_Weight0: 0.33783576
+    m_Weight1: 0.29094106
+    m_Weight2: 0.21004635
+    m_Weight3: 0.16117677
+    m_BoneIndex0: 9
+    m_BoneIndex1: 4
+    m_BoneIndex2: 8
+    m_BoneIndex3: 11
+  - m_Weight0: 0.34311014
+    m_Weight1: 0.29453796
+    m_Weight2: 0.18118075
+    m_Weight3: 0.18117113
+    m_BoneIndex0: 4
+    m_BoneIndex1: 9
+    m_BoneIndex2: 2
+    m_BoneIndex3: 8
+  - m_Weight0: 0.4707497
+    m_Weight1: 0.25907168
+    m_Weight2: 0.1469926
+    m_Weight3: 0.12318596
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 13
+    m_BoneIndex3: 15
+  - m_Weight0: 0.45919734
+    m_Weight1: 0.21698247
+    m_Weight2: 0.20224866
+    m_Weight3: 0.121571444
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 15
+  - m_Weight0: 0.5119
+    m_Weight1: 0.23056488
+    m_Weight2: 0.14784826
+    m_Weight3: 0.109686844
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 13
+    m_BoneIndex3: 11
+  - m_Weight0: 0.32715714
+    m_Weight1: 0.29579377
+    m_Weight2: 0.2268977
+    m_Weight3: 0.15015148
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 13
+    m_BoneIndex3: 11
+  - m_Weight0: 0.2990854
+    m_Weight1: 0.27572942
+    m_Weight2: 0.22375502
+    m_Weight3: 0.20143011
+    m_BoneIndex0: 20
+    m_BoneIndex1: 13
+    m_BoneIndex2: 16
+    m_BoneIndex3: 10
+  - m_Weight0: 0.28964105
+    m_Weight1: 0.26446143
+    m_Weight2: 0.22696638
+    m_Weight3: 0.21893118
+    m_BoneIndex0: 9
+    m_BoneIndex1: 16
+    m_BoneIndex2: 15
+    m_BoneIndex3: 11
+  - m_Weight0: 0.4071275
+    m_Weight1: 0.21389775
+    m_Weight2: 0.20833601
+    m_Weight3: 0.17063867
+    m_BoneIndex0: 13
+    m_BoneIndex1: 16
+    m_BoneIndex2: 11
+    m_BoneIndex3: 4
+  - m_Weight0: 0.41541374
+    m_Weight1: 0.24292088
+    m_Weight2: 0.18057261
+    m_Weight3: 0.16109283
+    m_BoneIndex0: 13
+    m_BoneIndex1: 10
+    m_BoneIndex2: 11
+    m_BoneIndex3: 16
+  - m_Weight0: 0.34223786
+    m_Weight1: 0.23017733
+    m_Weight2: 0.22977072
+    m_Weight3: 0.1978141
+    m_BoneIndex0: 13
+    m_BoneIndex1: 4
+    m_BoneIndex2: 10
+    m_BoneIndex3: 11
+  - m_Weight0: 0.2891453
+    m_Weight1: 0.2828195
+    m_Weight2: 0.22736132
+    m_Weight3: 0.20067386
+    m_BoneIndex0: 4
+    m_BoneIndex1: 13
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.40305987
+    m_Weight1: 0.2542926
+    m_Weight2: 0.17725992
+    m_Weight3: 0.16538763
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 13
+    m_BoneIndex3: 9
+  - m_Weight0: 0.30264357
+    m_Weight1: 0.28600225
+    m_Weight2: 0.21634355
+    m_Weight3: 0.19501062
+    m_BoneIndex0: 4
+    m_BoneIndex1: 2
+    m_BoneIndex2: 9
+    m_BoneIndex3: 13
+  - m_Weight0: 0.747107
+    m_Weight1: 0.11512811
+    m_Weight2: 0.0803286
+    m_Weight3: 0.0574363
+    m_BoneIndex0: 2
+    m_BoneIndex1: 4
+    m_BoneIndex2: 9
+    m_BoneIndex3: 11
+  - m_Weight0: 0.86927503
+    m_Weight1: 0.097087055
+    m_Weight2: 0.033637967
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.81563306
+    m_Weight1: 0.13732895
+    m_Weight2: 0.04703792
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.85215
+    m_Weight1: 0.14784987
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8874377
+    m_Weight1: 0.11256237
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8076993
+    m_Weight1: 0.13778311
+    m_Weight2: 0.05451756
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.85465926
+    m_Weight1: 0.14534077
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7472573
+    m_Weight1: 0.17976925
+    m_Weight2: 0.07297349
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.81550497
+    m_Weight1: 0.18449505
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.34769008
+    m_Weight1: 0.2505247
+    m_Weight2: 0.24558905
+    m_Weight3: 0.15619609
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.93554044
+    m_Weight1: 0.04581046
+    m_Weight2: 0.009662175
+    m_Weight3: 0.008986864
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 14
+    m_BoneIndex3: 5
+  - m_Weight0: 0.3131814
+    m_Weight1: 0.2964294
+    m_Weight2: 0.21616478
+    m_Weight3: 0.17422435
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.93136466
+    m_Weight1: 0.046668373
+    m_Weight2: 0.0114459945
+    m_Weight3: 0.010521052
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.33922368
+    m_Weight1: 0.25826076
+    m_Weight2: 0.24505952
+    m_Weight3: 0.157456
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.92272025
+    m_Weight1: 0.055909764
+    m_Weight2: 0.011398749
+    m_Weight3: 0.009971273
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.9269647
+    m_Weight1: 0.054850344
+    m_Weight2: 0.009198122
+    m_Weight3: 0.008986757
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 14
+    m_BoneIndex3: 5
+  - m_Weight0: 0.8966758
+    m_Weight1: 0.08167064
+    m_Weight2: 0.010951028
+    m_Weight3: 0.010702458
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.9670546
+    m_Weight1: 0.021803064
+    m_Weight2: 0.0057739234
+    m_Weight3: 0.0053683952
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.307052
+    m_Weight1: 0.30305132
+    m_Weight2: 0.21564077
+    m_Weight3: 0.17425597
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.9698717
+    m_Weight1: 0.020901164
+    m_Weight2: 0.0048076264
+    m_Weight3: 0.0044195494
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 14
+    m_BoneIndex3: 5
+  - m_Weight0: 0.3131814
+    m_Weight1: 0.2964294
+    m_Weight2: 0.21616478
+    m_Weight3: 0.17422435
+    m_BoneIndex0: 14
+    m_BoneIndex1: 17
+    m_BoneIndex2: 6
+    m_BoneIndex3: 15
+  - m_Weight0: 0.93554044
+    m_Weight1: 0.04581046
+    m_Weight2: 0.009662175
+    m_Weight3: 0.008986864
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 14
+    m_BoneIndex3: 5
+  - m_Weight0: 0.9269647
+    m_Weight1: 0.054850344
+    m_Weight2: 0.009198122
+    m_Weight3: 0.008986757
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 14
+    m_BoneIndex3: 5
+  - m_Weight0: 0.8966758
+    m_Weight1: 0.08167064
+    m_Weight2: 0.010951028
+    m_Weight3: 0.010702458
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.89183974
+    m_Weight1: 0.08290301
+    m_Weight2: 0.013758792
+    m_Weight3: 0.011498461
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.95635444
+    m_Weight1: 0.04364557
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.94852984
+    m_Weight1: 0.041797142
+    m_Weight2: 0.009673
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.93138266
+    m_Weight1: 0.051190063
+    m_Weight2: 0.009452921
+    m_Weight3: 0.007974296
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.87875736
+    m_Weight1: 0.09881933
+    m_Weight2: 0.02242332
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: 3
+    m_BoneIndex3: -1
+  - m_Weight0: 0.93528605
+    m_Weight1: 0.049935844
+    m_Weight2: 0.0074379826
+    m_Weight3: 0.0073401253
+    m_BoneIndex0: 17
+    m_BoneIndex1: 19
+    m_BoneIndex2: 5
+    m_BoneIndex3: 14
+  - m_Weight0: 0.95635444
+    m_Weight1: 0.04364557
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.8975789
+    m_Weight1: 0.102421135
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 19
+    m_BoneIndex1: 17
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.44183487
+    m_Weight1: 0.22558114
+    m_Weight2: 0.20522901
+    m_Weight3: 0.12735504
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 13
+  - m_Weight0: 0.67743886
+    m_Weight1: 0.27061644
+    m_Weight2: 0.05194462
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.45919734
+    m_Weight1: 0.21698247
+    m_Weight2: 0.20224866
+    m_Weight3: 0.121571444
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 15
+  - m_Weight0: 0.7110193
+    m_Weight1: 0.23701312
+    m_Weight2: 0.05196755
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.46656927
+    m_Weight1: 0.2117589
+    m_Weight2: 0.18957591
+    m_Weight3: 0.13209589
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 21
+    m_BoneIndex3: 13
+  - m_Weight0: 0.6405586
+    m_Weight1: 0.30562732
+    m_Weight2: 0.053814117
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.6053605
+    m_Weight1: 0.341498
+    m_Weight2: 0.053141475
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.7540551
+    m_Weight1: 0.19983378
+    m_Weight2: 0.046111036
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.48690554
+    m_Weight1: 0.2079137
+    m_Weight2: 0.1786503
+    m_Weight3: 0.12653048
+    m_BoneIndex0: 20
+    m_BoneIndex1: 16
+    m_BoneIndex2: 21
+    m_BoneIndex3: 15
+  - m_Weight0: 0.7214356
+    m_Weight1: 0.23171157
+    m_Weight2: 0.046852786
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.45919734
+    m_Weight1: 0.21698247
+    m_Weight2: 0.20224866
+    m_Weight3: 0.121571444
+    m_BoneIndex0: 20
+    m_BoneIndex1: 21
+    m_BoneIndex2: 16
+    m_BoneIndex3: 15
+  - m_Weight0: 0.67743886
+    m_Weight1: 0.27061644
+    m_Weight2: 0.05194462
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.6053605
+    m_Weight1: 0.341498
+    m_Weight2: 0.053141475
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.54577994
+    m_Weight1: 0.40145755
+    m_Weight2: 0.052762467
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.5804184
+    m_Weight1: 0.36562672
+    m_Weight2: 0.053954937
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.54577994
+    m_Weight1: 0.40145755
+    m_Weight2: 0.052762467
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.5811579
+    m_Weight1: 0.36811092
+    m_Weight2: 0.050731063
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.99855256
+    m_Weight1: 0.0014474364
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9801572
+    m_Weight1: 0.019842852
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.97523826
+    m_Weight1: 0.024761757
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.61593693
+    m_Weight1: 0.33266804
+    m_Weight2: 0.051394988
+    m_Weight3: 0
+    m_BoneIndex0: 21
+    m_BoneIndex1: 22
+    m_BoneIndex2: 20
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9839188
+    m_Weight1: 0.016081167
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.99855256
+    m_Weight1: 0.0014474364
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9839188
+    m_Weight1: 0.016081167
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.98108125
+    m_Weight1: 0.01891867
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.99855256
+    m_Weight1: 0.0014474364
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.96905833
+    m_Weight1: 0.030941661
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.90815055
+    m_Weight1: 0.09184948
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9454127
+    m_Weight1: 0.054587323
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9126192
+    m_Weight1: 0.087380916
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9236283
+    m_Weight1: 0.07637176
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9839188
+    m_Weight1: 0.016081167
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.97523826
+    m_Weight1: 0.024761757
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.96201205
+    m_Weight1: 0.03798803
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9189261
+    m_Weight1: 0.081073865
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9801572
+    m_Weight1: 0.019842852
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.97523826
+    m_Weight1: 0.024761757
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9388991
+    m_Weight1: 0.061100915
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9189261
+    m_Weight1: 0.081073865
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9038663
+    m_Weight1: 0.09613369
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9036337
+    m_Weight1: 0.09636632
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9189261
+    m_Weight1: 0.081073865
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9038663
+    m_Weight1: 0.09613369
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.90815055
+    m_Weight1: 0.09184948
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9126192
+    m_Weight1: 0.087380916
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9036337
+    m_Weight1: 0.09636632
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9454127
+    m_Weight1: 0.054587323
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9388991
+    m_Weight1: 0.061100915
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.99855256
+    m_Weight1: 0.0014474364
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.9801572
+    m_Weight1: 0.019842852
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.98108125
+    m_Weight1: 0.01891867
+    m_Weight2: 0
+    m_Weight3: 0
+    m_BoneIndex0: 22
+    m_BoneIndex1: 21
+    m_BoneIndex2: -1
+    m_BoneIndex3: -1
+  - m_Weight0: 0.37731096
+    m_Weight1: 0.2862256
+    m_Weight2: 0.18340811
+    m_Weight3: 0.15305538
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35624823
+    m_Weight1: 0.2519657
+    m_Weight2: 0.23083149
+    m_Weight3: 0.16095462
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37735623
+    m_Weight1: 0.2471875
+    m_Weight2: 0.22236556
+    m_Weight3: 0.15309075
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35659057
+    m_Weight1: 0.2907209
+    m_Weight2: 0.19179237
+    m_Weight3: 0.1608961
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3770239
+    m_Weight1: 0.37672067
+    m_Weight2: 0.15245976
+    m_Weight3: 0.09379572
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37419164
+    m_Weight1: 0.35169095
+    m_Weight2: 0.16481684
+    m_Weight3: 0.10930059
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.39829725
+    m_Weight1: 0.29263872
+    m_Weight2: 0.2033826
+    m_Weight3: 0.105681464
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3376673
+    m_Weight1: 0.32678288
+    m_Weight2: 0.21320103
+    m_Weight3: 0.12234887
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35624823
+    m_Weight1: 0.2519657
+    m_Weight2: 0.23083149
+    m_Weight3: 0.16095462
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32331723
+    m_Weight1: 0.2854431
+    m_Weight2: 0.27051738
+    m_Weight3: 0.120722316
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32389444
+    m_Weight1: 0.29123592
+    m_Weight2: 0.27503964
+    m_Weight3: 0.10983003
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34653926
+    m_Weight1: 0.32782874
+    m_Weight2: 0.21353881
+    m_Weight3: 0.11209327
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.46579468
+    m_Weight1: 0.2729258
+    m_Weight2: 0.18418548
+    m_Weight3: 0.07709392
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.5077604
+    m_Weight1: 0.25062397
+    m_Weight2: 0.17883043
+    m_Weight3: 0.06278516
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.38422856
+    m_Weight1: 0.28563696
+    m_Weight2: 0.21110564
+    m_Weight3: 0.1190288
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32678524
+    m_Weight1: 0.2934854
+    m_Weight2: 0.27412692
+    m_Weight3: 0.10560243
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3197348
+    m_Weight1: 0.29531065
+    m_Weight2: 0.26649234
+    m_Weight3: 0.11846223
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.43126696
+    m_Weight1: 0.24559368
+    m_Weight2: 0.23051316
+    m_Weight3: 0.09262611
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45360333
+    m_Weight1: 0.23313822
+    m_Weight2: 0.23216759
+    m_Weight3: 0.08109087
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34669504
+    m_Weight1: 0.34124902
+    m_Weight2: 0.22329703
+    m_Weight3: 0.0887589
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.3197348
+    m_Weight1: 0.29531065
+    m_Weight2: 0.26649234
+    m_Weight3: 0.11846223
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35747042
+    m_Weight1: 0.353934
+    m_Weight2: 0.21182853
+    m_Weight3: 0.07676709
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35879388
+    m_Weight1: 0.28993738
+    m_Weight2: 0.22905572
+    m_Weight3: 0.12221301
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.354648
+    m_Weight1: 0.28406012
+    m_Weight2: 0.23217328
+    m_Weight3: 0.12911864
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32601538
+    m_Weight1: 0.30587766
+    m_Weight2: 0.22888675
+    m_Weight3: 0.13922027
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.42265666
+    m_Weight1: 0.2709698
+    m_Weight2: 0.2188826
+    m_Weight3: 0.08749097
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4224516
+    m_Weight1: 0.31309092
+    m_Weight2: 0.19008811
+    m_Weight3: 0.074369356
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.36461383
+    m_Weight1: 0.30598664
+    m_Weight2: 0.21820249
+    m_Weight3: 0.111197025
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32601538
+    m_Weight1: 0.30587766
+    m_Weight2: 0.22888675
+    m_Weight3: 0.13922027
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.41698653
+    m_Weight1: 0.3823965
+    m_Weight2: 0.14981678
+    m_Weight3: 0.050800156
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.43293804
+    m_Weight1: 0.2831182
+    m_Weight2: 0.21373597
+    m_Weight3: 0.07020782
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.43297273
+    m_Weight1: 0.24851789
+    m_Weight2: 0.22714883
+    m_Weight3: 0.09136055
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.53389007
+    m_Weight1: 0.21605276
+    m_Weight2: 0.19390284
+    m_Weight3: 0.05615433
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.36050317
+    m_Weight1: 0.29834265
+    m_Weight2: 0.22258493
+    m_Weight3: 0.118569255
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.36461383
+    m_Weight1: 0.30598664
+    m_Weight2: 0.21820249
+    m_Weight3: 0.111197025
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4396079
+    m_Weight1: 0.29006606
+    m_Weight2: 0.19437683
+    m_Weight3: 0.07594924
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4760796
+    m_Weight1: 0.28687683
+    m_Weight2: 0.17619471
+    m_Weight3: 0.06084881
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4224516
+    m_Weight1: 0.31309092
+    m_Weight2: 0.19008811
+    m_Weight3: 0.074369356
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.41698653
+    m_Weight1: 0.3823965
+    m_Weight2: 0.14981678
+    m_Weight3: 0.050800156
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45513076
+    m_Weight1: 0.3439894
+    m_Weight2: 0.1483175
+    m_Weight3: 0.0525623
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.43293804
+    m_Weight1: 0.2831182
+    m_Weight2: 0.21373597
+    m_Weight3: 0.07020782
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.41698653
+    m_Weight1: 0.3823965
+    m_Weight2: 0.14981678
+    m_Weight3: 0.050800156
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45513076
+    m_Weight1: 0.3439894
+    m_Weight2: 0.1483175
+    m_Weight3: 0.0525623
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.41140565
+    m_Weight1: 0.2852931
+    m_Weight2: 0.22617063
+    m_Weight3: 0.07713063
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.37575287
+    m_Weight1: 0.3377664
+    m_Weight2: 0.21319713
+    m_Weight3: 0.07328365
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.32389444
+    m_Weight1: 0.29123592
+    m_Weight2: 0.27503964
+    m_Weight3: 0.10983003
+    m_BoneIndex0: 12
+    m_BoneIndex1: 18
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.34653926
+    m_Weight1: 0.32782874
+    m_Weight2: 0.21353881
+    m_Weight3: 0.11209327
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.53389007
+    m_Weight1: 0.21605276
+    m_Weight2: 0.19390284
+    m_Weight3: 0.05615433
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.5077604
+    m_Weight1: 0.25062397
+    m_Weight2: 0.17883043
+    m_Weight3: 0.06278516
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.4760796
+    m_Weight1: 0.28687683
+    m_Weight2: 0.17619471
+    m_Weight3: 0.06084881
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45483527
+    m_Weight1: 0.2962487
+    m_Weight2: 0.18222795
+    m_Weight3: 0.06668818
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45513076
+    m_Weight1: 0.3439894
+    m_Weight2: 0.1483175
+    m_Weight3: 0.0525623
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.45360333
+    m_Weight1: 0.23313822
+    m_Weight2: 0.23216759
+    m_Weight3: 0.08109087
+    m_BoneIndex0: 18
+    m_BoneIndex1: 12
+    m_BoneIndex2: 7
+    m_BoneIndex3: 10
+  - m_Weight0: 0.42826724
+    m_Weight1: 0.3564542
+    m_Weight2: 0.15683791
+    m_Weight3: 0.058440644
+    m_BoneIndex0: 7
+    m_BoneIndex1: 18
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+  - m_Weight0: 0.35747042
+    m_Weight1: 0.353934
+    m_Weight2: 0.21182853
+    m_Weight3: 0.07676709
+    m_BoneIndex0: 18
+    m_BoneIndex1: 7
+    m_BoneIndex2: 12
+    m_BoneIndex3: 10
+--- !u!114 &1875086636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 793e0ae62b98fe542a8bc346e24e3dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_container: {fileID: 11400000, guid: 6ce144d203f170d44b765fbb2c6c6fe3, type: 2}
+  m_particleGroup: -1
+  m_selfCollide: 0
+  m_selfCollideFilter: 0
+  m_fluid: 0
+  m_massScale: 1
+  m_drawParticles: 0
+  m_recreateActor: 0
+  m_asset: {fileID: 11400000, guid: c31fc52fa33ebc940877f95ea3165e60, type: 2}
+--- !u!137 &1875086637
+SkinnedMeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 0
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1947e96b578963840a710f5781bc03aa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 0
+  m_Mesh: {fileID: 4300000, guid: 0d14c367beb62a44a9934d3eb9839555, type: 3}
+  m_Bones:
+  - {fileID: 513640595}
+  - {fileID: 1826517603}
+  - {fileID: 259981693}
+  - {fileID: 616703930}
+  - {fileID: 1434867899}
+  - {fileID: 1408352298}
+  - {fileID: 418905276}
+  - {fileID: 1441068470}
+  - {fileID: 1181482725}
+  - {fileID: 1498718052}
+  - {fileID: 1177438957}
+  - {fileID: 2119745906}
+  - {fileID: 1501331140}
+  - {fileID: 1148937585}
+  - {fileID: 287562136}
+  - {fileID: 1666804368}
+  - {fileID: 1959317774}
+  - {fileID: 506897460}
+  - {fileID: 636389494}
+  - {fileID: 1233873120}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1408352298}
+  m_AABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.85474104, y: 0.547983, z: 0.9726747}
+  m_DirtyAABB: 0
+--- !u!114 &1875086638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba7e1a11c019e74a9fe7cf7fe12bf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bakedMesh: {fileID: 0}
+--- !u!114 &1875086639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875086630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa27eed860278314cae4af7bbddd53da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sm_target: {fileID: 554870299}
+  morphFrom: {fileID: 1875086638}
+  morphTo: {fileID: 1610395721}
+--- !u!4 &1959317774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400046, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1991283872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991283877}
+  - component: {fileID: 1991283876}
+  - component: {fileID: 1991283874}
+  - component: {fileID: 1991283873}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1991283873
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991283872}
+  m_Enabled: 1
+--- !u!124 &1991283874
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991283872}
+  m_Enabled: 1
+--- !u!20 &1991283876
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991283872}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0.019607844}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1991283877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991283872}
+  m_LocalRotation: {x: -0.0037628238, y: 0.99577874, z: -0.07819499, w: -0.047917906}
+  m_LocalPosition: {x: 0.2285862, y: 1.34, z: 1.6217722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2089736425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.538343
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.847557
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 0b25675351c3a43f799c307f044249d5, type: 3}
+--- !u!4 &2119745906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400012, guid: 0d14c367beb62a44a9934d3eb9839555,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610395719}
+  m_PrefabAsset: {fileID: 0}

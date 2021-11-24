@@ -131,7 +131,6 @@ public class MeshBonesSelect : MonoBehaviour
                     minIndex = i;
                 }
             }
-
         }
         selectedBone = shapeBones[minIndex];
         return minIndex;
@@ -161,7 +160,6 @@ public class MeshBonesSelect : MonoBehaviour
                 }
             }
         }
-
     }
 
     void addBoneVert(int boneIndex, int vertIndex)

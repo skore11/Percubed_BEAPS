@@ -171,22 +171,15 @@ namespace Percubed.Flex
         {
             //iter value = new iter();
             Node shocked = new DecoratorLoop(
-                            //new Selector(this.pauseAnim,
                             new Selector(
-                            //this.ST_Melt(meltSelection),
-                            new SequenceParallel(this.ST_ApproachAndWait(this.wander1), this.ST_Shock(this.shock)),
+                            new SequenceParallel(this.ST_ApproachAndWait(this.wander1) /*this.ST_Shock(this.shock)*/),
                             new SelectorParallel(this.stylize(),this.ST_ApproachAndWait(this.wander2)/*, this.stylize()*/),
-
-                            this.ST_shocker(target, hand, button)
-
-
-                            /*this.ST_ApproachAndWait(this.wander2)*/));
-            //this.ST_ApproachAndWait(this.wander3)));//);
+                            this.ST_shocker(target, hand, button)));
             return shocked;
 
         }
 
-        //Write another behavior tree to pick up an aobject.
+        //Write another behavior tree to pick up an object.
 
         //protected Node Trial()
         //{
