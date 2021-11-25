@@ -100,6 +100,7 @@ namespace NVIDIA.Flex
         {
             if (Application.isPlaying && handle && m_asset.referenceShape >= 0 && m_asset.referenceShape < m_asset.shapeCenters.Length)
             {
+                Debug.Log("moving object based on reference shape!");
                 FlexExt.Instance instance = handle.instance;
                 Vector3 position = Vector3.zero;
                 FlexUtils.FastCopy(instance.shapeTranslations, m_asset.referenceShape * 12, ref position, 0, 12);
