@@ -9,7 +9,7 @@ public class EnableMorph : MonoBehaviour
     public ExposeBakedMesh morphFrom;
     public ExposeBakedMesh morphTo;
 
-    void FixedUpdate()
+    void Update()
     {
         // on key press, enable morphtarget script after setting the from and to meshes:
         var keyboard = Keyboard.current;
