@@ -33,13 +33,12 @@ namespace Percubed.Flex
      * based on the current state of the mesh in the animation. But rather than re-rasterize
      * the mesh every frame, create a mapping of particles to vertices 
      */
-    [RequireComponent(typeof(FlexSoftActor))]
     public class FlexAnimSoftSkin : MonoBehaviour
     {
         public SkinnedMeshRenderer referenceAnimSkin; // the original animation,
         // i.e. the original model playing the animation (potentially offscreen)
+        public FlexSoftActor m_actor; // the flex actor the animation is applied to
 
-        private FlexSoftActor m_actor;
         /// caches for values copied in and out of the flex subsystem:
         private Vector4[] m_particles;
         private Vector3[] m_velocities;
@@ -65,7 +64,10 @@ namespace Percubed.Flex
 
         private void Awake()
         {
-            m_actor = GetComponent<FlexSoftActor>();
+            if (m_actor == null)
+            {
+                Debug.LogError("FlexAnimSoftSkin cannot work without a Flex actor to apply the animation to!");
+            }
             if (referenceAnimSkin == null)
             {
                 Debug.LogError("FlexAnimSoftSkin cannot work without a reference animation (Note: NOT the Skin of the Flex Object itself!)");
@@ -129,7 +131,7 @@ namespace Percubed.Flex
                 // Use the particle position transformed to local space to setup the needed mappings:
                 foreach (var i in m_particles)
                 {
-                    Vector3 localPos = this.transform.InverseTransformPoint(i);
+                    Vector3 localPos = m_actor.transform.InverseTransformPoint(i);
                     int nearestIndexforParticle = GetNearestVertIndex(localPos, cachedMeshVertices);
                     Vector3 VertOffset = localPos - cachedMeshVertices[nearestIndexforParticle];
                     vertOffsetVectors.Add(VertOffset);
@@ -175,7 +177,7 @@ namespace Percubed.Flex
             Vector3 _tempVector3Local;
             Vector3 _tempVector3Global; // (split into three different temps for DEBUG)
             Vector3 _tempVector3Diff;
-            Matrix4x4 localRotation = Matrix4x4.Rotate(Quaternion.Inverse(this.transform.localRotation));
+            Matrix4x4 localRotation = Matrix4x4.Rotate(Quaternion.Inverse(m_actor.transform.localRotation));
             for (int i = 0; i < particlePositions.Length; i++)
             {
                 // Now: First move it back to local space relative where its root bone is (i.e. to its parent).
@@ -187,7 +189,7 @@ namespace Percubed.Flex
                 // And then move it back to world space relative to this GameObject
                 // and calculate how far it is from its intended (animation-)position:
                 // (casting a Vector4 to a Vector3 automatically discards the w component)
-                _tempVector3Global = this.transform.TransformPoint(_tempVector3Local);
+                _tempVector3Global = m_actor.transform.TransformPoint(_tempVector3Local);
                 _tempVector3Diff = _tempVector3Global - ((Vector3) m_particles[i]);
                 particleDisplacements[i].x = _tempVector3Diff.x;
                 particleDisplacements[i].y = _tempVector3Diff.y;
@@ -274,7 +276,7 @@ namespace Percubed.Flex
                             "\nanimation bone weight {5}\nparticle bone weights {6}" +
                             "\nreference anim skin bones count {7} bindposes {8} boneweights {9}",
                             particleIndex, nearestVertexIndex, vertexPos,
-                            m_particles[particleIndex], this.transform.InverseTransformPoint(m_particles[particleIndex]),
+                            m_particles[particleIndex], m_actor.transform.InverseTransformPoint(m_particles[particleIndex]),
                             JsonUtility.ToJson(bw), debugPBW,
                             referenceAnimSkin.bones.Length, cachedBindposes.Length, cachedBoneWeights.Length));
                 }
