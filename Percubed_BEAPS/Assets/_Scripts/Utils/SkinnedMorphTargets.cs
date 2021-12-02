@@ -9,6 +9,19 @@ using System;
 /// </summary>
 public class SkinnedMorphTargets : MonoBehaviour 
 {
+    public bool morphEnabled = false;
+
+    /// <summary>
+    /// If true, recalculate morph for every index as often as possible.
+    /// Check this if the target or source mesh is dynamic/animated.
+    /// </summary>
+    public bool dynamicMorph;
+
+    /// <summary>
+    /// Was the script loaded successfully? (Public for debugging use)
+    /// </summary>
+    public bool loadedSuccessfully;
+
     /// <summary>
     /// The root of the hierarchy of source meshes that will be morphed "from".
     /// </summary>
@@ -39,15 +52,9 @@ public class SkinnedMorphTargets : MonoBehaviour
     
     /// <summary>
     /// The weights of each morph target weight.
-    /// The first weight is that of the original mesh.
+    /// The remainder of the sum from 1 is the weight for the original mesh.
     /// </summary>
     public float[] blendWeights;
-
-    /// <summary>
-    /// If true, recalculate morph for every index as often as possible.
-    /// Check this if the target or source mesh is dynamic/animated.
-    /// </summary>
-    public bool dynamicMorph;
 
     /// <summary>
     /// The normalized weights. Public for debugging
@@ -55,14 +62,9 @@ public class SkinnedMorphTargets : MonoBehaviour
     public float[] normalizedBlendWeights;
 
     /// <summary>
-    /// The weight of the neutral pose. Public for debugging.
+    /// The weight of the original mesh / neutral pose. Public for debugging.
     /// </summary>
     public float neutralWeight;
-
-    /// <summary>
-    /// Was the script loaded successfully? (Public for debugging use)
-    /// </summary>
-    public bool loadedSuccessfully;
 
     /// <summary>
     /// A simple array of indices.
@@ -97,13 +99,30 @@ public class SkinnedMorphTargets : MonoBehaviour
     //Need to check which vertices are highlighted to allow for morph to happen
     public NeighborVertexHighlight vertexHighlight;
 
-	/// <summary>
-	/// Start the script - attach the targets 
-	/// </summary>
+    /// <summary>
+    /// Start the script - attach the targets 
+    /// </summary>
     void Start()
     {
-		loadedSuccessfully = false;
-		
+        if (morphEnabled) {
+            UpdateMorphSetup();
+        }
+    }
+
+    public void SetupMorph(GameObject original, Mesh target)
+    {
+        // this OVERWRITES any settings made in the inspector!
+        originalMeshObjects = original;
+        morphTargets = new SkinnedMorphTargets.MeshArray[1];
+        morphTargets[0] = new SkinnedMorphTargets.MeshArray();
+        morphTargets[0].name = "FLEXMorphTarget";
+        morphTargets[0].submeshes = new Mesh[1];
+        morphTargets[0].submeshes[0] = target;
+        UpdateMorphSetup();
+    }
+
+    void UpdateMorphSetup() {
+        loadedSuccessfully = false;
         //Get the neutral pose meshes
         SkinnedMeshRenderer[] filters = originalMeshObjects.GetComponentsInChildren<SkinnedMeshRenderer>();
         //Debug.Log(filters[0].name);
@@ -168,8 +187,11 @@ public class SkinnedMorphTargets : MonoBehaviour
         //Check which vertices get modified by the morphing process
         CalculateMorphedVertices();
 
-        //Create working buffers for the submeshes that will get morphed
-        //and make the skinned mesh use these buffers
+        // Create working buffers for the submeshes that will get morphed
+        // and make the skinned mesh use these buffers
+        // TODO: these local renderers don't need to be SkinnedMeshRenderers at all, could just be MeshRenderers
+        // and using skinnedmeshRenderers might actually be complicating things if the rootbone is set!
+        // However, not sure how to set the mesh via code on pure MeshRenderers
         SkinnedMeshRenderer[] wrkFilters = gameObject.GetComponentsInChildren<SkinnedMeshRenderer>();
         //Debug.Log(filters[0].name);
         workingMeshes = new Mesh[wrkFilters.Length];
@@ -203,12 +225,20 @@ public class SkinnedMorphTargets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Early out if loading failed.
-        if (!loadedSuccessfully)
+        if (!morphEnabled)
         {
             return;
         }
-
+        // Try once to reload if setup not loaded (or unset in inspector)
+        if (!loadedSuccessfully)
+        {
+            UpdateMorphSetup();
+            if (!loadedSuccessfully)
+            {
+                morphEnabled = false;
+                return;
+            }
+        }
         if (CheckWeights() || this.dynamicMorph)
         {
             GenerateBlendedMesh();

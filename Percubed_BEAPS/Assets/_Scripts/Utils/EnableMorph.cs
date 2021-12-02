@@ -9,24 +9,25 @@ public class EnableMorph : MonoBehaviour
     public ExposeBakedMesh morphFrom;
     public ExposeBakedMesh morphTo;
 
-    void Update()
+    public InputAction morphAction;
+
+    public void Start()
     {
-        // on key press, enable morphtarget script after setting the from and to meshes:
-        var keyboard = Keyboard.current;
-        if (keyboard != null)
+        morphAction.performed += context => ChangeMorph();
+        morphAction.Enable();
+    }
+
+    void ChangeMorph()
+    {
+        // on key press, turn on/off morphtarget script after setting the from and to meshes:
+        if (sm_target.morphEnabled)
         {
-            if (keyboard.mKey.isPressed)
-            {
-                this.enabled = false;
-                // this OVERWRITES any settings made in the inspector!
-                sm_target.originalMeshObjects = morphFrom.gameObject;
-                sm_target.morphTargets = new SkinnedMorphTargets.MeshArray[1];
-                sm_target.morphTargets[0] = new SkinnedMorphTargets.MeshArray();
-                sm_target.morphTargets[0].name = "FLEXMorphTarget";
-                sm_target.morphTargets[0].submeshes = new Mesh[1];
-                sm_target.morphTargets[0].submeshes[0] = morphTo.bakedMesh;
-                sm_target.enabled = true;
-            }
+            sm_target.morphEnabled = false;
+        }
+        else
+        {
+            sm_target.SetupMorph(morphFrom.gameObject, morphTo.bakedMesh);
+            sm_target.morphEnabled = true;
         }
     }
 }
