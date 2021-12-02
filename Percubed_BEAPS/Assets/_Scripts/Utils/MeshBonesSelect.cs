@@ -58,7 +58,7 @@ public class MeshBonesSelect : MonoBehaviour
             Vector3? foundParticle = FindParticle(Camera.main.ScreenPointToRay(Input.mousePosition));
             if (foundParticle != null)
             {
-                Vector3 localParticle = this.transform.InverseTransformPoint((Vector3)foundParticle);
+                Vector3 localParticle = m_softActor.transform.InverseTransformPoint((Vector3)foundParticle);
                 print("foundParticle's world position: " + foundParticle + " local: " + localParticle);
                 int shapeCenterIndex = PickShapeCenter(localParticle);
                 findVerticesfromBoneWeight(shapeCenterIndex);
@@ -66,7 +66,7 @@ public class MeshBonesSelect : MonoBehaviour
                 doneSelecting = true;
                 print("shapeCenter's index " + shapeCenterIndex + " position: " + selectedBone);
                 GameObject sBone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                sBone.transform.parent = this.gameObject.transform;
+                sBone.transform.parent = m_softActor.transform;
                 sBone.transform.localPosition = selectedBone;
                 sBone.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 if (shapeIndexToVerticesDict.Count > 0)
