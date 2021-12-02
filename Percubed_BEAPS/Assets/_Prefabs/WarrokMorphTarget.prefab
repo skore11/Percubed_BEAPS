@@ -70,7 +70,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5657906417717569611}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -124,7 +124,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 3488260959152339900, guid: 833b0fb661e7904449015bbb2d46bded, type: 3}
+  m_Mesh: {fileID: 0}
   m_Bones:
   - {fileID: 0}
   - {fileID: 0}
@@ -204,19 +204,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5657906417717569611}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20df14af55f87714ca8e2e8bcc94de8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  morphEnabled: 0
+  dynamicMorph: 1
+  loadedSuccessfully: 0
   originalMeshObjects: {fileID: 0}
   morphTargets: []
   blendWeights:
   - 0.75
-  dynamicMorph: 1
   normalizedBlendWeights: []
   neutralWeight: 0
-  loadedSuccessfully: 0
   vertexHighlight: {fileID: 0}
 --- !u!114 &5657906417717569615
 MonoBehaviour:
