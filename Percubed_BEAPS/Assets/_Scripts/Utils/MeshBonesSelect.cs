@@ -21,6 +21,7 @@ public class MeshBonesSelect : MonoBehaviour
     public Dictionary<int, List<int>> shapeIndexToVerticesDict;
     public bool doneSelecting = false;
     public bool selectBones = false;
+    public GameObject shapePrefab;
     
     void Awake()
     {
@@ -65,8 +66,7 @@ public class MeshBonesSelect : MonoBehaviour
                 //Important: Will need to store this dictionary in XML using serializable formats, for future use
                 doneSelecting = true;
                 print("shapeCenter's index " + shapeCenterIndex + " position: " + selectedBone);
-                GameObject sBone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                sBone.transform.parent = m_softActor.transform;
+                GameObject sBone = Instantiate(shapePrefab, m_softActor.transform);
                 sBone.transform.localPosition = selectedBone;
                 sBone.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
                 if (shapeIndexToVerticesDict.Count > 0)

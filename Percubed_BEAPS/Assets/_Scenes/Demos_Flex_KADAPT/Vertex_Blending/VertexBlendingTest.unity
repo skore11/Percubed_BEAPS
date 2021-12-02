@@ -2237,6 +2237,8 @@ MonoBehaviour:
   selectedBonesIndices: 
   doneSelecting: 0
   selectBones: 0
+  shapePrefab: {fileID: 2740587349643653558, guid: 422f37332d0c5f64c9a8953aca143407,
+    type: 3}
 --- !u!114 &1653504444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3377,6 +3379,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1653504442}
     m_Modifications:
+    - target: {fileID: 9199919159770640508, guid: 366d4b9473d34d2458def783c6880991,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9199919161693971396, guid: 366d4b9473d34d2458def783c6880991,
         type: 3}
       propertyPath: m_RootOrder
