@@ -2319,6 +2319,7 @@ GameObject:
   - component: {fileID: 1653504444}
   - component: {fileID: 1653504443}
   - component: {fileID: 1653504446}
+  - component: {fileID: 1653504447}
   m_Layer: 0
   m_Name: Warrok_combined
   m_TagString: Untagged
@@ -2424,6 +2425,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   neighborVertHighlighter: {fileID: 1448434670}
   m_bonesSelect: {fileID: 1653504443}
+--- !u!114 &1653504447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653504441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a339be6e27fb44cab68506a7419d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshToCheck: {fileID: 3488260959152339900, guid: 833b0fb661e7904449015bbb2d46bded,
+    type: 3}
 --- !u!1 &1672805300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 833b0fb661e7904449015bbb2d46bded,
