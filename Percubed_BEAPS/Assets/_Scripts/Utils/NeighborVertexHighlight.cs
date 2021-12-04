@@ -150,6 +150,12 @@ public class NeighborVertexHighlight : MonoBehaviour
             if (neighbor[j2] == null) neighbor[j2] = new List<int>();
             if (neighbor[j3] == null) neighbor[j3] = new List<int>();
 
+            // TODO: the currentConnections dictionary seems completely unnecessary!
+            // it just maps the vector to its index, but we have the index right here,
+            // and it is ever read from with _vertices[index], i.e. with the index right there!
+            // it might be useful though if it was a list of indices for co-located vertices,
+            // if we wanted to deal with co-located vertices here as well!
+
             if (!currentConnections.ContainsKey(_vertices[j1]))
                 currentConnections.Add(_vertices[j1], j1);
             if (!currentConnections.ContainsKey(_vertices[j2]))

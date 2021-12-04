@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 /// <summary>
 /// This class can handle morph targets (blend shapes) for skinned meshes
@@ -245,31 +246,62 @@ public class SkinnedMorphTargets : MonoBehaviour
         }
     }
 
+    Dictionary<Vector3, int[]> CalculateColocatedVerticesDict(Mesh meshToCheck)
+    {
+        var verts = meshToCheck.vertices;
+        var duplicates = verts
+                .Select((vert, index) => new { index, vert })
+                .GroupBy(x => x.vert, x => x.index)
+                .Where(g => g.Count() > 1)
+                .ToDictionary(x => x.Key, y => y.ToArray())
+                ;
+        print(string.Format("Checked {0} certices for duplicates, found {1} groups.",
+                verts.Length,
+                duplicates.Count));
+        return duplicates;
+    }
+
     /// <summary>
     /// Check which submeshes might take place in the operation
     /// </summary>
     void CalculateMorphedVertices()
     {
-
-        //Copy vertex indices for only the vertices highlighted to be blended 
+        // Copy vertex indices for only the vertices highlighted to be blended 
+        // Also morph co-located vertices to reduce mesh tearing
         if (vertexHighlight.indexNeighbors.Values.Count != 0)
         {
             morphVertexIndices = new IndexArray[sourceMeshes.Length];
             for (int submeshNum = 0; submeshNum < sourceMeshes.Length; submeshNum++)
             {
+                Dictionary<Vector3, int[]> duplicateVertsDict = CalculateColocatedVerticesDict(sourceMeshes[submeshNum]);
                 List<int> morphedVertices = new List<int>();
                 foreach (var i in vertexHighlight.indexNeighbors)
                 {
                     //print(i.Value.Index);
-                    morphedVertices.Add(i.Value.Index);
+                    if (duplicateVertsDict.ContainsKey(i.Key))
+                    {
+                        print("While selecting highlighted vertices for morphing, found co-located vertices x "
+                                + duplicateVertsDict[i.Key].Length);
+                        foreach (int j in duplicateVertsDict[i.Key])
+                        {
+                            morphedVertices.Add(j);
+                        }
+                    }
+                    else
+                    {
+                        morphedVertices.Add(i.Value.Index);
+                    }
                 }
                 IndexArray idxArray = new IndexArray();
                 idxArray.indices = new int[morphedVertices.Count];
                 morphedVertices.CopyTo(idxArray.indices);
                 morphVertexIndices[submeshNum] = idxArray;
+                Debug.Log(string.Format(
+                    "For submesh {0}, {1} verts {2} highlighted: morphVertexIndices.length {3}.",
+                    submeshNum, sourceMeshes[submeshNum].vertices.Length,
+                    vertexHighlight.indexNeighbors.Count, morphVertexIndices[submeshNum].Length));
             }
         }
-
         else
         {
             morphVertexIndices = new IndexArray[sourceMeshes.Length];
@@ -308,9 +340,8 @@ public class SkinnedMorphTargets : MonoBehaviour
                 morphedVertices.CopyTo(idxArray.indices);
                 morphVertexIndices[submeshNum] = idxArray;
                 Debug.Log(string.Format(
-                    "For submesh {0}: morphVertexIndices.length {1}.",
-                    submeshNum, morphVertexIndices[submeshNum].Length));
-
+                    "For submesh {0}, {1} verts: morphVertexIndices.length {2}.",
+                    submeshNum, sourceMeshes[submeshNum].vertices.Length, morphVertexIndices[submeshNum].Length));
             }
         }
         
