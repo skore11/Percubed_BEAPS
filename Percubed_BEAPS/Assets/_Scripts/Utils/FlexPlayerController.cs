@@ -13,7 +13,7 @@ namespace Percubed.Flex {
         
         private Vector3 movement = Vector3.zero;
 
-        private FlexSoftActor m_actor;
+        private FlexClothActor m_actor;
 
         private Vector4[] m_particles;
 
@@ -23,7 +23,7 @@ namespace Percubed.Flex {
 
         private void Awake()
         {
-            m_actor = GetComponent<FlexSoftActor>();
+            m_actor = GetComponent<FlexClothActor>();
         }
 
         private void Start()

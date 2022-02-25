@@ -1,0 +1,18 @@
+newmtl JORONGO_blinnSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd JORONGO_TXTR.tif
+bump JORONGO_NM.tif -bm 1
+Ni 1.00
+Ks 0.22 0.22 0.22
+newmtl Tiras_blinnSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd -s 0.1 0.1 cloth.jpg
+bump -s 0.1 0.1 cloth.jpg -bm 0.011
+Ni 1.00
+Ks 0.50 0.50 0.50
